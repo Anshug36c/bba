@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BBA Sem 1 - Basics of Computer Fundamental & Application (TCA-100T)</title>
+<style>
+:root{--ink:#1c1c2b;--muted:#5b5b73;--brand:#1e3a8a;--brand2:#2563eb;--bg:#f1f5fd;--card:#fff;--line:#d8e2f8}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:system-ui,-apple-system,'Segoe UI',Roboto,'Noto Sans',sans-serif;background:var(--bg);color:var(--ink);line-height:1.68;font-size:16.5px}
+.wrap{max-width:980px;margin:0 auto;padding:0 18px 90px}
+header.hero{background:linear-gradient(135deg,#1e3a8a 0%,#2563eb 60%,#60a5fa 100%);color:#fff;padding:38px 20px 34px;text-align:center}
+header.hero h1{margin:0 0 8px;font-size:1.7rem;line-height:1.3}
+header.hero p{margin:4px 0;opacity:.93;font-size:.97rem}
+.badge{display:inline-block;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);padding:3px 12px;border-radius:999px;font-size:.79rem;margin:4px 3px}
+nav.toc{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 20px;margin:-26px auto 26px;box-shadow:0 8px 24px rgba(28,28,43,.10);position:relative;z-index:2}
+nav.toc h2{margin:0 0 10px;font-size:1rem;color:var(--brand);text-transform:uppercase;letter-spacing:1px}
+nav.toc a{display:inline-block;margin:3px 12px 3px 0;color:var(--brand2);text-decoration:none;font-size:.92rem;border-bottom:1px dashed #ccc}
+h2.unit{font-size:1.45rem;color:#fff;background:linear-gradient(135deg,#1e3a8a,#2563eb);padding:12px 18px;border-radius:12px;margin:48px 0 16px;box-shadow:0 6px 18px rgba(28,28,43,.22)}
+h3{font-size:1.2rem;color:var(--brand);margin:30px 0 9px;border-left:5px solid var(--brand2);padding-left:12px}
+h4{font-size:1.04rem;color:#333;margin:20px 0 7px}
+p{margin:9px 0}
+ul,ol{margin:8px 0 8px 4px;padding-left:22px}
+li{margin:4px 0}
+table{border-collapse:collapse;width:100%;margin:14px 0;background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 10px rgba(28,28,43,.07);font-size:.92rem}
+th{background:#dbeafe;color:#1e3a8a;text-align:left;padding:9px 11px;border:1px solid var(--line);font-size:.89rem}
+td{padding:8px 11px;border:1px solid var(--line);vertical-align:top}
+tr:nth-child(even) td{background:#fbfbfe}
+code{background:#dbeafe;padding:1.5px 6px;border-radius:5px;font-family:ui-monospace,Consolas,Menlo,monospace;font-size:.88em;color:var(--brand2)}
+pre{background:#16162e;color:#e8e8ff;padding:14px 16px;border-radius:12px;overflow-x:auto;font-family:ui-monospace,Consolas,Menlo,monospace;font-size:.85rem;line-height:1.6}
+.box{border-radius:12px;padding:13px 16px 13px 46px;margin:14px 0;position:relative;border:1px solid;font-size:.97rem}
+.box::before{position:absolute;left:13px;top:11px;font-size:1.15rem}
+.b-def{background:#eef2ff;border-color:#c7d2fe}.b-def::before{content:"📘"}
+.b-hing{background:#fff7ed;border-color:#fed7aa}.b-hing::before{content:"🗣️"}
+.b-real{background:#ecfdf5;border-color:#a7f3d0}.b-real::before{content:"🌍"}
+.b-tip{background:#fefce8;border-color:#fde68a}.b-tip::before{content:"🎯"}
+.b-warn{background:#fef2f2;border-color:#fecaca}.b-warn::before{content:"⚠️"}
+.b-mn{background:#f5f3ff;border-color:#ddd6fe}.b-mn::before{content:"🧠"}
+.b-fx{background:#f0f9ff;border-color:#bae6fd}.b-fx::before{content:"🧮"}
+.b-q{background:#fdf4ff;border-color:#f5d0fe}.b-q::before{content:"📝"}
+.b-key{background:#fffbeb;border-color:#fcd34d}.b-key::before{content:"🔑"}
+.tag{display:inline-block;background:var(--brand);color:#fff;font-size:.72rem;padding:2px 9px;border-radius:999px;margin-right:6px;letter-spacing:.4px}
+.rev{background:#16162e;color:#e8e8ff;border-radius:14px;padding:18px 20px;margin:18px 0}
+.rev h4{color:#c7d2fe;margin:0 0 8px}
+.rev li{margin:5px 0}
+.mini{font-size:.85rem;color:var(--muted)}
+.tag.alt{background:var(--brand2)}
+.footer{border-top:2px dashed var(--line);margin-top:50px;padding-top:18px;color:var(--muted);font-size:.88rem;text-align:center}
+</style>
+</head>
+<body>
+<header class="hero">
+  <h1>💻 Basics of Computer Fundamental &amp; Application (TCA-100T)</h1>
+  <p>Complete Hinglish Notes • Unit 1–5 • Diagrams, tables + practical steps</p>
+  <div><span class="badge">2 Credits</span><span class="badge">24 Hours</span><span class="badge">ESE 70 + Internal 30</span><span class="badge">AEC (Ability Enhancement)</span></div>
+</header>
+
+<div class="wrap">
+<nav class="toc">
+  <h2>Units</h2>
+  <a href="#u1">Unit 1 — Introduction &amp; Evolution of Computers</a>
+  <a href="#u2">Unit 2 — CPU, Memory, Number System &amp; Boolean</a>
+  <a href="#u3">Unit 3 — Software, OS &amp; Languages</a>
+  <a href="#u4">Unit 4 — Networking &amp; Internet</a>
+  <a href="#u5">Unit 5 — Word, Excel &amp; PowerPoint</a>
+</nav>
+
+<div class="box b-tip"><b>Is subject ka raaz:</b> Ye subject <b>theory + practical dono</b> ka hai. Ye topic pakka yaad karo: <b>Data vs Information, Generation of computers, Types (Analog/Digital/Hybrid), Block diagram (CPU), Primary vs Secondary memory, Number system conversion, Boolean gates + truth table, Types of software + OS functions, LAN/WAN/MAN + topologies, Internet/DNS/email, Excel formulas + PowerPoint steps</b>. Numerical (binary conversion) aur diagram har answer me dalo — full marks ✅</div>
+
+<!-- ================== UNIT 1 ================== -->
+<h2 class="unit" id="u1">UNIT 1 — Introduction &amp; Evolution of Computers</h2>
+
+<h3>1.1 Computer kya hai?</h3>
+<div class="box b-def"><b>Computer</b> = ek <b>electronic machine</b> jo <b>input</b> leti hai, usko <b>process</b> karti hai (diye gaye instructions ke hisaab se), aur <b>output</b> deti hai — aur saath hi data ko <b>store</b> kar sakti hai. Iska kaam kisi <b>program (instructions ka set)</b> ke control me hota hai, apne aap nahi.</div>
+
+<p>Aasan bhasa me: <b>Input → Process → Output + Storage</b> — yahi computer ka chakra hai.</p>
+<pre>        +-------------------+
+Input ->|   PROCESSING      |-> Output
+        |   (CPU + Memory)  |
+        +-------------------+
+                 |
+              STORAGE
+   (Input devices: keyboard, mouse, scanner, mic)
+   (Output devices: monitor, printer, speaker)
+   (Processing: CPU - ALU + CU + Registers)
+   (Storage: HDD, SSD, Pen drive, Cloud, RAM)</pre>
+
+<h3>1.2 Data vs Information</h3>
+<table>
+<tr><th>Basis</th><th>Data</th><th>Information</th></tr>
+<tr><td>Matlab</td><td>Kachcha (raw) facts aur figures — bina process kiye hue</td><td>Processed, meaningful data jo decision me kaam aata hai</td></tr>
+<tr><td>Form</td><td>Numbers, text, images, sound (unorganised)</td><td>Report, statement, chart (organised)</td></tr>
+<tr><td>Example</td><td>Class ke 50 students ke marks: 60, 75, 82, 45...</td><td>Class ka average 68%, top scorer 95%, pass % 90 — ye information hai</td></tr>
+<tr><td>Use</td><td>Input ke roop me</td><td>Decision ke liye</td></tr>
+<tr><td>Dependency</td><td>Information data se banti hai</td><td>Information se phir knowledge/judgement banta hai</td></tr>
+</table>
+<div class="box b-mn"><b>Trick:</b> <b>Data = "daba" hua kachcha maal</b>, <b>Information = "informed" kiya gaya maal</b>. DIKW chain yaad rakho: <b>D</b>ata → <b>I</b>nformation → <b>K</b>nowledge → <b>W</b>isdom (GIGO: Garbage In Garbage Out — galat data se galat info).</div>
+
+<h3>1.3 Characteristics of Computer (Features — 8 points)</h3>
+<table>
+<tr><th>Feature</th><th>Matlab</th></tr>
+<tr><td>1. Speed</td><td>Lakhon calculations per second — days ka kaam seconds me. Speed: nanosecond, picosecond me naapi jaati hai</td></tr>
+<tr><td>2. Accuracy (shudhta)</td><td>Calculation me galti nahi — galti sirf human input me hoti hai (GIGO)</td></tr>
+<tr><td>3. Diligence (mehnat/lagatar)</td><td>Thakta nahi, bore nahi hota, 24x7 kaam kar sakta hai</td></tr>
+<tr><td>4. Versatility (bahu-mukhi)</td><td>Ek hi machine — typing, drawing, gaming, accounting, video editing, AI</td></tr>
+<tr><td>5. Storage capacity</td><td>GB/TB me data store — pen drive me hazaaron books, photos</td></tr>
+<tr><td>6. Automatic</td><td>Ek baar program do, khud kaam karega (robot assembly line)</td></tr>
+<tr><td>7. No Intelligence / No IQ</td><td>Khud soch nahi sakta, jo bataya jaaye wahi karta hai (AI tak bhi human design hi hai)</td></tr>
+<tr><td>8. No feelings/emotions</td><td>Uska mood nahi hota — par AI chat me "humans jaise" feel dena programming hai</td></tr>
+</table>
+
+<h4>Limitations of Computer (kaunse kaam nahi kar sakta)</h4>
+<ul>
+  <li><b>No self-thinking:</b> Instructions ke bina kuch nahi kar sakta — "zero IQ" machine.</li>
+  <li><b>No decision (without program):</b> Khud se judgement nahi leta.</li>
+  <li><b>No feelings/emotions:</b> Empathy, care, moral judgement nahi.</li>
+  <li><b>Dependency:</b> Bijli, hardware aur software aur human operator chahiye.</li>
+  <li><b>Hardware failure ka risk:</b> System crash, virus, data loss.</li>
+  <li><b>Unemployment ka concern:</b> Automation se kuch jobs par asar.</li>
+  <li><b>Cost &amp; maintenance:</b> Setup aur regular maintenance mehnga.</li>
+</ul>
+<div class="box b-real"><b>Real life example:</b> Railway reservation system (IRCTC) ek saath lakhon seats ka hisaab seconds me rakhta hai, 100% accuracy se — par "kis passenger ko emergency me priority deni hai" wo judgement railway staff lega, computer nahi. Yahi hai computer ki speed + insaan ki wisdom ka combination 👌</div>
+
+<h3>1.4 Evolution / History of Computers (Generations — super important)</h3>
+<table>
+<tr><th>Generation</th><th>Period</th><th>Main Technology</th><th>Example</th><th>Memory/Size</th></tr>
+<tr><td>1st Generation</td><td>1940–1956</td><td>Vacuum tubes (thermionic valves)</td><td>ENIAC, EDVAC, UNIVAC, IBM 701</td><td>Kam, room-size bade; heat zyada; punch card input</td></tr>
+<tr><td>2nd Generation</td><td>1956–1963</td><td>Transistors</td><td>IBM 1401, CDC 1604, IBM 7094</td><td>Chhota, sasta, kam heat; magnetic core memory</td></tr>
+<tr><td>3rd Generation</td><td>1964–1971</td><td>Integrated Circuits (IC)</td><td>IBM System/360, ICL 1900</td><td>Zyada reliable, monitor + keyboard, OS ka janm</td></tr>
+<tr><td>4th Generation</td><td>1971–1980</td><td>Microprocessor (VLSI - Very Large Scale Integration)</td><td>Intel 4004, IBM PC, Apple II</td><td>Personal computer ka daur; GUI ka shuruaat</td></tr>
+<tr><td>5th Generation</td><td>1980–present</td><td>ULSI, AI, parallel processing, quantum ki taraf</td><td>Laptops, smartphones, AI systems (ChatGPT type), robots</td><td>Voice + touch, artificial intelligence, cloud</td></tr>
+</table>
+<div class="box b-mn"><b>Trick — "VT-IC-M-AI":</b> <b>V</b>acuum (1) → <b>T</b>ransistor (2) → <b>IC</b> (3) → <b>M</b>icroprocessor (4) → <b>AI</b> (5). Ya sequence me: "Valves, Transistors, IC, Microprocessor, AI" — "V-T-I-M-A". Numeric ka exam me pooch lete hain (ENIAC = 1st gen, IBM 1401 = 2nd gen).</div>
+
+<h4>Important "First" facts (objective/viva ke liye)</h4>
+<table>
+<tr><th>Point</th><th>Answer</th></tr>
+<tr><td>First mechanical calculator</td><td>Abacus (ancient, ~3000 BC) — phir Pascal's Pascaline (1642), Leibniz's Stepped Reckoner</td></tr>
+<tr><td>Father of Computer</td><td><b>Charles Babbage</b> — Analytical Engine + Difference Engine design (1837); "Father of Modern Computer"</td></tr>
+<tr><td>First programmer</td><td><b>Lady Ada Lovelace</b> — Babbage ki machine ke liye instructions likhi</td></tr>
+<tr><td>First electronic general-purpose computer</td><td><b>ENIAC</b> (1946, USA) — 30 ton, 18000 vacuum tubes, 5000 additions/second</td></tr>
+<tr><td>First commercial computer</td><td>UNIVAC I (1951)</td></tr>
+<tr><td>First stored program concept</td><td>John von Neumann (EDVAC) — program + data dono memory me</td></tr>
+<tr><td>Microprocessor</td><td>Intel 4004 (1971)</td></tr>
+<tr><td>First PC (IBM)</td><td>IBM PC 5150 (1981) — MS-DOS ke saath</td></tr>
+<tr><td>India ka pehla computer</td><td>HEC-2M (ISI Kolkata, 1955) — TIFRAC (TIFR, 1960) India me banaya gaya</td></tr>
+<tr><td>1 Byte me</td><td>8 bits; 1 KB = 1024 Bytes</td></tr>
+</table>
+
+<h3>1.5 Types of Computers</h3>
+<h4>(A) Working principle ke hisaab se</h4>
+<table>
+<tr><th>Type</th><th>Kaam kaise karta hai</th><th>Example</th></tr>
+<tr><td>Analog</td><td>Continuous physical values (voltage, temperature) se kaam; accurate nahi par fast</td><td>Old voltmeter, speedometer, thermometer</td></tr>
+<tr><td>Digital</td><td>Discrete values (0 aur 1) — binary system; accurate aur reliable</td><td>Laptop, calculator, smartphone — aaj sab</td></tr>
+<tr><td>Hybrid</td><td>Analog + digital dono ka mix</td><td>ECG machine, ICU monitors, petrol pump machine</td></tr>
+</table>
+
+<h4>(B) Size, speed aur capacity ke hisaab se</h4>
+<table>
+<tr><th>Type</th><th>Size &amp; power</th><th>Use</th><th>Example</th></tr>
+<tr><td>Supercomputer</td><td>Sabse bada, lakhs of processors; 500+ crore calculations/second</td><td>Weather forecasting, space research, nuclear simulation, AI training</td><td>PARAM (India, C-DAC), CRAY, Fugaku; India ke kaunse: PARAM Siddhi-AI</td></tr>
+<tr><td>Mainframe</td><td>Bada, multi-user (hazaaron users), high reliability</td><td>Bank, railway reservation, insurance, big data</td><td>IBM z-series</td></tr>
+<tr><td>Mini computer</td><td>Medium, departmental level</td><td>Mid-size office, college lab, server</td><td>PDP-11, IBM AS/400 (aaj server)</td></tr>
+<tr><td>Micro computer</td><td>Chhota, single user (CPU = microprocessor)</td><td>Ghar, office, student</td><td>Desktop, Laptop, Palmtop/tablet, Smartphone</td></tr>
+<tr><td>Embedded / Special purpose</td><td>Chip ke andar fixed kaam ke liye</td><td>Washing machine, AC, car, ATM, microwave</td><td>Microcontroller based devices</td></tr>
+</table>
+<div class="box b-real"><b>Real life example:</b> Tumhare ghar me 4 "computers" hain: 📱 mobile (micro), 🧺 washing machine (embedded), 🚗 car ka ECU (embedded), aur 💻 laptop (micro). Hospital me ECG = hybrid (analog signal + digital display). Bank ka server/mainframe = mainframe. Aur IMD ka weather prediction = supercomputer (PARAM). Isliye ek hi cheez "computer" ke teen-chaar roop dekh rahe ho ✅</div>
+
+<h3>1.6 Computer Architecture (Block Diagram) &amp; Organisation</h3>
+<pre>                       COMPUTER SYSTEM
++---------------------------------------------------------------+
+|                    CENTRAL PROCESSING UNIT (CPU)              |
+|  +----------------+   +----------------+   +----------------+  |
+|  |   ALU          |<->|   CONTROL      |<->|   REGISTERS    |  |
+|  | (Arithmetic &  |   |   UNIT (CU)    |   | (temporary     |  |
+|  |  Logic: +,-,*,/|   | fetch-decode-  |   |  fast storage) |  |
+|  |  compare)      |   | execute control|   |                |  |
+|  +----------------+   +----------------+   +----------------+  |
++-----------------------------|---|-----------------------------+
+                              |   |
+        PRIMARY MEMORY        |   |        SECONDARY STORAGE
+        (Main Memory)         |   |   (HDD, SSD, Pen drive, DVD)
+        RAM + ROM             |   |
+              |               |   |
+              +-------+-------+---+
+                      |
+              SYSTEM BUS (Data bus, Address bus, Control bus)
+                      |
+        +-------------+--------------+
+        |                            |
+   INPUT DEVICES                OUTPUT DEVICES
+   Keyboard, Mouse,             Monitor, Printer,
+   Scanner, MIC, Webcam         Speaker, Plotter, Projector</pre>
+
+<h4>Main units ka kaam</h4>
+<table>
+<tr><th>Unit</th><th>Kaam</th></tr>
+<tr><td>Input Unit</td><td>Bahar se data/instructions lena (keyboard, mouse, scanner, mic, camera, touch screen)</td></tr>
+<tr><td>CPU (ALU + CU)</td><td>ALU = ganit aur logic (+, −, ×, ÷, compare). CU = instructions fetch karke control karna (kaunsa kaam kab) — sab units ko "direct" karti hai</td></tr>
+<tr><td>Memory Unit</td><td>Data + program store karna (primary for running, secondary for permanent)</td></tr>
+<tr><td>Output Unit</td><td>Result dena (monitor, printer, speaker)</td></tr>
+</table>
+<div class="box b-mn"><b>CPU = "Dimaag", Memory = "Yaad", Input = "Aankh-Kaan", Output = "Muh-Bolna".</b> ALU = calculator wala banda, CU = teacher jo batata hai kaunsa sum kab karna hai. Ye ek line exam aur viva dono me kaam aati hai 😄</div>
+
+<h3>1.7 Registers (CPU ke andar ki tiny memory)</h3>
+<div class="box b-def"><b>Register</b> = CPU ke andar bani <b>sabse tez, sabse chhoti</b> storage location (bits ka group) jahan currently process ho raha data/address rakha jaata hai. Ye memory hierarchy me sabse upar hai (fastest, smallest, costliest).</div>
+
+<table>
+<tr><th>Register</th><th>Kaam</th></tr>
+<tr><td>Accumulator (AC)</td><td>ALU ke calculation ka temporary result rakhta hai (jaise "ans" memory of calculator)</td></tr>
+<tr><td>Program Counter (PC) / Instruction Pointer</td><td>Agli instruction ka address rakhta hai — "ab kya padhna hai"</td></tr>
+<tr><td>Instruction Register (IR)</td><td>Currently execute ho rahi instruction rakhta hai</td></tr>
+<tr><td>Memory Address Register (MAR)</td><td>Us address ko rakhta hai jahan se data laana/store karna hai</td></tr>
+<tr><td>Memory Data Register (MDR)</td><td>Memory se aaya/jaane wala actual data rakhta hai</td></tr>
+<tr><td>General Purpose Registers</td><td>Temporary data ke liye (AX, BX, CX, DX jaise names assembly me)</td></tr>
+<tr><td>Status/Flag Register</td><td>Result ke conditions: zero, carry, overflow, sign — decision (if/else) me kaam aata hai</td></tr>
+</table>
+
+<h4>Instruction Cycle (CPU kaise kaam karta hai — 4 steps)</h4>
+<pre>1. FETCH    - PC ke address se instruction memory se laao
+2. DECODE   - CU samjhe ki instruction kya keh rahi hai
+3. EXECUTE  - ALU/CU kaam kare (add, compare, move data)
+4. STORE    - Result ko register/memory me rakho, PC ko next par badhao
+   (ye cycle billions of times per second chalta hai - 3 GHz CPU = 3 billion cycles/sec)</pre>
+
+<h3>1.8 Storage ke Units (bits se TB tak)</h3>
+<pre>1 Bit        = 0 ya 1 (sabse chhoti unit)
+1 Nibble     = 4 bits
+1 Byte       = 8 bits (ek character, jaise 'A' ya '5')
+1 KB (Kilobyte) = 1024 Bytes
+1 MB (Megabyte) = 1024 KB
+1 GB (Gigabyte) = 1024 MB
+1 TB (Terabyte) = 1024 GB
+1 PB (Petabyte) = 1024 TB
+1 EB (Exabyte)  = 1024 PB
+1 ZB (Zettabyte)= 1024 EB
+1 YB (Yottabyte)= 1024 ZB
+Note: 1024 (2^10) hota hai, 1000 nahi - kyunki computer binary (0/1) me chalta hai.</pre>
+
+<div class="box b-q"><b>Probable exam questions — Unit 1</b>
+<ol>
+  <li>Computer kya hai? Iski visheshtaayein aur limitations likhiye. (10)</li>
+  <li>Data aur Information me antar likhiye, example ke saath. (5)</li>
+  <li>Computer ki generations ko technology aur examples ke saath samjhaiye. (10)</li>
+  <li>Computers ke prakaar (size/speed ke hisaab se) likhiye. (10)</li>
+  <li>Computer ka block diagram banaaiye aur uske har unit ka kaam likhiye. (10)</li>
+  <li>Register kya hai? Konse main registers hote hain? (5)</li>
+</ol></div>
+
+<div class="rev">
+<h4>⚡ Rapid Revision — Unit 1</h4>
+<ul>
+  <li>Computer = Input → Process → Output + Storage (program ke control me).</li>
+  <li>Data = raw facts, Information = processed meaningful data (DIKW).</li>
+  <li>Features: speed, accuracy, diligence, versatility, storage, automatic; Limitations: no IQ, no feelings, dependency, virus/unemployment.</li>
+  <li>Generations: Vacuum tube → Transistor → IC → Microprocessor → AI (ULSI).</li>
+  <li>Charles Babbage = father of computer; Ada Lovelace = first programmer; ENIAC = first electronic computer (1946); Intel 4004 = first microprocessor.</li>
+  <li>Types: Analog, Digital, Hybrid; size: Super, Mainframe, Mini, Micro, Embedded.</li>
+  <li>CPU = ALU + CU + Registers; memory = primary + secondary; bus = data + address + control.</li>
+  <li>Instruction cycle: Fetch → Decode → Execute → Store.</li>
+  <li>1 Byte = 8 bits; 1 KB = 1024 Bytes.</li>
+</ul>
+</div>
+
+<!-- ================== UNIT 2 ================== -->
+<h2 class="unit" id="u2">UNIT 2 — CPU, Input-Output Devices, Memory, Number System &amp; Boolean Algebra</h2>
+
+<h3>2.1 Input Devices</h3>
+<table>
+<tr><th>Device</th><th>Kaam</th><th>Example/Note</th></tr>
+<tr><td>Keyboard</td><td>Text/number/command type karna</td><td>QWERTY layout; 104 keys; hotkeys se speed</td></tr>
+<tr><td>Mouse</td><td>Pointer se click, drag, select</td><td>Mechanical, optical, wireless; left-right click + scroll</td></tr>
+<tr><td>Scanner</td><td>Paper document ko digital image me badalna</td><td>Marksheet scan karna</td></tr>
+<tr><td>MIC (Microphone)</td><td>Awaaz ko digital signal me badalna</td><td>Voice typing, online class</td></tr>
+<tr><td>Webcam</td><td>Video + photo input</td><td>Online interview/viva</td></tr>
+<tr><td>Touch screen</td><td>Touch se input (finger/stylus)</td><td>Mobile, ATM, kiosk — input + output dono</td></tr>
+<tr><td>Joystick / Gamepad</td><td>Gaming control</td><td>—</td></tr>
+<tr><td>Light pen, Trackball, Touchpad</td><td>Pointing devices</td><td>Laptop me touchpad</td></tr>
+<tr><td>MICR / OCR / OMR / Barcode / QR reader</td><td>Special input</td><td>MICR = cheque number (bank), OMR = OMR sheet, OCR = scanned text padhna, barcode = product tag</td></tr>
+<tr><td>Biometric devices</td><td>Fingerprint, iris, face scan</td><td>Aadhaar authentication, attendance</td></tr>
+</table>
+
+<h3>2.2 Output Devices</h3>
+<table>
+<tr><th>Device</th><th>Kaam</th><th>Type</th></tr>
+<tr><td>Monitor (VDU)</td><td>Soft copy output</td><td>LCD, LED, OLED; CRT purana. Resolution: HD, Full HD, 4K</td></tr>
+<tr><td>Printer</td><td>Hard copy output</td><td>Impact (Dot matrix — carbon copy ke liye) vs Non-impact (Inkjet, Laser, Thermal)</td></tr>
+<tr><td>Plotter</td><td>Bade size ke designs/graph</td><td>Architecture drawing, maps</td></tr>
+<tr><td>Speaker / Headphone</td><td>Sound output</td><td>—</td></tr>
+<tr><td>Projector</td><td>Bada screen par display</td><td>Classroom, presentation</td></tr>
+<tr><td>3D printer</td><td>Physical object banana layer by layer</td><td>Prototype, medical implants</td></tr>
+</table>
+<div class="box b-warn"><b>Confusion clear karo:</b> <b>Soft copy</b> = screen par dikhne wala output (monitor, file) — permanent nahi. <b>Hard copy</b> = print wala output — permanent, touch kar sakte ho. Printer "impact" = needle/dhakka se print (dot matrix, carbon copy), "non-impact" = ink/heat/laser se (silent, fast) ✅</div>
+
+<h3>2.3 Memory (Computer ki yaad)</h3>
+<h4>Memory Hierarchy (upar = fast + costly + kam size)</h4>
+<pre>Registers            -> CPU ke andar, fastest, smallest
+   |  Cache (L1, L2, L3) -> CPU ke paas, super fast, mehenga
+   |     |  RAM (Main memory) -> programs run ke liye
+   |     |     |  Secondary storage (HDD/SSD/Pen drive) -> permanent
+   |     |     |     |  Cloud storage -> bahar ke server par</pre>
+
+<table>
+<tr><th>Basis</th><th>Primary Memory (Main Memory)</th><th>Secondary Memory</th></tr>
+<tr><td>Kya hai</td><td>RAM + ROM — CPU ke direct access me</td><td>HDD, SSD, DVD, Pen drive, Memory card</td></tr>
+<tr><td>Speed</td><td>Bahut fast</td><td>Slow (par SSD fast hai)</td></tr>
+<tr><td>Permanence</td><td>RAM volatile (power with data gone); ROM non-volatile</td><td>Non-volatile — permanent storage</td></tr>
+<tr><td>Capacity</td><td>Kam (GB me)</td><td>Zyada (TB me)</td></tr>
+<tr><td>Cost</td><td>Mehnga per GB</td><td>Sasta per GB</td></tr>
+<tr><td>Kaam</td><td>Currently running program + data rakhna</td><td>Files, photos, software permanently rakhna</td></tr>
+</table>
+
+<h4>RAM vs ROM</h4>
+<table>
+<tr><th>Basis</th><th>RAM (Random Access Memory)</th><th>ROM (Read Only Memory)</th></tr>
+<tr><td>Full form</td><td>Random Access Memory</td><td>Read Only Memory</td></tr>
+<tr><td>Nature</td><td><b>Volatile</b> — light gayi to data khatm</td><td><b>Non-volatile</b> — permanent</td></tr>
+<tr><td>Kaam</td><td>Running programs, current data (tumhari typing, open apps)</td><td>Booting instructions (BIOS/firmware), startup program</td></tr>
+<tr><td>Write</td><td>Read + Write dono</td><td>Normally sirf read</td></tr>
+<tr><td>Types</td><td>DRAM (Dynamic, sasta — refresh chahiye), SRAM (Static, fast-mehenga — cache me)</td><td>PROM (programmable once), EPROM (UV se erase), EEPROM (electrically erase — flash memory ka base)</td></tr>
+<tr><td>Size</td><td>4 GB, 8 GB, 16 GB, 32 GB...</td><td>Chhota (MB/KB) — BIOS chip</td></tr>
+</table>
+<div class="box b-mn"><b>Trick:</b> <b>RAM = "Rapidly All Memory vanishes"</b> (power jaate hi gayab) — Use: "Working desk" jiske upar tum kaam kar rahe ho. <b>ROM = "Read Only Memory" = permanent "Seb"</b> jo pehle se likha hai — BIOS. File save karna = desk se <b>almari (HDD)</b> me rakhna. Ye example exam me bahut pasand aata hai 😄</div>
+
+<h4>Cache Memory &amp; Virtual Memory (bonus concepts)</h4>
+<ul>
+  <li><b>Cache Memory:</b> CPU aur RAM ke beech ki super-fast chhoti memory — frequently used data ki copy rakhti hai. L1 (fastest, chhoti), L2, L3 (badi, thodi slow). Isse speed badhti hai.</li>
+  <li><b>Virtual Memory:</b> Jab RAM full ho jaaye, to computer HDD/SSD ke ek hissa ko "RAM jaisa" use karta hai (page file/swap). Slow hota hai par crash nahi hone deta.</li>
+  <li><b>Buffer:</b> Temporary holding area — jaise printer spool, YouTube video ka buffering.</li>
+  <li><b>BIOS:</b> Basic Input Output System — ROM me likha program jo komputer start karte waqt POST (power-on self-test) karke OS load karta hai.</li>
+</ul>
+
+<h4>Secondary Storage Devices</h4>
+<table>
+<tr><th>Device</th><th>Kaam kaise</th><th>Note</th></tr>
+<tr><td>Magnetic Disk (HDD)</td><td>Platter par magnetism se data</td><td>Capacity badi (500 GB–4 TB), sasta; moving parts — thoda slow, dhakka se kharab</td></tr>
+<tr><td>SSD (Solid State Drive)</td><td>Flash memory chips — koi moving part nahi</td><td>Bahut fast, silent, shock-proof; per-GB mehnga. Aaj ka standard</td></tr>
+<tr><td>Optical Disk</td><td>Laser se padhna/likhna</td><td>CD (700 MB), DVD (4.7 GB), Blu-ray (25 GB+)</td></tr>
+<tr><td>Pen drive / Flash memory</td><td>USB port me EEPROM flash</td><td>8 GB se 256 GB, carry easy</td></tr>
+<tr><td>Memory card</td><td>SD/microSD — camera, mobile</td><td>16 GB–1 TB</td></tr>
+<tr><td>Magnetic Tape</td><td>Sequential access, backup ke liye</td><td>Bulk backup, archives (slow access par sasta)</td></tr>
+<tr><td>Cloud storage</td><td>Internet par server par data</td><td>Google Drive, Dropbox; kahi se access, internet chahiye</td></tr>
+</table>
+<div class="box b-real"><b>Real life example:</b> Tum laptop me 3 apps khole ho (Word, Chrome ke 20 tabs, YouTube) — ye sab <b>RAM</b> me chal rahe hain. Photo album, notes, project file — wo <b>HDD/SSD</b> me save hain. Bijli chali jaaye to open apps band ho jaate hain (RAM volatile) par files safe rehti hain (secondary non-volatile). Isliye "2 ghante ka kaam save nahi kiya" ka dukh sirf tab hota hai jab kaam <b>RAM me hi</b> tha 😅</div>
+
+<h3>2.4 CPU &amp; Memory kaise kaam karte hain (step-by-step)</h3>
+<pre>Jab tum "Excel" par click karte ho:
+1. HDD/SSD se Excel ka program code RAM me load hota hai
+2. CPU ka CU instruction fetch karta hai (Memory se RAM se)
+3. Decode -> Execute: ALU calculations karta hai, values register me aati hain
+4. Result RAM me jata hai, screen par display (output) hoti hai
+5. Tum file save karte ho -> RAM se HDD/SSD me data likha jaata hai
+Speed note: Register > Cache > RAM > SSD > HDD > Cloud (network)
+Isliye RAM 8 GB se 16 GB karne par laptop "fast" feel hota hai - kam swapping.</pre>
+
+<h3>2.5 Number System &amp; Conversions</h3>
+<div class="box b-def"><b>Number System</b> = numbers likhne ka tarika — base/rataank ke aadhaar par. Computer binary (2) me kaam karta hai par human decimal (10) me sochta hai; isliye conversion aata hona zaroori hai.</div>
+
+<table>
+<tr><th>System</th><th>Base</th><th>Digits</th><th>Example</th><th>Kahan use</th></tr>
+<tr><td>Binary</td><td>2</td><td>0, 1</td><td>(1011)₂ = 11</td><td>Machine language — computer ki bhasha</td></tr>
+<tr><td>Octal</td><td>8</td><td>0–7</td><td>(17)₈ = 15</td><td>Purane systems, UNIX permissions</td></tr>
+<tr><td>Decimal</td><td>10</td><td>0–9</td><td>(25)₁₀ = 25</td><td>Human counting</td></tr>
+<tr><td>Hexadecimal</td><td>16</td><td>0–9, A–F</td><td>(1F)₁₆ = 31</td><td>Memory address, colour codes (#FF0000), machine code likhna</td></tr>
+</table>
+
+<h4>(A) Decimal to Binary — Division method</h4>
+<pre>Example 1: (25)10 = ?
+25 / 2 = 12 remainder 1  (LSB - last likhna)
+12 / 2 =  6 remainder 0
+ 6 / 2 =  3 remainder 0
+ 3 / 2 =  1 remainder 1
+ 1 / 2 =  0 remainder 1  (MSB - sabse pehle likhna)
+Jawab (neeche se upar padho): 11001
+=> (25)10 = (11001)2
+
+Example 2: (45)10 = ?
+45/2=22 r1, 22/2=11 r0, 11/2=5 r1, 5/2=2 r1, 2/2=1 r0, 1/2=0 r1
+=> neeche se upar: 101101
+Jawab: (45)10 = (101101)2</pre>
+
+<h4>(B) Binary to Decimal — Power method</h4>
+<pre>Har bit ko 2 ki power se multiply karo (right se left: 2^0, 2^1, 2^2...)
+Example 1: (11001)2
+= 1x2^4 + 1x2^3 + 0x2^2 + 0x2^1 + 1x2^0
+= 16 + 8 + 0 + 0 + 1 = 25
+=> (11001)2 = (25)10  ✅ (upper wale ka ulta - sahi hai!)
+
+Example 2: (101101)2
+= 1x32 + 0x16 + 1x8 + 1x4 + 0x2 + 1x1
+= 32+8+4+1 = 45
+=> (101101)2 = (45)10  ✅</pre>
+
+<h4>(C) Decimal ↔ Hexadecimal / Octal, aur Binary-Octal-Hex shortcut</h4>
+<pre>Decimal to Hex (16 se divide):
+(255)10: 255/16 = 15 r 15 (F)   => 15/16 = 0 r 15 (F)
+Jawab: (255)10 = (FF)16  (koi bhi colour code dekho: #FF0000 me FF hai)
+
+Binary to Hexadecimal (4-4 bits ka group banao):
+(1101 1010)2 -> 1101 = D (13), 1010 = A (10) -> (DA)16
+
+Binary to Octal (3-3 bits ka group banao):
+(101 110)2 -> 101 = 5, 110 = 6 -> (56)8
+
+Hex to Decimal:
+(2A)16 = 2x16 + 10 = 42  => (2A)16 = (42)10</pre>
+
+<div class="box b-mn"><b>Shortcut yaad karo:</b> <b>Decimal→Binary = Division method, jawab neeche se upar.</b> <b>Binary→Decimal = Power method (2^0 se badhao).</b> <b>Binary→Octal = 3 bits ka joda, Binary→Hex = 4 bits ka joda.</b> Aur haan: 2^0=1, 2^1=2, 2^2=4, 2^3=8, 2^4=16, 2^5=32, 2^6=64, 2^7=128, 2^8=256 — ye table ratta maar lo (conversion me sabse zyada kaam aata hai) ✅</div>
+
+<h3>2.6 Boolean Algebra &amp; Logic Gates</h3>
+<div class="box b-def"><b>Boolean Algebra</b> = George Boole (1854) ka develop kiya gaya woh algebra jisme sirf <b>do values</b> hoti hain — <b>TRUE (1)</b> aur <b>FALSE (0)</b>. Digital circuits (CPU ke andar ke hazaron gates) isi par chalte hain. Isme OR, AND, NOT jaise operations hote hain.</div>
+
+<h4>Three basic logic gates</h4>
+<table>
+<tr><th>Gate</th><th>Symbol ka matlab</th><th>Rule (1 line me)</th><th>Boolean expression</th></tr>
+<tr><td>AND</td><td>Multiplication (·) jaisa</td><td>Output 1 tabhi jab <b>dono input 1</b> hon</td><td>Y = A · B</td></tr>
+<tr><td>OR</td><td>Addition (+) jaisa</td><td>Output 1 agar <b>koi bhi ek input 1</b> ho</td><td>Y = A + B</td></tr>
+<tr><td>NOT</td><td>Inverter / complement</td><td>Input ko ulta kar deta hai — 0 ka 1, 1 ka 0</td><td>Y = A' or Ā</td></tr>
+</table>
+
+<h4>Truth Tables (inhe ratta maar do — pakka aata hai)</h4>
+<pre>AND Gate                    OR Gate                   NOT Gate
+A  B  | Y = A.B              A  B  | Y = A+B             A  | Y = A'
+0  0  |   0                  0  0  |   0                 0  |   1
+0  1  |   0                  0  1  |   1                 1  |   0
+1  0  |   0                  1  0  |   1
+1  1  |   1                  1  1  |   1
+
+NAND (AND ka ulta)           NOR (OR ka ulta)         XOR
+A  B  |  Y                   A  B  |  Y                 A  B  |  Y (alag hone par 1)
+0  0  |  1                   0  0  |  1                 0  0  |  0
+0  1  |  1                   0  1  |  0                 0  1  |  1
+1  0  |  1                   1  0  |  0                 1  0  |  1
+1  1  |  0                   1  1  |  0                 1  1  |  0
+Note: NAND aur NOR "universal gates" hain - inhi se saare gate bana sakte hain.</pre>
+
+<h4>Basic Boolean Laws (identity yaad rakho)</h4>
+<table>
+<tr><th>Law</th><th>Expression</th></tr>
+<tr><td>Identity</td><td>A + 0 = A ; A · 1 = A</td></tr>
+<tr><td>Null/Domination</td><td>A + 1 = 1 ; A · 0 = 0</td></tr>
+<tr><td>Idempotent</td><td>A + A = A ; A · A = A</td></tr>
+<tr><td>Complement</td><td>A + A' = 1 ; A · A' = 0</td></tr>
+<tr><td>Commutative</td><td>A + B = B + A ; A·B = B·A</td></tr>
+<tr><td>Associative</td><td>(A+B)+C = A+(B+C)</td></tr>
+<tr><td>Distributive</td><td>A·(B+C) = A·B + A·C</td></tr>
+<tr><td>De Morgan's Theorem (I)</td><td>(A + B)' = A' · B'</td></tr>
+<tr><td>De Morgan's Theorem (II)</td><td>(A · B)' = A' + B'</td></tr>
+</table>
+<div class="box b-real"><b>Real life example:</b> Ghar me "AC chalu ho" ka logic lo — AC ON tab hi jab (door band ho) AND (temperature high ho). Ek bhi condition fail = AC nahi chalega (AND gate). Aur "light ON" jab switch se hi... ya remote se hi (OR gate). ATM me card + PIN (AND) check hota hai. Sirf card = kaam nahi, sirf PIN = kaam nahi. Isliye AND gate zindagi me har jagah hai 🔐</div>
+
+<div class="box b-tip"><b>De Morgan's theorem likhne ka trick:</b> "Bar todo to sign badlo" — (A+B)' me bar todne par '·' lagta hai aur (A·B)' me bar todne par '+' lagta hai. Exam me statement + truth table se verify karke likho, full marks.</div>
+
+<div class="box b-q"><b>Probable exam questions — Unit 2</b>
+<ol>
+  <li>Input aur Output devices ke naam aur kaam likhiye. (10)</li>
+  <li>Primary aur Secondary memory me antar likhiye. RAM aur ROM ko samjhaiye. (10)</li>
+  <li>Number system kya hai? (45)10 ko binary me aur (11001)2 ko decimal me badliye. (10)</li>
+  <li>Logic gates kya hain? AND, OR, NOT ki truth table banaiye. (10)</li>
+  <li>Boolean algebra ke laws aur De Morgan's theorem likhiye. (5-10)</li>
+  <li>CPU aur memory milkar kaise kaam karte hain? Instruction cycle samjhaiye. (5)</li>
+</ol></div>
+
+<div class="rev">
+<h4>⚡ Rapid Revision — Unit 2</h4>
+<ul>
+  <li>Input: keyboard, mouse, scanner, mic, webcam, OMR/OCR/MICR, biometric. Output: monitor, printer (impact/non-impact), plotter, speaker, projector.</li>
+  <li>CPU = ALU (calculation) + CU (control) + Registers (fast temporary).</li>
+  <li>Registers: AC, PC, IR, MAR, MDR, General purpose, Flags.</li>
+  <li>Memory hierarchy: Register → Cache → RAM → Secondary → Cloud.</li>
+  <li>RAM = volatile, read/write, running programs. ROM = non-volatile, BIOS/firmware. SRAM fast vs DRAM sasta.</li>
+  <li>Secondary: HDD (magnetic), SSD (flash, fast), CD/DVD/Blu-ray, pen drive, tape, cloud.</li>
+  <li>Number systems: Binary(2), Octal(8), Decimal(10), Hex(16). Dec→Bin = divide by 2, neeche se upar. Bin→Dec = powers of 2.</li>
+  <li>Gates: AND (dono 1), OR (koi bhi 1), NOT (ulta), NAND/NOR universal, XOR (different = 1).</li>
+  <li>De Morgan: (A+B)' = A'·B' ; (A·B)' = A'+B'.</li>
+</ul>
+</div>
+
+<!-- ================== UNIT 3 ================== -->
+<h2 class="unit" id="u3">UNIT 3 — Software, Operating System &amp; Languages</h2>
+
+<h3>3.1 Software kya hai? Aur uske types</h3>
+<div class="box b-def"><b>Software</b> = instructions ka wo <b>organized set (programs + data + documentation)</b> jo computer hardware ko batata hai ki kya karna hai. Hardware = body, Software = aatma/dimaag ka logic.</div>
+
+<pre>                     SOFTWARE
+                        |
+        +---------------+---------------+
+        |                               |
+   SYSTEM SOFTWARE              APPLICATION SOFTWARE
+   (computer ko chalane ke liye)  (user ke kaam ke liye)
+        |                               |
+  1. Operating System (Windows,      1. General purpose (MS Word,
+     Linux, macOS, Android, iOS)       Excel, Chrome, Tally)
+  2. Language translators            2. Customised / Tailor-made
+     (Assembler, Compiler,             (school ERP, hospital software)
+     Interpreter)                    3. Utility (Antivirus, WinZip,
+  3. Utility programs                 backup tool, disk cleaner)
+     (antivirus, backup, disk tool)  4. Presentation/Graphics
+  4. Device drivers                   (PowerPoint, Photoshop)
+  5. Firmware (BIOS)</pre>
+
+<table>
+<tr><th>Basis</th><th>System Software</th><th>Application Software</th></tr>
+<tr><td>Kaam</td><td>Computer ko chalane aur manage karne ke liye</td><td>User ke specific kaam ke liye (typing, ganit, design)</td></tr>
+<tr><td>Kaun use karta hai</td><td>Machine + system</td><td>End user</td></tr>
+<tr><td>Zaroori?</td><td>Essential — iske bina computer start nahi hota</td><td>Optional — jaroorat ke hisaab se install karte hain</td></tr>
+<tr><td>Example</td><td>Windows, Linux, device driver, antivirus</td><td>MS Word, Excel, Tally, WhatsApp, VLC</td></tr>
+<tr><td>Size</td><td>Bada, complex</td><td>Chhota, specific</td></tr>
+</table>
+
+<h3>3.2 Operating System (OS)</h3>
+<div class="box b-def"><b>Operating System</b> = wo <b>system software</b> jo computer ke <b>hardware aur user ke beech interface</b> ka kaam karta hai — resources (CPU, memory, devices) manage karta hai, programs chalata hai, aur user ko command/GUI deta hai. Iske bina computer "kabadi" hai 😄</div>
+
+<h4>Functions of OS (ye 8 point pakka likho)</h4>
+<table>
+<tr><th>Function</th><th>Matlab</th></tr>
+<tr><td>1. Process management</td><td>Kaun sa program kab chale, CPU ka time baantna (scheduling)</td></tr>
+<tr><td>2. Memory management</td><td>RAM ka hissa har program ko dena; virtual memory banana</td></tr>
+<tr><td>3. File management</td><td>Files/folders banana, naam badalna, copy-delete, permission</td></tr>
+<tr><td>4. Device management</td><td>Printer, mouse, keyboard, pen drive — device drivers ke through control</td></tr>
+<tr><td>5. Security &amp; protection</td><td>Password, user accounts, file permissions, virus se safety</td></tr>
+<tr><td>6. User interface</td><td>GUI (icons, windows) ya CUI (command line)</td></tr>
+<tr><td>7. Networking &amp; communication</td><td>Internet, Wi-Fi, sharing, socket management</td></tr>
+<tr><td>8. Error detection &amp; help</td><td>Error message, recovery, logging, performance monitoring</td></tr>
+</table>
+
+<h4>Classification of OS</h4>
+<table>
+<tr><th>Type</th><th>Kaam</th><th>Example</th></tr>
+<tr><td>Single-user / Multi-user</td><td>Ek user ya ek saath kai user (server)</td><td>MS-DOS (single), UNIX/Linux server (multi)</td></tr>
+<tr><td>Single-tasking / Multi-tasking</td><td>Ek kaam ya kai kaam saath (background music + typing)</td><td>Windows/Android = multi-tasking</td></tr>
+<tr><td>Batch OS</td><td>Kaam ko batch me jama karke ek saath process (human interaction kam)</td><td>Payroll processing, old mainframe jobs</td></tr>
+<tr><td>Time-sharing OS</td><td>CPU time chhote-chhote slices me har user ko (lagta hai jaise poori machine uski hai)</td><td>UNIX</td></tr>
+<tr><td>Real-time OS (RTOS)</td><td>Fixed time me jawab zaroori — late hone ka matlab fail</td><td>Car ka airbag, robot, pacemaker, satellite control</td></tr>
+<tr><td>Distributed OS</td><td>Kai computers milkar ek jaise kaam karein</td><td>Cluster/supercomputer, cloud platform</td></tr>
+<tr><td>Network OS</td><td>Server par chalta hai, network me file/printer share</td><td>Windows Server, Novell NetWare</td></tr>
+<tr><td>Mobile OS</td><td>Touch, battery, sensor aur app-based</td><td>Android, iOS</td></tr>
+<tr><td>Embedded OS</td><td>Fixed device ke andar chhota OS</td><td>Washing machine, smart TV</td></tr>
+</table>
+
+<h4>System Programs (ye OS ke saath aate hain)</h4>
+<ul>
+  <li><b>Loader:</b> Program ko disk se memory me load karta hai.</li>
+  <li><b>Linker:</b> Alag-alag compiled modules ko jodkar ek program banata hai.</li>
+  <li><b>Utility programs:</b> Backup, disk defragmenter, antivirus, compression (WinZip/WinRAR), file manager.</li>
+  <li><b>Device drivers:</b> Printer/scanner/graphics card ko OS se baat karwana.</li>
+  <li><b>Compiler/Assembler/Interpreter:</b> Language translator (neeche detail me).</li>
+  <li><b>Bootstrap/BIOS:</b> Start-up ke waqt system check (POST) aur OS load.</li>
+</ul>
+
+<h3>3.3 Popular Operating Systems (DOS, UNIX, LINUX, Windows)</h3>
+<table>
+<tr><th>OS</th><th>Nature</th><th>Khaas baat</th></tr>
+<tr><td><b>MS-DOS</b> (Disk Operating System, 1981)</td><td>Single user, single tasking, CUI (command line)</td><td>Commands yaad karne padte hain — jaise DIR, COPY, DEL, MD, CD, FORMAT, TYPE, CLS. IBM PC ke saath aaya (Bill Gates/Microsoft)</td></tr>
+<tr><td><b>UNIX</b> (1969, Bell Labs)</td><td>Multi-user, multi-tasking, portable, C me likha</td><td>Server/enterprise ka baap; "everything is a file" philosophy; shell scripting; aaj bhi bank/server me</td></tr>
+<tr><td><b>LINUX</b> (1991, Linus Torvalds)</td><td>Open source, multi-user, multi-tasking</td><td>Free + customisable; distributions (Ubuntu, Fedora, CentOS, Debian); servers, Android ka core bhi Linux; India me e-governance systems par</td></tr>
+<tr><td><b>Windows</b> (Microsoft)</td><td>GUI-based, multi-tasking</td><td>Windows 95/XP/7/10/11; easy for common users; office/home ka favourite, wide software support</td></tr>
+<tr><td><b>macOS</b> (Apple)</td><td>UNIX-based GUI OS</td><td>Design, video editing, premium hardware</td></tr>
+<tr><td>Android / iOS</td><td>Mobile OS</td><td>Android (Linux kernel, Google), iOS (Apple) — apps ke through kaam</td></tr>
+</table>
+
+<h4>DOS ke important commands (practical/viva ke liye)</h4>
+<table>
+<tr><th>Command</th><th>Kaam</th></tr>
+<tr><td>DIR</td><td>Directory me files ki list</td></tr>
+<tr><td>CD / CD..</td><td>Folder me jaana / bahar aana</td></tr>
+<tr><td>MD / RD</td><td>Naya folder banane / remove karne</td></tr>
+<tr><td>COPY / DEL</td><td>File copy / delete</td></tr>
+<tr><td>REN</td><td>File ka naam badalna</td></tr>
+<tr><td>TYPE</td><td>File ka content padhna</td></tr>
+<tr><td>FORMAT</td><td>Disk format karna</td></tr>
+<tr><td>CLS</td><td>Screen clean karna</td></tr>
+</table>
+
+<h3>3.4 Language Translators &amp; Programming Languages</h3>
+<h4>Levels of Languages</h4>
+<table>
+<tr><th>Language</th><th>Level</th><th>Kaisi hoti hai</th><th>Example</th></tr>
+<tr><td>Machine Language</td><td>Low (1st gen)</td><td>Sirf 0 aur 1 — hardware directly samajhta hai; fastest par likhna bahut mushkil; machine-dependent</td><td>10110000 01100001</td></tr>
+<tr><td>Assembly Language</td><td>Low (2nd gen)</td><td>Symbolic codes/mnemonics use karte hain (ADD, MOV, SUB); machine language se aasan; specific hardware ke liye</td><td>MOV AX, 5</td></tr>
+<tr><td>High Level Language</td><td>High (3rd-4th gen)</td><td>English jaisa, human-friendly; machine-independent; likhna-padhna aasan</td><td>C, C++, Java, Python, COBOL</td></tr>
+<tr><td>4GL / Very High Level</td><td>4th-5th gen</td><td>SQL, MATLAB, AI tools — kaam ka "kya" batao, "kaise" na likho</td><td>SELECT * FROM table;</td></tr>
+</table>
+
+<h4>Translators (3 types — very important table)</h4>
+<table>
+<tr><th>Translator</th><th>Kaam</th><th>Kaise translate karta hai</th><th>Speed &amp; Notes</th></tr>
+<tr><td><b>Assembler</b></td><td>Assembly language → Machine language</td><td>Line by line, symbol table ke saath</td><td>Low-level language ke liye; output = object code</td></tr>
+<tr><td><b>Compiler</b></td><td>High level → Machine language (poora program ek saath)</td><td>Poora source code scan karta hai, phir error list deta hai; phir execute</td><td><b>Fast execution</b> (translation slow), poora error list ek saath; C, C++, Java (JVM ka hybrid)</td></tr>
+<tr><td><b>Interpreter</b></td><td>High level → Machine language (line by line)</td><td>Ek line translate karke turant chala deta hai</td><td>Slow execution par debugging aasan (pehli error par ruk jaata hai); BASIC, Python, JavaScript</td></tr>
+</table>
+<div class="box b-mn"><b>Trick:</b> <b>Compiler = "Poora (Complete) exam check karke result"</b> — pura code ek baar, sab errors ek saath, chalna fast. <b>Interpreter = "Line-by-line padhkar turant sunao"</b> — pehli galti par wahin ruk jayega (chat/viva jaisa). <b>Assembler = "Assembly ka translator"</b> (A for Assembly).</div>
+
+<div class="box b-real"><b>Real life example:</b> Compiler = poori assignment check karke teacher saari mistakes ki list deti hai (ek baar me), interpret = teacher ek-ek line par ruk kar correct karti jaati hai. Pehla exam se pehle better (saara error ek baar me pata), doosra seekhne me better (turant feedback). Isliye Python (interpreter) seekhne me aasan, C (compiler) run me fast 🚀</div>
+
+<div class="box b-q"><b>Probable exam questions — Unit 3</b>
+<ol>
+  <li>Software kya hai? System aur application software me antar likhiye examples ke saath. (10)</li>
+  <li>Operating System kya hai? Iske functions aur classification likhiye. (12)</li>
+  <li>DOS, UNIX aur LINUX ko short me samjhaiye. (10)</li>
+  <li>Machine language, assembly language aur high-level language me antar likhiye. (10)</li>
+  <li>Compiler, Interpreter aur Assembler me antar likhiye. (10)</li>
+</ol></div>
+
+<div class="rev">
+<h4>⚡ Rapid Revision — Unit 3</h4>
+<ul>
+  <li>Software = system (OS, translators, utilities, drivers) + application (general, customised, utility, graphics).</li>
+  <li>OS = hardware-user interface; functions: process, memory, file, device management, security, UI, networking, error handling.</li>
+  <li>Types: batch, time-sharing, real-time, distributed, network, mobile, embedded, single/multi user-tasking.</li>
+  <li>MS-DOS (CUI, commands DIR/CD/COPY), UNIX (multi-user, server), LINUX (open source, Ubuntu/Fedora), Windows (GUI).</li>
+  <li>Languages: machine (0/1) → assembly (mnemonics) → high level (C, Python, Java).</li>
+  <li>Translators: Assembler (assembly→machine), Compiler (poora, fast run), Interpreter (line-by-line, easy debugging).</li>
+</ul>
+</div>
+
+<!-- ================== UNIT 4 ================== -->
+<h2 class="unit" id="u4">UNIT 4 — Computer Networks &amp; Internet</h2>
+
+<h3>4.1 Computer Network kya hai?</h3>
+<div class="box b-def"><b>Computer Network</b> = do ya zyada computers ka wo <b>connection</b> jo hardware (cable, Wi-Fi) aur rules (protocol) se juda hota hai — taaki wo <b>data/resource share</b> kar saken (file, printer, internet, software).</div>
+
+<h4>Objectives / Advantages of Networking</h4>
+<ul>
+  <li><b>Resource sharing:</b> Ek printer, ek internet connection, ek server — sab use kar sakte hain (cost bachti hai).</li>
+  <li><b>Communication:</b> Email, chat, video call — instant messaging.</li>
+  <li><b>File &amp; data sharing:</b> Ek jagah file rakh do, sab access kar lein.</li>
+  <li><b>Cost saving &amp; efficiency:</b> Software ki ek hi copy centrally manage ho jaati hai.</li>
+  <li><b>Backup &amp; reliability:</b> Data duplicate karke safety milti hai.</li>
+  <li><b>Centralised administration:</b> IT staff ek jagah se sab manage karta hai.</li>
+</ul>
+<h4>Disadvantages</h4>
+<ul>
+  <li>Setup cost (cables, switches, server, IT staff).</li>
+  <li>Security risk — hacking, virus, data leak.</li>
+  <li>System dependency — server down to poori company ka kaam rukta hai.</li>
+  <li>Management complex — IP, permissions, troubleshooting.</li>
+</ul>
+
+<h3>4.2 LAN, MAN aur WAN</h3>
+<table>
+<tr><th>Basis</th><th>LAN</th><th>MAN</th><th>WAN</th></tr>
+<tr><td>Full form</td><td>Local Area Network</td><td>Metropolitan Area Network</td><td>Wide Area Network</td></tr>
+<tr><td>Area</td><td>Ek room, building, campus (10 m – 1 km)</td><td>Ek sheher (1 km – 100 km)</td><td>Desh/poore world (100+ km)</td></tr>
+<tr><td>Speed</td><td>Sabse fast (100 Mbps – 10 Gbps)</td><td>Medium</td><td>Comparatively slow (par aaj fibre se fast ho raha hai)</td></tr>
+<tr><td>Ownership</td><td>Private</td><td>Private/public mix (cable operator, ISP)</td><td>Public (multiple organisations)</td></tr>
+<tr><td>Error rate</td><td>Kam</td><td>Medium</td><td>Zyada</td></tr>
+<tr><td>Cost</td><td>Kam</td><td>Medium</td><td>Bahut zyada</td></tr>
+<tr><td>Example</td><td>College computer lab, ghar ka Wi-Fi</td><td>City cable network, Metro rail's network</td><td>Internet, bank ka poore India ka network, Aadhaar system</td></tr>
+</table>
+<div class="box b-tip"><b>Extra type (bonus marks):</b> <b>PAN</b> (Personal Area Network — Bluetooth, hotspot 10m), <b>CAN</b> (Campus Area Network — college), <b>SAN</b> (Storage Area Network — data centre), <b>VPN</b> (Virtual Private Network — internet par secure tunnel, jaise office VPN).</div>
+
+<h3>4.3 Data Communication &amp; Transmission</h3>
+<table>
+<tr><th>Concept</th><th>Detail</th></tr>
+<tr><td>Transmission Modes</td><td><b>Simplex</b> (ek taraf hi — TV/radio), <b>Half duplex</b> (dono taraf par ek samay me ek — walkie-talkie), <b>Full duplex</b> (dono taraf saath — mobile call)</td></tr>
+<tr><td>Transmission Media</td><td><b>Guided (wired)</b>: Twisted pair (LAN cable/RJ45), Coaxial (cable TV), Fibre optic (super fast, light se data). <b>Unguided (wireless)</b>: Radio waves, Microwave, Infrared, Satellite, Wi-Fi, Bluetooth</td></tr>
+<tr><td>Bandwidth</td><td>Kitna data per second ja sakta hai (Mbps/Gbps) — "highway ki lanes"</td></tr>
+<tr><td>Analog vs Digital signal</td><td>Analog = continuous wave (purana telephone), Digital = 0/1 (computer)</td></tr>
+<tr><td>Modem</td><td>MOdulator + DEModulator — digital ko analog aur ulta karta hai (internet ke liye)</td></tr>
+<tr><td>Switching</td><td>Circuit switching (dedicated line — old telephone), Packet switching (data ko packets me todkar bhejna — internet)</td></tr>
+<tr><td>Protocol</td><td>Rules ka set — TCP/IP (internet), HTTP/HTTPS (web), FTP (file transfer), SMTP/POP3/IMAP (email), DNS (naam→IP)</td></tr>
+<tr><td>Devices</td><td>Hub (purana, sabko bhejta), Switch (sahi port par), Router (network ko network se jodta, internet deta), Repeater (signal boost), Bridge, Gateway, NIC (network card), Modem</td></tr>
+</table>
+
+<h3>4.4 Network Topologies (layout/structure)</h3>
+<table>
+<tr><th>Topology</th><th>Structure</th><th>Advantage</th><th>Disadvantage</th></tr>
+<tr><td>Bus</td><td>Ek single cable (backbone) par sab judte hain</td><td>Sasta, simple, cable kam</td><td>Main cable tootne par poora network down; collision zyada; troubleshooting mushkil</td></tr>
+<tr><td>Star</td><td>Sab ek central switch/hub se jude</td><td>Ek node down = baaki chalte hain; easy troubleshoot, aaj ka standard</td><td>Central device fail = poora network down; cable zyada</td></tr>
+<tr><td>Ring</td><td>Sab ek loop (ring) me — ek se doosre tak data</td><td>Equal access, predictable performance</td><td>Ek node fail = ring toot sakti hai; add/remove mushkil</td></tr>
+<tr><td>Mesh</td><td>Har node har node se jude (fully/partially)</td><td>Sabse reliable, multiple path, no single point failure</td><td>Bahut mehnga, wiring complex (internet backbone isi type ka)</td></tr>
+<tr><td>Tree / Hybrid</td><td>Star groups ko bus/backbone se jodna; ya mix topology</td><td>Bade campus ke liye flexible, scalable</td><td>Backbone fail = bada hissa down; complex</td></tr>
+</table>
+<div class="box b-real"><b>Real life example:</b> Tumhara college lab = <b>star</b> (ek switch, sab computers usse jude). Ghar ka Wi-Fi = star (router centre me). Airtel/Jio ka network = <b>mesh</b> type (kahin cable kat jaaye to data doosre raste se chal jaata hai). Ek bank ka ATM network = <b>WAN</b> with hub-spoke. Inhe dekh kar topology yaad rakho — theory rattne se better hai 👌</div>
+
+<h3>4.5 Internet Basics</h3>
+<div class="box b-def"><b>Internet</b> = <b>network of networks</b> — duniya bhar ke millions of computers ka aapsi juda hua network jo TCP/IP protocol par chalta hai. Iska koi ek malik nahi hai (decentralised), aur iske coordination ke liye organisations hain (ISOC, ICANN, IETF).</div>
+
+<table>
+<tr><th>Term</th><th>Matlab</th></tr>
+<tr><td><b>ISP</b></td><td>Internet Service Provider — internet dene wali company (Jio, Airtel, BSNL, local cable operator). Isse IP aur bandwidth milti hai</td></tr>
+<tr><td><b>IP Address</b></td><td>Har device ka unique number (jaise 192.168.1.1 — IPv4; IPv6 lamba hota hai). "Ghar ka pata"</td></tr>
+<tr><td><b>Logical vs Physical address</b></td><td><b>Physical (MAC)</b> address: hardware (NIC) me permanent, 6-byte hex (e.g. 00:1A:2B:3C:4D:5E), Layer-2 par use. <b>Logical (IP)</b> address: software se milta hai, badal sakta hai, Layer-3 par use, routing ke liye zaroori</td></tr>
+<tr><td><b>DNS</b></td><td>Domain Name System — domain naam (www.google.com) ko IP address (142.250.x.x) me badalta hai. "Internet ki phone book"</td></tr>
+<tr><td><b>URL</b></td><td>Uniform Resource Locator — webpage ka poora pata: protocol + domain + path (https://www.facebook.com/profile)</td></tr>
+<tr><td><b>HTTP vs HTTPS</b></td><td>HTTP = data plain text (unsafe), HTTPS = encrypted (SSL/TLS) — padhta hai 🔒 (banking/login me HTTPS zaroori)</td></tr>
+<tr><td><b>WWW</b></td><td>World Wide Web (Tim Berners-Lee, 1989) — internet par websites ka collection; internet ≠ web (internet hardware hai, web usme ki ek service)</td></tr>
+<tr><td>Web server &amp; Client</td><td>Client = browser (request bhejta hai), Server = website ka computer (response deta hai)</td></tr>
+<tr><td>Intranet / Extranet</td><td>Intranet = company ke andar ka private network; Extranet = share kiya hua hissa (suppliers/dealers ke liye)</td></tr>
+<tr><td>Firewall</td><td>Network ka security guard — data ko filter karke unauthorized entry rokta hai</td></tr>
+</table>
+
+<h3>4.6 Web Browsers, Search Engines &amp; Social Networking</h3>
+<table>
+<tr><th>Category</th><th>Examples + kaam</th></tr>
+<tr><td>Web Browser</td><td>Chrome, Firefox, Edge, Safari, Opera — website kholne ke liye. Features: address bar, tabs, bookmarks, history, extensions, incognito</td></tr>
+<tr><td>Search Engine</td><td>Google, Bing, Yahoo, DuckDuckGo — web par information dhoondhne ki "machine"; keyword search, images, maps, scholar</td></tr>
+<tr><td>Email service</td><td>Gmail, Outlook — letters ka digital roop; attach file, CC/BCC, folders</td></tr>
+<tr><td>Social networking</td><td>Facebook, Instagram, X (Twitter), LinkedIn, WhatsApp, YouTube — connect, share photos/videos, business promotion, job search (LinkedIn), e-commerce/selling</td></tr>
+<tr><td>E-commerce &amp; payment</td><td>Amazon, Flipkart, Meesho, Paytm, UPI, PhonePe — online buying/selling aur payment</td></tr>
+<tr><td>Cloud services</td><td>Google Drive, OneDrive, Dropbox — file storage + share; Google Docs (ms office jaisa online)</td></tr>
+</table>
+
+<h3>4.7 Email — kaise likhein (format bhi aata hai)</h3>
+<pre>Email ke parts:
+  From:      tumhara email address
+  To:        receiver ka email (ek ya zyada)
+  CC:        Carbon Copy (sabko dikhta hai ki kis-kis ko bheja)
+  BCC:       Blind CC (baaki logon ko ye naam nahi dikhta - privacy)
+  Subject:   short title (jaise "Application for fee concession")
+  Body:      Greeting -> message -> closing
+  Attachment: file (PDF/photo) - 25 MB tak mostly
+
+Sample email (leave application to Principal):
+  To: principal@college.edu
+  Subject: Application for 3 days leave (14-16 Oct)
+
+  Respected Sir/Madam,
+  I am Anshu, BBA Semester 1 student of Roll No. 21. I have fever
+  and the doctor has advised rest for three days. Kindly grant me
+  leave from 14 to 16 October 2026.
+  I will complete my pending work after returning.
+  Thank you.
+  Sincerely,
+  Anshu / BBA Sem 1 / Roll 21 / 9876543210
+
+Email ke fayde: 2 second me duniya me kahi bhi pahunch jata hai, free,
+record rehta hai, ek saath 100 logon ko, file + photo bhej sakte ho.
+Email ke nuksan: spam, phishing fraud, internet zaroori, formal tone
+ka dhyan rakhna padta hai.</pre>
+
+<div class="box b-warn"><b>Cyber safety ke 5 rules (exam me likho + khud bhi follow karo):</b> (1) Password strong + do-step verification (2FA) rakho, kisi se share na karo. (2) "Lottery jeeti hai, OTP bhejo" — ye <b>phishing</b> hai, OTP/PIN kisi ko na do (bank kabhi nahi maangta). (3) Public Wi-Fi par banking nahi. (4) Unknown link/attachment na kholo. (5) Anti-virus + regular backup (3-2-1 rule).</div>
+
+<div class="box b-q"><b>Probable exam questions — Unit 4</b>
+<ol>
+  <li>Computer network kya hai? Iske advantages aur disadvantages likhiye. (10)</li>
+  <li>LAN, MAN aur WAN me antar table ke saath likhiye. (10)</li>
+  <li>Network topology ke prakaar likhiye, kisi ek ka diagram banaiye. (10)</li>
+  <li>Internet ke basic terms samjhaiye — ISP, DNS, IP address, URL, HTTP/HTTPS. (10)</li>
+  <li>Logical address aur Physical address me antar likhiye. (5)</li>
+  <li>Email ka format likhiye aur ek leave application ka email draft kijiye. (10)</li>
+</ol></div>
+
+<div class="rev">
+<h4>⚡ Rapid Revision — Unit 4</h4>
+<ul>
+  <li>Network = resources + data sharing; benefits: sharing, communication, backup, central admin; risk: security, cost, dependency.</li>
+  <li>LAN (building) &lt; MAN (city) &lt; WAN (country/world); extra PAN, CAN, SAN, VPN.</li>
+  <li>Modes: simplex, half duplex, full duplex. Media: twisted pair, coaxial, fibre (guided); radio, microwave, satellite (unguided).</li>
+  <li>Topologies: Bus, Star (aaj standard), Ring, Mesh (most reliable), Tree/Hybrid.</li>
+  <li>Devices: Hub, Switch, Router, Modem, Repeater, Gateway, NIC, Firewall.</li>
+  <li>Protocols: TCP/IP, HTTP/HTTPS, FTP, SMTP/POP3/IMAP, DNS.</li>
+  <li>DNS = name to IP; MAC = physical address (fixed), IP = logical (badal sakta hai).</li>
+  <li>Browser (Chrome), Search engine (Google), Email format (To/CC/BCC/Subject/Body/Attachment), social networking &amp; cyber safety.</li>
+</ul>
+</div>
+
+<!-- ================== UNIT 5 ================== -->
+<h2 class="unit" id="u5">UNIT 5 — Word Processing, MS Excel &amp; PowerPoint</h2>
+
+<h3>5.1 Word Processing (MS Word / LibreOffice Writer)</h3>
+<div class="box b-def"><b>Word Processing</b> = computer par text document (letter, report, project, resume) <b>create, edit, format, save aur print</b> karne ka kaam. Software = MS Word, Google Docs, LibreOffice Writer.</div>
+
+<h4>Basic operations (steps ke saath)</h4>
+<table>
+<tr><th>Operation</th><th>Kaise karte hain</th></tr>
+<tr><td>Document banana</td><td>Word kholo → Blank document → Save (Ctrl+S) → naam do (e.g. Project.docx)</td></tr>
+<tr><td>Text edit karna</td><td>Type karo; Backspace/Delete se hataao; Ctrl+C copy, Ctrl+X cut, Ctrl+V paste, Ctrl+Z undo, Ctrl+Y redo</td></tr>
+<tr><td>Selection</td><td>Shift + arrows, Ctrl+A (poora), double click (word), triple click (paragraph)</td></tr>
+<tr><td>Formatting text</td><td>Bold (Ctrl+B), Italic (Ctrl+I), Underline (Ctrl+U), font size/type, text colour, highlight, align (left/centre/right/justify), line spacing</td></tr>
+<tr><td>Paragraph formatting</td><td>Indent, spacing, bullets &amp; numbering, borders &amp; shading, tabs</td></tr>
+<tr><td>Insert</td><td>Table, Picture, Shapes, Chart, Header/Footer, Page Number, Symbol, Date, Hyperlink, Text box, Cover page (Insert menu)</td></tr>
+<tr><td>Page setup</td><td>Page size (A4), orientation (portrait/landscape), margins, columns</td></tr>
+<tr><td>Special tools</td><td>Find &amp; Replace (Ctrl+F/Ctrl+H), Spell check (F7), Word Count, Thesaurus, Track changes (edit history), Comments</td></tr>
+<tr><td>Mail Merge</td><td>Ek letter ka template + data list (Excel/Word table) → sabko personal letter (invitations, marksheets) — Steps: Main document → Recipients → Insert fields → Finish &amp; Merge</td></tr>
+<tr><td>Print &amp; Save</td><td>Ctrl+P print, Ctrl+S save, File > Save As (PDF me bhi save kar sakte ho)</td></tr>
+</table>
+<div class="box b-real"><b>Real life example:</b> College ke function me 200 invitation card bhejne hain — naam aur address alag-alag. Haath se 200 baar type karne ke bajaye <b>Mail Merge</b>: ek template + Excel sheet me 200 naam → ek click me 200 personalised letters ready. Yahi Word ka superpower hai 👌</div>
+
+<h3>5.2 MS Excel (Spreadsheet)</h3>
+<div class="box b-def"><b>MS Excel</b> = ek <b>spreadsheet software</b> jisme data ko <b>rows aur columns</b> ke grid me rakhte hain aur calculation, chart, analysis karte hain. Har cell ek address (kai jaise B5) se pehchana jaata hai. Cell me: number, text, date, formula, function — kuch bhi rakha ja sakta hai.</div>
+
+<h4>Basic Structure</h4>
+<pre>Workbook (poori file .xlsx)
+   |-- Sheet 1 (worksheet)
+   |-- Sheet 2
+   |-- Sheet 3 ...
+Each sheet = Columns (A, B, C... IV, XFD tak) + Rows (1, 2, 3... 10,48,576 tak)
+Cell = ek box (Column + Row milakar: A1, B5, C10)
+Cell Range = A1:D10 (block)
+Active cell = jis cell par currently cursor hai
+Formula Bar = formula dikhne/edit karne wali jagah
+Name Box = aktive cell ka address</pre>
+
+<h4>Important Excel Terms</h4>
+<table>
+<tr><th>Term</th><th>Matlab</th></tr>
+<tr><td>Cell</td><td>Data rakhne ka ek box (row + column ka intersection)</td></tr>
+<tr><td>Row / Column</td><td>Horizontal line (numbers) / Vertical line (letters)</td></tr>
+<tr><td>Workbook / Worksheet</td><td>Poori file / uske andar ka ek page</td></tr>
+<tr><td>Cell Reference</td><td>Relative (A1 — copy karne par badalta hai), Absolute ($A$1 — fixed, F4 se banata hai), Mixed ($A1 or A$1)</td></tr>
+<tr><td>Formula &amp; Function</td><td>Formula = khud likhi calculation (=A1+B1); Function = ready-made (=SUM(A1:A10))</td></tr>
+<tr><td>Sort &amp; Filter</td><td>Data ko order me lagana (A-Z) / condition se data chhaantna (top 10, marks &gt; 60)</td></tr>
+<tr><td>Chart</td><td>Data ka graph — column, bar, line, pie, scatter; Insert > Charts</td></tr>
+<tr><td>Freeze Panes</td><td>Heading row ko fix karna (scroll karne par bhi dikhe)</td></tr>
+<tr><td>Conditional Formatting</td><td>Rule ke hisaab se colour (failing marks red, 90+ green)</td></tr>
+<tr><td>Data Validation</td><td>Cell me sirf allowed entry (jaise list se select karo, 0-100 marks)</td></tr>
+<tr><td>Pivot Table</td><td>Bade data ka summary table (category-wise total, average) — 30 second me report</td></tr>
+<tr><td>Print &amp; Page setup</td><td>Orientation, print area, fit to 1 page, repeat header rows</td></tr>
+</table>
+
+<h4>Common Formulas &amp; Functions (ratta maar lo — practical me aayega)</h4>
+<pre>Basic math:     =A1+B1   =A1-B1   =A1*B1   =A1/B1   =A1^2 (power)
+AutoSum:        =SUM(A1:A10)
+Average:        =AVERAGE(B2:B31)
+Count:          =COUNT(A1:A10)         (sirf numbers)
+                =COUNTA(A1:A10)        (non-empty cells)
+Max / Min:      =MAX(B2:B31)  =MIN(B2:B31)
+Round:          =ROUND(A1,2)
+Percentage:     =B2/Total*100   or  =B2/$B$10*100 (absolute ref)
+IF (condition): =IF(B2>=33,"Pass","Fail")
+IF + AND/OR:    =IF(AND(B2>=33,C2>=33),"Pass","Fail")
+Nested IF:      =IF(B2>=75,"A",IF(B2>=60,"B",IF(B2>=45,"C","D")))
+Lookup (VLOOKUP): =VLOOKUP(A2, $D$2:$F$50, 3, FALSE)
+                   (A2 ko dhoondo table D2:F50 me, 3rd column se value laao)
+SUMIF:          =SUMIF(C2:C100,"Chai",D2:D100)  (category Chai ka total)
+COUNTIF:        =COUNTIF(B2:B100,"Fail")
+Concatenate:    =A2&" "&B2  or  =CONCAT(A2,B2)
+Trim / Len:     =TRIM(A2)  =LEN(A2)
+Date:           =TODAY()  =NOW()  =YEAR(A2)
+Text join:      =TEXTJOIN(", ",TRUE,A2:A5)</pre>
+
+<div class="box b-fx"><b>Example — Marks ki sheet:</b> A: Roll, B: Naam, C: Marks1, D: Marks2, E: Total (=C2+D2), F: Percentage (=E2/$E$32*100), G: Result (=IF(E2>=66,"Pass","Fail")), H: Grade (=IF(F2>=75,"A",IF(F2>=60,"B",IF(F2>=45,"C","D")))). Sheet ban jaane par Insert > Column Chart se graph bana do — report ready ✅</div>
+<div class="box b-warn"><b>Errors ka matlab (viva me pooch sakte hain):</b> <b>#DIV/0!</b> = zero se division. <b>#NAME?</b> = function ka naam galat. <b>#VALUE!</b> = galat type (text ke saath ganit). <b>#REF!</b> = deleted cell reference. <b>#N/A</b> = lookup me value mili nahi. <b>#####</b> = column chhota hai — widen karo (galti nahi).</div>
+
+<h3>5.3 MS PowerPoint (Presentation)</h3>
+<div class="box b-def"><b>PowerPoint</b> = Microsoft ka <b>presentation software</b> jisme slides banate hain — class project, seminar, business pitch, training ke liye. Slide me text, image, chart, video, animation sab aa jaata hai.</div>
+
+<h4>Basic Steps (create → save → print)</h4>
+<pre>Step 1  New presentation kholo (Blank ya Template/Design chois)
+Step 2  Slide add karo (Home > New Slide ya Ctrl+M)
+        - Slide layouts: Title Slide, Title+Content, Two Content, Picture with Caption
+Step 3  Content daalo:
+        - Text: title box + content box (font, size, color)
+        - Insert > Picture / Chart / Table / SmartArt / Video / Shape
+Step 4  Format karo:
+        - Themes/Design (colours, fonts), Slide size (4:3 ya 16:9)
+        - Slide Master se poora design ek jagah set karo
+        - Notes me speaker points likho
+Step 5  Animation & Transition (halka rakho):
+        - Transition: slide ke beech ka effect
+        - Animation: ek slide ke andar text/image ka effect
+        - Duration + order set karo, "On Click" ya "After 2 sec"
+Step 6  Slideshow chalao:
+        - F5 = start from beginning, Shift+F5 = current slide se
+        - Slide Show > From Beginning, Presenter view
+        - B = black screen, . (dot) = white screen, Esc = exit
+Step 7  Save & export:
+        - Save as .pptx (Ctrl+S)
+        - File > Export > PDF (print/notes ke liye)
+        - Print: Page setup (handouts - 2,4,6 slides per page / outline)</pre>
+
+<div class="box b-tip"><b>Presentation Tips (marks + impression dono):</b> (1) Ek slide = ek message; 6-8 line se zyada nahi. (2) Font size 24+ (last bench ko bhi dikhe). (3) Bullet points me likho, paragraph nahi. (4) Chart/picture use karo — 1 good visual = 100 words. (5) Animation/clour ka jungle nahi. (6) Speaker ke liye notes rakho, slide par ratta nahi. (7) Time limit ka dhyan rakho — 1 slide = 1-1.5 minute. (8) Consistency: same fonts/colours poori deck me.</div>
+
+<div class="box b-real"><b>Real life example:</b> Job interview ya college seminar — same content par 2 students present karte hain. Ek ne 20 slides bhar diye text se, doosre ne 8 slides me 2 chart + 1 flow diagram + clean bullets. Examiner/interviewer ko doosra hi yaad rehta hai. Isliye kehte hain: "PowerPoint ka kaam hai tumhe support karna, replace karna nahi."</div>
+
+<h4>MS Office shortcuts — ek jagah (common for all)</h4>
+<table>
+<tr><th>Shortcut</th><th>Kaam</th></tr>
+<tr><td>Ctrl+N / Ctrl+O / Ctrl+S</td><td>New / Open / Save</td></tr>
+<tr><td>Ctrl+C / Ctrl+X / Ctrl+V</td><td>Copy / Cut / Paste</td></tr>
+<tr><td>Ctrl+Z / Ctrl+Y</td><td>Undo / Redo</td></tr>
+<tr><td>Ctrl+B / I / U</td><td>Bold / Italic / Underline</td></tr>
+<tr><td>Ctrl+A, Ctrl+F, Ctrl+P</td><td>Select All, Find, Print</td></tr>
+<tr><td>F7 (Word) / F5 (PPT)</td><td>Spell check / Slideshow start</td></tr>
+<tr><td>Alt+Tab, Ctrl+Shift+Esc</td><td>App switch / Task manager (Windows)</td></tr>
+</table>
+
+<div class="box b-q"><b>Probable exam questions — Unit 5</b>
+<ol>
+  <li>Word processing kya hai? Iski main features aur steps (create, edit, save, print) likhiye. (10)</li>
+  <li>MS Excel kya hai? Cell, row, column, workbook aur worksheet ko samjhaiye. (10)</li>
+  <li>Excel ke 10 important functions (SUM, AVERAGE, IF, COUNT...) likhiye, example ke saath. (10)</li>
+  <li>PowerPoint me presentation kaise banate hain? Steps likhiye. (10)</li>
+  <li>Presentation ke tips / ek achhi PPT ki visheshtaayein. (5)</li>
+  <li>Mail Merge kya hai, kaise karte hain? (5)</li>
+</ol></div>
+
+<div class="rev">
+<h4>⚡ Rapid Revision — Unit 5</h4>
+<ul>
+  <li>Word: text document create-edit-format-save-print; Ctrl+B/I/U, Find &amp; Replace, Spell check, Mail Merge, Insert table/picture.</li>
+  <li>Excel: Workbook &gt; Worksheet &gt; rows/columns &gt; cells; cell reference relative/absolute ($A$1).</li>
+  <li>Functions: SUM, AVERAGE, COUNT/COUNTA, MAX/MIN, IF, AND/OR, VLOOKUP, SUMIF, COUNTIF, TODAY, ROUND.</li>
+  <li>Features: Sort &amp; Filter, Conditional formatting, Data validation, Pivot table, Charts, Freeze panes.</li>
+  <li>Errors: #DIV/0!, #NAME?, #VALUE!, #REF!, #N/A, ##### .</li>
+  <li>PowerPoint: slides, layouts, theme, animation, transition, slide show (F5), save .pptx / PDF export, handouts print.</li>
+  <li>Presentation tips: 6-8 lines per slide, font 24+, visual use karo, notes rakho, consistency.</li>
+</ul>
+</div>
+
+<div class="footer">
+  📚 File 06 — Basics of Computer Fundamental &amp; Application (TCA-100T) • BBA Semester 1 • Hinglish Notes<br>
+  Baaki files: 01 (Management), 02 (Business Economics), 03 (Accounting), 04 (Business Environment), 05 (Life Skills), 07 (Viva Prep)
+</div>
+</div>
+</body>
+</html>

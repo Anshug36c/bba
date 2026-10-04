@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BBA Sem 1 - Principles & Practices of Management (CMM-102T)</title>
+<style>
+:root{--ink:#1c1c2b;--muted:#5b5b73;--brand:#075985;--brand2:#0369a1;--bg:#f0f7fb;--card:#fff;--line:#dbe9f2}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:system-ui,-apple-system,'Segoe UI',Roboto,'Noto Sans',sans-serif;background:var(--bg);color:var(--ink);line-height:1.68;font-size:16.5px}
+.wrap{max-width:980px;margin:0 auto;padding:0 18px 90px}
+header.hero{background:linear-gradient(135deg,#075985 0%,#0369a1 60%,#38bdf8 100%);color:#fff;padding:38px 20px 34px;text-align:center}
+header.hero h1{margin:0 0 8px;font-size:1.7rem;line-height:1.3}
+header.hero p{margin:4px 0;opacity:.93;font-size:.97rem}
+.badge{display:inline-block;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);padding:3px 12px;border-radius:999px;font-size:.79rem;margin:4px 3px}
+nav.toc{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 20px;margin:-26px auto 26px;box-shadow:0 8px 24px rgba(28,28,43,.10);position:relative;z-index:2}
+nav.toc h2{margin:0 0 10px;font-size:1rem;color:var(--brand);text-transform:uppercase;letter-spacing:1px}
+nav.toc a{display:inline-block;margin:3px 12px 3px 0;color:var(--brand2);text-decoration:none;font-size:.92rem;border-bottom:1px dashed #ccc}
+h2.unit{font-size:1.45rem;color:#fff;background:linear-gradient(135deg,#075985,#0369a1);padding:12px 18px;border-radius:12px;margin:48px 0 16px;box-shadow:0 6px 18px rgba(28,28,43,.22)}
+h3{font-size:1.2rem;color:var(--brand);margin:30px 0 9px;border-left:5px solid var(--brand2);padding-left:12px}
+h4{font-size:1.04rem;color:#333;margin:20px 0 7px}
+p{margin:9px 0}
+ul,ol{margin:8px 0 8px 4px;padding-left:22px}
+li{margin:4px 0}
+table{border-collapse:collapse;width:100%;margin:14px 0;background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 10px rgba(28,28,43,.07);font-size:.92rem}
+th{background:#e0f2fe;color:#075985;text-align:left;padding:9px 11px;border:1px solid var(--line);font-size:.89rem}
+td{padding:8px 11px;border:1px solid var(--line);vertical-align:top}
+tr:nth-child(even) td{background:#fbfbfe}
+code{background:#e0f2fe;padding:1.5px 6px;border-radius:5px;font-family:ui-monospace,Consolas,Menlo,monospace;font-size:.88em;color:var(--brand2)}
+pre{background:#16162e;color:#e8e8ff;padding:14px 16px;border-radius:12px;overflow-x:auto;font-family:ui-monospace,Consolas,Menlo,monospace;font-size:.85rem;line-height:1.6}
+.box{border-radius:12px;padding:13px 16px 13px 46px;margin:14px 0;position:relative;border:1px solid;font-size:.97rem}
+.box::before{position:absolute;left:13px;top:11px;font-size:1.15rem}
+.b-def{background:#eef2ff;border-color:#c7d2fe}.b-def::before{content:"📘"}
+.b-hing{background:#fff7ed;border-color:#fed7aa}.b-hing::before{content:"🗣️"}
+.b-real{background:#ecfdf5;border-color:#a7f3d0}.b-real::before{content:"🌍"}
+.b-tip{background:#fefce8;border-color:#fde68a}.b-tip::before{content:"🎯"}
+.b-warn{background:#fef2f2;border-color:#fecaca}.b-warn::before{content:"⚠️"}
+.b-mn{background:#f5f3ff;border-color:#ddd6fe}.b-mn::before{content:"🧠"}
+.b-fx{background:#f0f9ff;border-color:#bae6fd}.b-fx::before{content:"🧮"}
+.b-q{background:#fdf4ff;border-color:#f5d0fe}.b-q::before{content:"📝"}
+.b-key{background:#fffbeb;border-color:#fcd34d}.b-key::before{content:"🔑"}
+.tag{display:inline-block;background:var(--brand);color:#fff;font-size:.72rem;padding:2px 9px;border-radius:999px;margin-right:6px;letter-spacing:.4px}
+.rev{background:#16162e;color:#e8e8ff;border-radius:14px;padding:18px 20px;margin:18px 0}
+.rev h4{color:#c7d2fe;margin:0 0 8px}
+.rev li{margin:5px 0}
+.mini{font-size:.85rem;color:var(--muted)}
+.tag.alt{background:var(--brand2)}
+.footer{border-top:2px dashed var(--line);margin-top:50px;padding-top:18px;color:var(--muted);font-size:.88rem;text-align:center}
+</style>
+</head>
+<body>
+<header class="hero">
+  <h1>📊 Principles &amp; Practices of Management (CMM-102T)</h1>
+  <p>Complete Hinglish Notes • Unit 1–5 • Real-life examples + Mnemonics + Exam Qs</p>
+  <div><span class="badge">4 Credits</span><span class="badge">ESE 70 + Internal 30</span><span class="badge">DSCC Core</span></div>
+</header>
+
+<div class="wrap">
+<nav class="toc">
+  <h2>Units</h2>
+  <a href="#u1">Unit 1 — Nature &amp; Evolution of Management</a>
+  <a href="#u2">Unit 2 — Planning &amp; Decision Making</a>
+  <a href="#u3">Unit 3 — Organizing</a>
+  <a href="#u4">Unit 4 — Coordination &amp; Emerging Concepts</a>
+  <a href="#u5">Unit 5 — Direction &amp; Control</a>
+</nav>
+
+<div class="box b-tip"><b>Is subject ka raaz:</b> Management me 70% marks <b>definitions + functions + principles</b> se aate hain, 30% <b>real-life examples</b> se. Taylor, Fayol, MBO, Span of Control, Budgetary Control — ye 5 topics pakka aate hain. Har unit ke end me "Probable Questions" hain — pehle wahi karo ✅</div>
+
+<!-- ================== UNIT 1 ================== -->
+<h2 class="unit" id="u1">UNIT 1 — Nature, Functions &amp; Evolution of Management</h2>
+
+<h3>1.1 Meaning and Nature of Management</h3>
+<div class="box b-def"><b>Management</b> is the process of <b>planning, organizing, staffing, directing and controlling</b> the resources (men, money, material, machines, methods) of an organisation to achieve its goals efficiently and effectively. (Management = "getting things done through others.")</div>
+<div class="box b-hing"><b>Hinglish:</b> Management = "kaam karwana, khud karne se zyada important". Jaise ghar ki mummy 👩 — subah plan karti hai (kya banana hai), samaan organize karti hai, sabko kaam batati hai (dono ko), aur kaam ho gaya ya nahi check karti hai. Bas mummy = manager, ghar = organisation 😄</div>
+<div class="box b-real"><b>Real life:</b> (1) <b>Street vendor:</b> savere 100 samose banane ka plan (planning), thela lagana (organizing), customer se deal (directing), sale check (controlling) — 4 functions kar raha hai! (2) <b>Tata Motors:</b> 5 lakh employees ko line me chalana management hai. (3) Aapka college: principal se HOD se teacher tak — poora management structure.</div>
+<h4>Management ke Nature/Characteristics (6 points — exam me kaam aate hain)</h4>
+<table>
+  <tr><th>#</th><th>Nature</th><th>Matlab (Hinglish)</th></tr>
+  <tr><td>1</td><td><b>Universal</b></td><td>Har jagah chahiye — ghar, college, company, mandir committee sab me</td></tr>
+  <tr><td>2</td><td><b>Goal-oriented</b></td><td>Bina aim ke management bekaar — "target kya hai?" pehle decide</td></tr>
+  <tr><td>3</td><td><b>Continuous process</b></td><td>Ek din ki cheez nahi — roz planning, directing, controlling chalti rehti hai</td></tr>
+  <tr><td>4</td><td><b>Group activity</b></td><td>Akela banda manage nahi karta — kai logon ka group hota hai (isliye "through others")</td></tr>
+  <tr><td>5</td><td><b>Dynamic</b></td><td>Badalta rehta hai — market, technology, mausam ke saath (COVID me har company ne online ho gayi)</td></tr>
+  <tr><td>6</td><td><b>Both Science &amp; Art</b></td><td>Rules/theory bhi hai (science) aur practice/skill bhi chahiye (art) — aagy aayega detail me</td></tr>
+</table>
+
+<h3>1.2 Importance of Management</h3>
+<ul>
+  <li><b>Goal achievement:</b> Sahi direction me effort → target time pe pura hota hai 🎯</li>
+  <li><b>Resource ka best use:</b> Kam paise me zyada output — "waste nahi, efficient" (kaam ki quality)</li>
+  <li><b>Team work &amp; motivation:</b> Logon ko saath lana, gussa-naarazgi chhoti rakhna</li>
+  <li><b>Rapid growth &amp; expansion:</b> Structure ho to business aage badhta hai (kirana se supermarket) 📈</li>
+  <li><b>Stability &amp; survival:</b> Crisis me bhi naukri, production, cash flow — sab manage (COVID ka example)</li>
+  <li><b>Social welfare &amp; employment:</b> Achha management = fair salary, jobs, society ka fayda</li>
+</ul>
+
+<h3>1.3 Functions of Management (5 core — "POSDC" ya "POSDCORB")</h3>
+<table>
+  <tr><th>Function</th><th>Kya hota hai (Hinglish)</th><th>Example (ek dukaan se)</th></tr>
+  <tr><td><b>Planning</b></td><td>Aage kya karna hai decide karna — target, rasta, time</td><td>"Is mahine ₹1 lakh ka maal bechunga — Diwali stock kaise bharun?"</td></tr>
+  <tr><td><b>Organizing</b></td><td>Kaam baantna, resources lagana, structure banana</td><td>"Bhavya billing karega, Raman door-delivery, maal godown me rakho"</td></tr>
+  <tr><td><b>Staffing</b></td><td>Sahi banda sahi jagah — hire, train, salary, see-off</td><td>"Naya helper chahiye jo scooty chala sakta ho"</td></tr>
+  <tr><td><b>Directing</b></td><td>Commands dena, motivate karna, lead karna, communicate</td><td>"Beta fast karo, customer line me hai!" 😄</td></tr>
+  <tr><td><b>Controlling</b></td><td>Kaam check karna, galti sudharna (standards + feedback)</td><td>"Daily sale kitni hui? Stock khatam nahi hua?"</td></tr>
+</table>
+<div class="box b-mn"><b>Trick:</b> "P-O-S-D-C" = <b>P</b>lan, <b>O</b>rganize, <b>S</b>taff, <b>D</b>irect, <b>C</b>ontrol → bolo "<b>P</b>adhoge toh <b>O</b>ffice <b>S</b>e <b>D</b>irector <b>C</b>hale jaoge" 😄. Purani books me "POSDCORB" bhi hota hai (Luther Gulick): Planning, Organizing, Staffing, Directing, COordinating, Reporting, Budgeting.</div>
+
+<h3>1.4 Levels of Management</h3>
+<table>
+  <tr><th>Level</th><th>Kaun</th><th>Kaam</th><th>Example</th></tr>
+  <tr><td><b>Top Level</b> (Strategic)</td><td>Board of Directors, CEO, MD, President</td><td>Vision, policy, bade decisions, poore org ka target</td><td>"5 saal me 100 cities me paunchne hain" — CEO ka kaam</td></tr>
+  <tr><td><b>Middle Level</b> (Tactical/Executive)</td><td>HODs, Branch Manager, Department Manager</td><td>Top ke plan ko neeche implement karana, department chalana, reports</td><td>"Is branch ka monthly target 20 lakh — team ko baant do"</td></tr>
+  <tr><td><b>Lower/Supervisory</b> (Operational)</td><td>Supervisor, Foreman, Team Leader</td><td>Roz ka kaam karana, workers ko guide karna, quality check</td><td>"Aaj 50 shirts stitched honi chahiye — line chalte raho"</td></tr>
+</table>
+<div class="box b-mn"><b>Trick (pyramid yaad rakho):</b> Top = <b>Chhota + Dimaag</b> (kam log, sochna zyada) 🧠; Lower = <b>Bada + Haath</b> (zyada log, karne zyada) 💪. Middle = dono ka mel. "Top sochta hai, middle batata hai, lower karata hai."</div>
+
+<h3>1.5 Management: Science or Art?</h3>
+<table>
+  <tr><th>Basis</th><th>Management as Science 🧪</th><th>Management as Art 🎨</th></tr>
+  <tr><td>Matlab</td><td>Systematic knowledge, principles, theories (jaise Taylor ke rules)</td><td>Skill, creativity, practice, experience (har situation alag handle karna)</td></tr>
+  <tr><td>Evidence</td><td>Hawthorne experiments, time-motion studies — repeatable results</td><td>Do managers same theory se alag natije nikalte hain — kyunki log machines nahi</td></tr>
+  <tr><td>Formula</td><td>"Aise karo to aisa hoga"</td><td>"Kis se kaise baat karni hai" — ye feel aati hai</td></tr>
+</table>
+<div class="box b-key"><b>Final answer (exam me ye likho):</b> Management ek <b>"both science and art"</b> — knowledge (science) + usko apply karne ki skill (art). Ek acha doctor ko medical science aani chahiye <b>aur</b> patient handle karna bhi aana chahiye — wahi management hai. Aur kuch log ise <b>"inexact science + practice"</b> kehte hain. <br>👉 Standard likhne wala line: "Management is the oldest of arts and the youngest of sciences."</div>
+
+<h3>1.6 Functional Areas of Management</h3>
+<table>
+  <tr><th>Area</th><th>Kya dekhta hai</th><th>Example</th></tr>
+  <tr><td>Production/Operations</td><td>Kya banana hai, kaise, kitna, quality</td><td>Maruti ki assembly line 🏭</td></tr>
+  <tr><td>Marketing</td><td>Customer, price, promotion, distribution (4P)</td><td>Cadbury ki ads, discount, packaging 🍫</td></tr>
+  <tr><td>Finance</td><td>Paisa kahan se, kahan lagana, profit, hisaab</td><td>Loan lena, budget, FD 💰</td></tr>
+  <tr><td>Human Resource (HR)</td><td>Bharti, training, salary, transfer, welfare</td><td>"HR ne naya staff hire kiya" 👥</td></tr>
+  <tr><td>Purchasing/Material</td><td>Samaan khareedna, store karna</td><td>Raw material ka order 📦</td></tr>
+  <tr><td>Research &amp; Development</td><td>Naya product/improvement</td><td>Colgate ke naye flavour pe R&amp;D 🔬</td></tr>
+</table>
+
+<h3>1.7 Evolution of Management Thought — Taylor &amp; Fayol <span class="tag">⭐ Star topic</span></h3>
+<h4>(a) F.W. Taylor (1856–1915) — "Father of Scientific Management" 🛠️</h4>
+<div class="box b-def">Taylor ne management ko <b>science</b> banaya — "guess work" ki jagah experiments, measurement aur standardization. Unhone factory me (Bethelehem Steel) <b>time study, motion study</b> se sabse efficient tarika dhundha. Famous: "Ek best tareeka hota hai kaam karne ka — dhundho aur sabko sikhao."</div>
+<table>
+  <tr><th>Taylor ke 4 Principles (scientific management)</th><th>Matlab (Hinglish)</th></tr>
+  <tr><td>1. Science, not Rule of Thumb</td><td>Andaze se nahi — measurement/alag-alag methods test karke "one best way" dhundo</td></tr>
+  <tr><td>2. Harmony, not Discord</td><td>Malik aur mazdoor dushman na hain — dono ka fayda ek saath (shared prosperity)</td></tr>
+  <tr><td>3. Cooperation, not Individualism</td><td>Sab milkar kaam karo — individual hero nahi, team ka fayda</td></tr>
+  <tr><td>4. Development of Workers to their Greatest Efficiency</td><td>Worker ko train karo, right person ko right kaam do (selection + training + incentive)</td></tr>
+</table>
+<p><b>Taylor ke techniques (yaad rakho):</b> Time study (kis kaam me kitna time), Motion study (kaam ke faltu movements hatao), Standardization (tools, per day ka target), Differential piece rate (zyada kaam = zyada paisa — motivation 💰), Functional foremanship (8 bosses ka idea — par ye practically kam successful tha kyunki "8 boss" weird hai 😄).</p>
+<h4>(b) Henri Fayol (1841–1925) — "Father of Modern/General Management" 🏢</h4>
+<div class="box b-def">Fayol ne <b>poore organisation ke level</b> pe management ko dekha (Taylor ne shop-floor pe). Unhone bataya: management ke <b>5 functions</b> (Plan, Organize, Command, Coordinate, Control) aur <b>14 principles</b> jo aaj bhi har management book me padhaye jaate hain.</div>
+<table>
+  <tr><th>Fayol ke 14 Principles (yaad karne wali list)</th><th>Hinglish</th></tr>
+  <tr><td>1. Division of Work</td><td>Kaam baanto — specialization se speed + quality</td></tr>
+  <tr><td>2. Authority &amp; Responsibility</td><td>Zimmedari do to adhikar bhi do — aur dono balance me</td></tr>
+  <tr><td>3. Discipline</td><td>Niyam sabke liye — ooncha aadmi bhi exempt nahi</td></tr>
+  <tr><td>4. Unity of Command</td><td>Ek employee ka <b>ek hi boss</b> — do boss = confusion 🔀</td></tr>
+  <tr><td>5. Unity of Direction</td><td>Same goal wale kaam ka <b>ek plan, ek head</b></td></tr>
+  <tr><td>6. Subordination of Individual Interest</td><td>Mera nahi, sabka fayda pehle (personal ego side me)</td></tr>
+  <tr><td>7. Remuneration</td><td>Fair salary — na kam (gussa) na zyada (kharcha)</td></tr>
+  <tr><td>8. Centralization</td><td>Decision power kahan rahe — top pe ya baanto (situation ke hisaab se)</td></tr>
+  <tr><td>9. Scalar Chain</td><td>Officers ka chain (MD → manager → worker) — "Gang Plank" shortcut bhi allowed (emergency me direct baat)</td></tr>
+  <tr><td>10. Order</td><td>Right cheez right jagah, right banda right kaam pe</td></tr>
+  <tr><td>11. Equity</td><td>Sabke saath insaaf + izzat (kind + fair)</td></tr>
+  <tr><td>12. Stability of Tenure</td><td>Naukri me stability — aata-jata staff = bekaar results</td></tr>
+  <tr><td>13. Initiative</td><td>Naye ideas ko encourage karo (na sirf order follow karo)</td></tr>
+  <tr><td>14. Esprit de Corps</td><td>Team spirit 🫂 — "milkar jeetne ki bhavna" (union is strength)</td></tr>
+</table>
+<div class="box b-mn"><b>Trick (14 principles):</b> Groups me yaad karo — <b>(a) Kaam ke 3:</b> Division, Authority-Responsibility, Discipline • <b>(b) Boss/Hierarchy ke 4:</b> Unity of Command, Unity of Direction, Centralization, Scalar Chain • <b>(c) Logon ke 4:</b> Subordination, Remuneration, Equity, Stability • <b>(d) Spirit ke 3:</b> Order, Initiative, Esprit de Corps. Group-wise yaad karo, hilte nahi! 😎</div>
+<table>
+  <tr><th>Basis</th><th>Taylor (Scientific Management)</th><th>Fayol (Administrative Management)</th></tr>
+  <tr><td>Level</td><td>Shop floor / worker level (peeche se shuru)</td><td>Top/organisation level (upar se shuru)</td></tr>
+  <tr><td>Focus</td><td>Productivity badhana, kaam ka best tarika</td><td>Poora organisation chalana (administration)</td></tr>
+  <tr><td>Famous for</td><td>Time-motion study, differential piece rate, 4 principles</td><td>14 principles, 5 functions, 6 areas</td></tr>
+  <tr><td>Kehlate hain</td><td>"Father of Scientific Management"</td><td>"Father of Modern Management"</td></tr>
+</table>
+
+<div class="rev">
+<h4>⚡ Unit 1 — Rapid Revision</h4>
+<ul>
+  <li>Management = planning, organizing, staffing, directing, controlling (POSDC) — "getting things done through others"</li>
+  <li>Nature: Universal, Goal-oriented, Continuous, Group activity, Dynamic, Both science &amp; art</li>
+  <li>Importance: goals, resource efficiency, teamwork, growth, stability, social welfare</li>
+  <li>Levels: Top (strategic, vision) → Middle (tactical, implement) → Lower (operational, supervision)</li>
+  <li>"Management is the oldest of arts and the youngest of sciences" — both science &amp; art</li>
+  <li>Functional areas: Production, Marketing, Finance, HR, Purchasing, R&amp;D</li>
+  <li><b>Taylor:</b> Father of Scientific Management — time/motion study, differential piece rate, 4 principles (Science not rule of thumb, Harmony not discord, Cooperation not individualism, Development of workers)</li>
+  <li><b>Fayol:</b> Father of (Modern) Management — 14 principles + 5 functions; Unity of Command (ek boss), Scalar Chain, Esprit de Corps, Gang Plank</li>
+</ul>
+</div>
+<div class="box b-q"><b>Most probable exam questions — Unit 1:</b>
+<ol>
+  <li>Management kya hai? Iski nature/characteristics explain karo. (10)</li>
+  <li>Management ke functions ka varnan karo (POSDC). (10)</li>
+  <li>Management ke levels — top, middle, lower; kaam aur examples. (5–10)</li>
+  <li>"Management is both science and art" — discuss. (10)</li>
+  <li>Importance of management in modern business. (5)</li>
+  <li>F.W. Taylor ke scientific management ke principles aur techniques. (10)</li>
+  <li>Henri Fayol ke 14 principles of management. (10)</li>
+  <li>Taylor aur Fayol ke yogdan ka comparison. (10)</li>
+  <li>Short notes: Functional areas of management, Levels of management. (5×2)</li>
+</ol></div>
+
+<!-- ================== UNIT 2 ================== -->
+<h2 class="unit" id="u2">UNIT 2 — Planning &amp; Decision Making</h2>
+
+<h3>2.1 Planning — Meaning &amp; Nature</h3>
+<div class="box b-def"><b>Planning</b> is deciding <b>in advance</b> — what to do, how to do, when to do, and who will do it. Ye poore management ka <b>pehla aur base function</b> hai ("primary function"). Planning = soch kar kaam karna, na ki andaza.</div>
+<div class="box b-hing"><b>Hinglish:</b> Planning = "kaam se pehle ka soch" 🤔. Shaadi ki tayari ka example: pehle list banti hai (kya-kya chahiye), budget banta hai, pandit ji book hote hain, card chhapte hain. Agar planning nahi ki — bhandara sabji ke bina 😂. Yahi planning business me hai.</div>
+<h4>Purpose/Importance of Planning (fayde)</h4>
+<ul>
+  <li><b>Direction deta hai:</b> "kahan jaana hai" clear (kirana ka target: local delivery shuru karna)</li>
+  <li><b>Waste kam:</b> Duplicate kaam, extra kharcha bachta hai (sahi samay pe sahi saaman)</li>
+  <li><b>Uncertainty ka face:</b> Aane wale risk ke liye taiyari (monsoon me stock safe)</li>
+  <li><b>Decision-making easy:</b> Options pehle hi soch liye jaate hain</li>
+  <li><b>Control ka base:</b> Bina plan, checking kaise karoge? ("target 100, hua 60" — ye compare tabhi ho sakta hai jab target ho)</li>
+  <li><b>Motivation:</b> Clear goals team ko energy dete hain 🎯</li>
+</ul>
+<h4>Steps in Planning (5–8 steps me likho)</h4>
+<ol>
+  <li><b>Goal set karo:</b> "3 mahine me online orders shuru karne hain"</li>
+  <li><b>Reality check (premises):</b> Kitna paisa, kitna staff, market kaisa hai</li>
+  <li><b>Options dhundho:</b> Website banwao? WhatsApp catalog? Zomato/Swiggy pe jao?</li>
+  <li><b>Best option choose karo:</b> sabse faydemand, feasible</li>
+  <li><b>Detailed plan banao:</b> Kaun kya karega, kitne din me, kitna kharcha</li>
+  <li><b>Implement karo + review:</b> Chalu karo, hafta-hafte check, zarurat pe plan badlo (derived plans)</li>
+</ol>
+<div class="box b-mn"><b>Trick (steps):</b> "<b>G-O-O-B-D-I</b>" = <b>G</b>oal, <b>O</b>ptions, <b>O</b>ptimise (best chuno), <b>B</b>udget/plan, <b>D</b>o (implement), <b>I</b>nspect (review). Ya simple: "Target → Soch → Chuno → Likho → Karo → Dekho" 😄</div>
+
+<h3>2.2 Types of Plans (Objectives, Strategies, Policies, Procedures)</h3>
+<table>
+  <tr><th>Type</th><th>Matlab</th><th>Example</th></tr>
+  <tr><td><b>Objectives (Targets)</b></td><td>Aise haasil karne wale end-results — "kya paana hai"</td><td>"Is saal 25% revenue badhana"</td></tr>
+  <tr><td><b>Strategies</b></td><td>Bade goals ke liye <b>overall long-term game plan</b> aur competitive approach</td><td>"Metro cities me pehle launch karenge, phir tier-2"</td></tr>
+  <tr><td><b>Policies</b></td><td>Decision ke liye <b>general guidelines</b> — "is situation me kya karna hai"</td><td>"Naukri sirf merit se" / "Customer return 7 din me"</td></tr>
+  <tr><td><b>Procedures</b></td><td>Kaam karne ka <b>step-by-step tarika</b> (chronological order)</td><td>"Order mila → bill banao → pack → courier → follow-up"</td></tr>
+  <tr><td><b>Programmes</b></td><td>Ek bada kaam/scheme jisme kaam, time, budget fixed</td><td>"Diwali sale campaign — 15 Oct–15 Nov"</td></tr>
+  <tr><td><b>Budgets</b></td><td>Plan ka paisa wala roop (numbers)</td><td>"Marketing: ₹2,00,000; stock: ₹5,00,000"</td></tr>
+  <tr><td><b>Rules</b></td><td>Strict "karo/mat karo" — flexibility bilkul nahi</td><td>"Mobile phone factory me allowed nahi" 📵 (bilkul strict)</td></tr>
+</table>
+<div class="box b-tip"><b>Yaad rakhne wala farak (Objective-Stategy-Policy-Procedure-Rule):</b> <b>Objective</b> = kya paana hai • <b>Strategy</b> = kaise jeetna hai (long-term game plan) • <b>Policy</b> = decision ki guideline ("thodi marzi hai") • <b>Procedure</b> = steps ka order ("pehle ye, phir wo") • <b>Rule</b> = bilkul strict ("karo ya mat karo, beech ka rasta nahi"). Ye 5 ka difference exam me pakka poochha jaata hai! ✅</div>
+<p><b>Planning ke types (by level/time):</b> <b>Strategic plans</b> (top level, long-term 3–10 saal) • <b>Tactical plans</b> (middle level, 1 saal) • <b>Operational plans</b> (lower level, roz/daily–monthly). Aur time ke hisaab se: Long-range (3–5+ saal), Medium (1–3 saal), Short-term (1 saal se kam).</p>
+
+<h3>2.3 Management By Objectives (MBO) <span class="tag">⭐ Star topic</span></h3>
+<div class="box b-def"><b>MBO (Management by Objectives)</b> is a technique jisme <b>boss aur employee milkar targets decide karte hain</b> (participative goal setting), phir performance ko us criteria pe measure karke review + reward diya jaata hai. Famous book: Peter Drucker ("The Practice of Management", 1954).</div>
+<h4>MBO ka Process (5 steps — exam me poochhte hain)</h4>
+<ol>
+  <li><b>Goal setting:</b> Boss + subordinate milkar {specific + measurable} objectives banate hain (SMART: Specific, Measurable, Achievable, Realistic, Time-bound)</li>
+  <li><b>Action planning:</b> Kaise karna hai — kya kya karna hoga, kaun karega</li>
+  <li><b>Actual work (implementation):</b> Employee kaam karta hai, apne aap ko monitor bhi karta hai</li>
+  <li><b>Performance review (mid-term + final):</b> Target vs actual — fair comparison</li>
+  <li><b>Reward / Correction:</b> Acha hua to bonus/promotion; kam hua to guidance, need ho to target revise</li>
+</ol>
+<h4>MBO ke Benefits / Advantages ✔️</h4>
+<ul>
+  <li>Employee ka <b>involvement</b> — apne target khud banaye, isliye motivate 😊</li>
+  <li>"Kaam aur target" clear — confusion nahi</li>
+  <li>Performance measurement aur appraisal easy + fair (numbers me)</li>
+  <li>Communication aur relationship better (boss-employee baat karte hain)</li>
+  <li>Organisation ke goal aur individual goal ka <b>linkage</b> (sab ek direction me)</li>
+</ul>
+<h4>MBO ke Problems / Limitations ❌</h4>
+<ul>
+  <li>Time-consuming (sabke objective banane me mehnat)</li>
+  <li>Sirf measurable cheezein aati hain — creativity, teamwork jaisi cheezein ignore</li>
+  <li>Kabhi kabhi sirf <b>"numbers ka khel"</b> — log quality/ethics se samjhaute kar lete hain (target 100, saaman kharab bhi chala do 😬)</li>
+  <li>Top management support na ho to sirf paper work</li>
+  <li>Har level pe expert/skill chahiye — possible nahi hamesha</li>
+  <li>Rapid change (market badla) → target purana/outdated ho jaata hai</li>
+</ul>
+<div class="box b-real"><b>Real life:</b> IT companies me (Infosys/TCS) appraisal MBO-style hota hai — employee aur manager milkar yearly goals set karte hain, phir review. Sales teams ke "monthly target" bhi MBO ka roop hain. Aur agar aap ne khud target set kiya hai (90% laana hai), wo bhi personal MBO hai 😄</div>
+
+<h3>2.4 Decision Making</h3>
+<div class="box b-def"><b>Decision making</b> = problem/opportunity ke liye <b>options me se sahi rasta chunna</b>. Ye management ka core kaam hai — "manager = decision maker" (Peter Drucker: "Whatever a manager does, he does through decision making.")</div>
+<h4>Steps in Decision Making (7 steps)</h4>
+<ol>
+  <li><b>Problem define karo:</b> Asli problem kya hai? (sale gir gayi — kyun?)</li>
+  <li><b>Information collect karo:</b> Data, feedback, market report</li>
+  <li><b>Options banao:</b> 3–4 possible solutions (discount do, naya product, ad badhao, distributor change)</li>
+  <li><b>Options compare karo:</b> Cost, risk, time, outcome — pros/cons</li>
+  <li><b>Best option choose karo:</b> Decision! (rational choice — jo max fayda de)</li>
+  <li><b>Implement karo:</b> Team ko batao, resources lagao</li>
+  <li><b>Feedback/review:</b> Result check — theek hai to continue, warna sudhar</li>
+</ol>
+<h4>Types of Decisions</h4>
+<ul>
+  <li><b>Programmed decisions:</b> Rozana wale, rules se ho jaate hain (salary dena, attendance rule) — routine 🧾</li>
+  <li><b>Non-programmed decisions:</b> Naye/complex, har baar soch kar (naya plant lagana, corona me WFH policy) 🧠</li>
+  <li>Strategic (top-level, long-term) vs Tactical (middle) vs Operational (daily)</li>
+</ul>
+<div class="box b-mn"><b>Trick (decision steps):</b> "<b>PICCID-F</b>" nahi, simple yaad lo: "<b>P</b>roblem → <b>I</b>nfo → <b>O</b>ptions → <b>C</b>hoose → <b>I</b>mplement → <b>R</b>eview" = <b>P-I-O-C-I-R</b> → "Piyo Chir" 😄. Ya rat lo: "Soch se solution tak 7 seedhiyaan."</div>
+<div class="box b-tip"><b>Exam me decision wala question aaye to:</b> Ek real example (kirana/pharmacy/college fest) ke saath 7 steps likho — 10/10 milenge. Bina example wale answers aadhe marks dete hain 📉✔</div>
+
+<div class="rev">
+<h4>⚡ Unit 2 — Rapid Revision</h4>
+<ul>
+  <li>Planning = base function; "what, how, when, who in advance"; purpose: direction, waste kam, uncertainty, control ka base, motivation</li>
+  <li>Planning steps: Goals → Premises → Options → Best choose → Detailed plan → Implement/Review</li>
+  <li>Plan types: Objectives (kya), Strategy (long-term game plan), Policy (guideline), Procedure (steps), Programme, Budget, Rule (strict)</li>
+  <li>SMART goals: Specific, Measurable, Achievable, Realistic, Time-bound</li>
+  <li>MBO (Peter Drucker): objectives boss+employee milkar set karo → action → review → reward</li>
+  <li>MBO benefits: motivation, clarity, fair appraisal, communication • Problems: time, sirf numbers, top support</li>
+  <li>Decision making 7 steps: Problem → Info → Options → Compare → Choose → Implement → Review</li>
+  <li>Programmed (routine) vs Non-programmed (naye/complex) decisions; Strategic vs Tactical vs Operational</li>
+</ul>
+</div>
+<div class="box b-q"><b>Most probable exam questions — Unit 2:</b>
+<ol>
+  <li>Planning kya hai? Purpose/importance aur steps explain karo. (10)</li>
+  <li>Types of plans — objectives, strategies, policies, procedures aur farak batao. (10)</li>
+  <li>Planning ki limitations/pitfalls. (5)</li>
+  <li>MBO kya hai? Iska process, benefits aur problems likho. (10)</li>
+  <li>Decision making kya hai? Iske steps explain karo examples ke saath. (10)</li>
+  <li>Decision making ke types (programmed vs non-programmed). (5)</li>
+  <li>Short note: SMART goals. (5)</li>
+</ol></div>
+
+<!-- ================== UNIT 3 ================== -->
+<h2 class="unit" id="u3">UNIT 3 — Organizing</h2>
+
+<h3>3.1 Organizing &amp; Organisation — Concept</h3>
+<div class="box b-def"><b>Organizing</b> is the process of identifying and grouping work, defining responsibility &amp; authority, and establishing relationships so that people can work together effectively. <b>Organisation</b> = us process ka <b>result</b> (structure) — kaam ka baantwara aur logon ka network.</div>
+<div class="box b-hing"><b>Hinglish:</b> Organizing = "kaam ki tarkeeb lagana" 🧩 — kaun kya karega, kis ka adhikar kya hoga, kisko kis se report karna hai. Ek bade event (college fest) me 100 log kaam karte hain — koi stage, koi food, koi permission. Ye sab <b>organizing</b> hai, aur jo structure bana = <b>organisation</b>.</div>
+<h4>Objectives of Organizing</h4>
+<ul>
+  <li>Kaam ka <b>baantwara</b> (division of work) → specialization → efficiency ✅</li>
+  <li>Dobara kaam/confusion kam karna (koi khaali na baithe, koi double kaam na kare)</li>
+  <li>Resources ka sahi use (sahi banda sahi kaam pe)</li>
+  <li>Communication &amp; coordination ka rasta banana</li>
+  <li>Authority ke clear chain se speed</li>
+</ul>
+<h4>Nature/Characteristics of Organizing</h4>
+<ul>
+  <li>Group of persons (log judte hain) • Common goal • Division of work • Chain of command (hierarchy) • Coordination • Continuous process • Formal + informal dono hota hai</li>
+</ul>
+
+<h3>3.2 Types of Organisation (Structure)</h3>
+<table>
+  <tr><th>Structure</th><th>Kaisa dikhta hai</th><th>Faayda</th><th>Nuksaan</th></tr>
+  <tr><td><b>Line (Military/Simple)</b></td><td>Seedha chain — boss → worker, koi specialist staff nahi</td><td>Simple, clear command, fast decisions, discipline</td><td>Boss overloaded, specialist advice nahi, growth slow</td></tr>
+  <tr><td><b>Line &amp; Staff</b></td><td>Line officers (command) + staff specialists (advice: HR, legal, R&amp;D)</td><td>Specialists ka gyaan + clear command bhi; better decisions</td><td>Donon me ego/conflict ho sakta hai; costly</td></tr>
+  <tr><td><b>Functional</b></td><td>Kaam ke type se division — production dept, marketing dept, finance dept (har dept ka apna head)</td><td>Specialization, efficiency, kam training cost</td><td>Unity of command tootta hai (worker ke kai boss), coordination mushkil</td></tr>
+  <tr><td><b>Divisional/Product</b></td><td>Product/Region ke hisaab se alag divisions (jaise Honda: cars div, bikes div)</td><td>Har product ka focus, accountability, tez decision</td><td>Duplicate resources (har div ka apna marketing), mehnga</td></tr>
+  <tr><td><b>Matrix</b></td><td>Do aadhaar — functional + project (banda 2 boss ke under)</td><td>Project focus + specialization; flexible; bade/complex kaam</td><td>2 boss = conflict (Fayol ka unity of command toota), confusion</td></tr>
+  <tr><td>Committee</td><td>Group milkar decision (board, council)</td><td>Group wisdom, balanced decision, pooling of ideas</td><td>Slow, blame kisi pe nahi, zyada time</td></tr>
+</table>
+<div class="box b-real"><b>India se example:</b> TCS me <b>matrix</b> structure common hai — employee ka ek reporting manager (project/account) aur ek HR/functional side. Honda ka 2-wheeler and car divisions = divisional. Startup chhota = line structure. Government offices = line &amp; staff (IAS officer + expert advisors).</div>
+
+<h3>3.3 Delegation of Authority <span class="tag">⭐ Exam favourite</span></h3>
+<div class="box b-def"><b>Delegation</b> = superior apna kuch kaam/authority <b>subordinate ko dena</b> — taaki wo kaam kar sake. Delegation ke 3 elements: <b>Responsibility (kaam), Authority (adhikar), Accountability (jawabdehi)</b>.</div>
+<div class="box b-hing"><b>Hinglish:</b> Delegation = "kaam baant do" — jaise dukaan ka bhaisahab manager ko kehta hai: "tum counter sambhalo, ₹500 tak discount de sakte ho" (authority), "weekly report mujhe dena" (responsibility), aur "report galat hua to tum jawab doge" (accountability). Bina delegation ke boss dimaag se ghis jata hai 😄</div>
+<h4>Delegation ke Principles (exam me kaam aate hain)</h4>
+<ol>
+  <li><b>Authority = Responsibility:</b> Jitni zimmedari, utna hi adhikar — kam adhikar = kaam nahi hoga, zyada = misuse</li>
+  <li><b>Delegation me responsibility di ja sakti hai, accountability NAHI:</b> Boss hamesha apne boss ke saamne jawabdeh rehta hai ("bhaishaab it's on me") — bilkul finance minister jaise 😄</li>
+  <li><b>Unity of command:</b> Ek banda, ek boss</li>
+  <li><b>Clear definition:</b> Kaam, adhikar, limits saaf ho (Kitna discount de sakta hai — ₹500 ya ₹5000?)</li>
+</ol>
+<h4>Delegation ke faayde / Barriers</h4>
+<table>
+  <tr><th>Benefits ✔️</th><th>Barriers (kyun nahi hoti) ❌</th></tr>
+  <tr><td>Boss ka time bachta hai → wo important kaam kare</td><td>Boss ka "main hi karunga" ego / kisi pe bharosa nahi</td></tr>
+  <tr><td>Subordinate ka development (skills + confidence)</td><td>Subordinate ka "main kar nahi paunga" dr; galti ka dar</td></tr>
+  <tr><td>Kaam tez hota hai (decisions door tak pahunchte hain)</td><td>Poori information/system na hona</td></tr>
+  <tr><td>Motivation + satisfaction (log khush work karte hain)</td><td>Control kho dene ka dar (kaam se haath dhona pad jayega 😬)</td></tr>
+  <tr><td>Growth possible (ek aadmi sab nahi kar sakta)</td><td>Adequate reward/system ka na hona</td></tr>
+</table>
+<div class="box b-mn"><b>Trick (3 elements ka farak):</b> <b>Authority = dena</b> (badhao se mila adhikar), <b>Responsibility = lena</b> (zimmedari), <b>Accountability = jawab dena</b> (hamesha upar wale ko). "Kaam baanta ja sakta hai, jawabdehi kabhi nahi." 📌</div>
+
+<h3>3.4 Centralization vs Decentralization</h3>
+<table>
+  <tr><th>Basis</th><th>Centralization</th><th>Decentralization</th></tr>
+  <tr><td>Decision power</td><td>Top management ke haath me (ek jagah)</td><td>Neeche tak faila hua (branch manager bhi decide kar sakta hai)</td></tr>
+  <tr><td>Speed</td><td>Slow (order ka wait)</td><td>Fast (site pe hi decide)</td></tr>
+  <tr><td>Uniformity</td><td>Poori company me ek jaisa</td><td>Har unit apne hisaab se (flexible)</td></tr>
+  <tr><td>Motive</td><td>Control + uniformity</td><td>Responsibility + initiative + growth</td></tr>
+  <tr><td>Kahan suit karta</td><td>Chhota org, crisis me, strong owner</td><td>Bada org, multi-branch/multi-product</td></tr>
+  <tr><td>Example</td><td>Chhota kirana — owner hi sab decide</td><td>Dominos: har outlet ka manager staff/offer decide (to an extent)</td></tr>
+</table>
+<p><b>Note:</b> Dono ka combination hota hai practically — important (pricing, policy) central, routine (staffing, local offers) decentral. Isi ko "balanced/partial" kehte hain.</p>
+
+<h3>3.5 Span of Control (Span of Management) <span class="tag">⭐ Star topic</span></h3>
+<div class="box b-def"><b>Span of control</b> = kitne subordinates ek superior <b>effectively manage</b> kar sakta hai. Do prakaar: <b>Narrow span</b> (kam log, tall structure — hierarchy lambi) aur <b>Wide span</b> (zyada log, flat structure — hierarchy chhoti).</div>
+<pre>NARROW SPAN (kam log per boss)          WIDE SPAN (zyada log per boss)
+        Boss                                 Boss
+      /  |  \                          / / | | \ \ / / \
+    3-4 log                             8-10 log
+
+Structure: TALL (lambi hierarchy)       Structure: FLAT (chhoti hierarchy)
++ close supervision                     + kam cost (kam managers)
++ better control & communication        + fast decisions (fewer levels)
+− costly (kai managers), slow           − overloaded boss, bande unsupervised
+− decision me zyada levels              − boss 50 log manage kare = impossible</pre>
+<div class="box b-real"><b>Real life:</b> Ek classroom example — ek teacher 40 students manage kar sakta hai, 400 nahi (wide span ki limit!). Army me narrow span (ek captain 10 soldier). Startup/IT me wide span common (1 manager, 10 developers). Aure zyada levels = zyada salary cost + zyada delay. Google/Amazon ka "flat structure" idea isi span ka optimization hai 😄</div>
+<p><b>Span ko decide karne wale factors:</b> Nature of work (routine → wide span; complex/new → narrow), subordinate ki ability (skilled → wide), superior ki ability, communication system, geography, delegation ki quality. Formula yaada: "Kam span = control zyada, cost zyada; zyada span = cost kam par risk zyada."</p>
+
+<div class="rev">
+<h4>⚡ Unit 3 — Rapid Revision</h4>
+<ul>
+  <li>Organizing = kaam banana (process); Organisation = structure (result)</li>
+  <li>Objectives: division of work, no duplication, right person right job, communication, authority chain</li>
+  <li>Types: Line (simple, military), Line &amp; Staff (command + advice), Functional (kam ke type se dept), Divisional (product/region), Matrix (2 boss), Committee</li>
+  <li>Delegation = Responsibility + Authority + Accountability</li>
+  <li>Delegation principle: authority = responsibility; accountability aage nahi di ja sakti (jawabdeh hamesha upar wala)</li>
+  <li>Centralization (top pe power, slow, uniform) vs Decentralization (neeche tak power, fast, flexible)</li>
+  <li>Span of control: Narrow (kam log → tall structure, costly, close control) vs Wide (zyada log → flat structure, sasta, risk)</li>
+  <li>Span factors: nature of work, subordinate ability, communication, delegation</li>
+</ul>
+</div>
+<div class="box b-q"><b>Most probable exam questions — Unit 3:</b>
+<ol>
+  <li>Organizing kya hai? Iske objectives aur nature explain karo. (10)</li>
+  <li>Organisation ke types/structures — line, line &amp; staff, functional, matrix. (10)</li>
+  <li>Delegation of authority kya hai? Elements + principles + benefits. (10)</li>
+  <li>Authority, Responsibility aur Accountability me farak. (5)</li>
+  <li>Centralization vs Decentralization — difference + merits/demerits. (10)</li>
+  <li>Span of Control kya hai? Narrow vs Wide span, factors jo span decide karte hain. (10)</li>
+  <li>Functional organisation ke advantages/disadvantages. (5)</li>
+</ol></div>
+
+<!-- ================== UNIT 4 ================== -->
+<h2 class="unit" id="u4">UNIT 4 — Coordination &amp; Emerging Concepts</h2>
+
+<h3>4.1 Coordination — Meaning &amp; Characteristics</h3>
+<div class="box b-def"><b>Coordination</b> = different departments, people aur activities ko <b>milkar, ek saath, ek direction me</b> chalta rakhna taaki common goal achieve ho. Isse "<b>sangathan ka saar (essence)</b>" kehte hain — sabhi functions (planning, organizing, directing...) me sama hi hota hai.</div>
+<div class="box b-hing"><b>Hinglish:</b> Coordination = "sabke kaam me taalamel (tuning)" 🎻. Orchestra ka example: flute wala tez bajaye, tabla wala dheere — bas sur bigad gaya! Sab ek hi lay (goal) me hone chahiye. College fest me food team, stage team, permission team — sab aapas me coordinate na karein to stage bina permission wala 😂</div>
+<h4>Characteristics of Coordination</h4>
+<ul>
+  <li>Unity of action — sab ek maqsad ki taraf (dono haath ek kaam me)</li>
+  <li>Continuous process — project khatam hone tak, roz</li>
+  <li>Group effort — individual nahi, team ka coordination</li>
+  <li>Essence of management — har function me andar included</li>
+  <li>Deliberate/conscious — khud se karna padta hai, khud ba khud nahi hota</li>
+  <li>Integrates diverse activities — alag-alag kaam ko jodna 👥</li>
+</ul>
+
+<h3>4.2 Coordination vs Cooperation — Aur "Coordination as the Essence of Management"</h3>
+<table>
+  <tr><th>Coordination</th><th>Cooperation</th></tr>
+  <tr><td>Ek <b>process/technique</b> hai — kaam ka taalamel</td><td>Ek <b>attitude/vyavhaar</b> hai — milkar kaam karne ki bhavna</td></tr>
+  <tr><td>Order/plan se banaya jata hai (system)</td><td>Swayam se, apni marzi se hota hai (willingness)</td></tr>
+  <tr><td>Result: unity of action</td><td>Result: team spirit, cooperation</td></tr>
+  <tr><td>Manager <b>karta/karvata</b> hai (deliberate)</td><td>Log <b>karte hain</b> (voluntary)</td></tr>
+</table>
+<div class="box b-key"><b>Exam favourite line:</b> "<b>Coordination is the essence of management</b>" — kyunki ye har function ke andar hota hai: planning me alag-alag plans ka mel, organizing me kaam ka juice, staffing me right bande ka matching, directing me instructions ka milaap, controlling me sabke results ka comparison. <b>Coordination koi alag 6th function nahi — ye sabme "sama hua" hai (pervasive/adjunct).</b> Koontz &amp; O'Donnell ne ise "the essence of management" kaha. ✅</div>
+<h4>Principles of Coordination (14 ya 10 — simple list)</h4>
+<ul>
+  <li><b>Direct contact:</b> Seedhi baat-cheet — fast + trust</li>
+  <li><b>Early start:</b> Jab plan ban raha ho tab se coordination shuru karo (baad me jodna mehnga)</li>
+  <li><b>Continuity:</b> Roz-roz (project khatam tak)</li>
+  <li><b>Reciprocal relations:</b> sabke relations ko samjho (dono taraf ka asar)</li>
+  <li><b>Self-coordination:</b> har unit apne andar bhi balance rakhe</li>
+</ul>
+<h4>Advantages &amp; Disadvantages</h4>
+<table>
+  <tr><th>Advantages ✔️</th><th>Disadvantages ❌</th></tr>
+  <tr><td>Kaam fast + smooth hota hai</td><td>Zyada meetings/communication = time kharcha</td></tr>
+  <tr><td>Waste, duplication kam</td><td>Galat coordination = group think (sab ek hi opinion, naya idea khatam 😶🌫️)</td></tr>
+  <tr><td>Team spirit + morale high</td><td>Har situation me perfect coordination costly/mehnat</td></tr>
+  <tr><td>Conflict kam, opportunities zyada</td><td>Responsibility ka chhupana ho sakta hai (galat ke liye "sab ki galti thi" 😅)</td></tr>
+  <tr><td>Goals ka achievement (targets time pe)</td><td>Slow decision-making (sabki raay-mashwara > delay)</td></tr>
+</table>
+<h4>Techniques of Coordination</h4>
+<ul>
+  <li><b>Sound planning</b> (sabko ek direction dena) • <b>Clear definitions</b> of duties • <b>Effective communication</b> — meetings, reports, email, video calls 📧</li>
+  <li><b>Leadership</b> — ek leader jo sabko jodta hai • <b>Chain of command</b> ka use • <b>Committees &amp; task teams</b> (cross-department) • <b>Liaison officers</b> (special link banda) • <b>Staff meetings/ conferences • Incentives/schemes (reward teamwork) • Voluntary coordination</b> (self-driven team spirit) • <b>Modern tools:</b> ERP, Slack, Kanban — aaj ka digital coordination 😄</li>
+</ul>
+
+<h3>4.3 Emerging Concepts in Management</h3>
+<h4>(a) TQM — Total Quality Management 🏆</h4>
+<div class="box b-def"><b>TQM</b> = poori organisation me <b>quality ko sabka kaam</b> maanna — har process, har banda, har din. Sirf final product check nahi — pehle hi galti roko ("quality by design, not by inspection"). Iso baap: W. Edwards Deming (Japan ne TQM se world-class quality banai).</div>
+<ul>
+  <li><b>Core ideas:</b> Customer focus (andar wale customer = next process bhi), continuous improvement (Kaizen — chhoti-chhoti roz sudhar), employee involvement (sabka suggestion), process approach, facts (data) pe decision, top management leadership</li>
+  <li><b>Tools (basic idea):</b> PDCA cycle (Plan-Do-Check-Act 🔁), Six Sigma (defects 3.4 per million!), 5S (Japanese — Sort, Set, Shine, Standardize, Sustain), Quality circles, Statistical Process Control</li>
+  <li><b>India me:</b> Tata Steel (Deming Prize jeeta!), Maruti, Wipro — TQM culture. "Make in India" ke 'zero defect' wala dream bhi yahi hai</li>
+</ul>
+<h4>(b) MBE — Management by Exception ⚡</h4>
+<div class="box b-def"><b>MBE</b> = manager sirf <b>"exceptional" cases pe dhyan deta hai</b> (jo normal se hatke hon) — routine kaam subordinates ko de do. Warna manager sara time chhoti cheezon me jayega. (Kisi books me isko "Management by Exception" = control technique bhi kehte hain.)</div>
+<ul>
+  <li>Rule: "Chhoti baatein ignore karo, bhaari cheezon pe kilk karo"</li>
+  <li>Fayde: Manager ka time important kaam pe bache, delegation zyada, decision fast, motivation better (log apne kaam ke maalik bante hain)</li>
+  <li>Nuksaan: agar exception ka criteria galat set karo (kabhi kuch important miss ho jaye — "jo chhota laga tha wo bomb tha" 😬)</li>
+  <li><b>Example:</b> Dukaan ka boss — roz ke ₹50-₹100 wale bill khud check nahi karta, sirf ₹10,000+ ya risky customers pe dhyan. Bank ka SMS alert system — "balance kam hua to message aayega" = exception reporting 😄</li>
+</ul>
+<h4>(c) Core Competency 💎</h4>
+<div class="box b-def"><b>Core competency</b> = wo <b>khaas strength/skill</b> jo ek company ko doosron se alag (aur ahead) banati hai — copy karna mushkil, customer value deti hai, aur kai products me use hoti hai (Prahalad &amp; Hamel ka concept, 1990).</div>
+<ul>
+  <li><b>3 test:</b> (1) Customer value deti hai (2) Competitors copy nahi kar pate (3) Naye products me phailai ja sakti hai</li>
+  <li><b>Examples:</b> Honda = <b>engine</b> (car, bike, generator, lawn-mower — sab me wahi competency 🔧); Sony = miniaturization; Tata = trust + scale; Google = search/algorithm; Amul = milk cold-chain; Zomato = delivery network 🛵</li>
+  <li><b>Business ka funda:</b> Jo aap best karte ho, wahi pe focus karo — baaki outsource/partner (Core vs Context: context = sab companies ko karna padta hai, core = aapka farak)</li>
+</ul>
+<h4>(d) CSR — Corporate Social Responsibility 🤝</h4>
+<div class="box b-def"><b>CSR</b> = company ka apne <b>profit ke saath-saath society aur environment ke liye zimmedari</b> nibhana — community, employees, environment, customers sabka khayal. "Sirf shareholder nahi, <b>stakeholders</b> sab ka fayda."</div>
+<ul>
+  <li><b>Areas:</b> Education (school/tuition support), environment (plantation, water), health (camps/blood donation), skill development (training), women empowerment, disaster relief, sports/culture 🎗️</li>
+  <li><b>India me kanoon:</b> Companies Act 2013 — bade companies (net profit ≥ ₹5 crore etc.) ko <b>2% average net profit CSR pe kharch karna HOTA hai</b> — India duniya ka pehla desh jisne CSR ko compulsory banaya! ✅</li>
+  <li><b>Examples:</b> Tata Trusts (hospitals, education), Infosys Foundation (libraries, health), Amul (farmers welfare), Reliance Foundation (schools). Aur "Swachh Bharat" me companies ka saamuhik contribution 🧹</li>
+  <li><b>CSR ka fayda company ko bhi:</b> Image/reputation, customer trust, employee pride (kaam ka maza), long-term sustainability ("give back to society" = business ka license to operate)</li>
+</ul>
+<div class="box b-mn"><b>Trick (4 emerging concepts):</b> "<b>T-M-C-C</b>" = <b>T</b>QM (quality sabka kaam), <b>M</b>BE (sirf exception pe dhyan), <b>C</b>ore competency (apni khaas taakat), <b>C</b>SR (samaj ke liye zimmedari) → bol kar yaad karo "TMCC — Technical Management Ki Chaabi" 😄</div>
+
+<div class="rev">
+<h4>⚡ Unit 4 — Rapid Revision</h4>
+<ul>
+  <li>Coordination = sab kaam ka taalamel ek maqsad ke liye; "essence of management" (har function me andar)</li>
+  <li>Characteristics: unity of action, continuous, group effort, deliberate, integrative</li>
+  <li>Coordination (process/technique, manager karwata) ≠ Cooperation (attitude, log khud karte hain)</li>
+  <li>Principles: direct contact, early start, continuity, reciprocal relations, self-coordination</li>
+  <li>Techniques: planning, communication, meetings, committees, liaison officer, incentives, ERP tools</li>
+  <li><b>TQM:</b> quality sabka kaam; customer focus, Kaizen (continuous improvement), PDCA, Six Sigma, 5S; Deming ka naam</li>
+  <li><b>MBE:</b> sirf exceptional cases pe dhyan; routine delegate — manager ka time bachta hai</li>
+  <li><b>Core Competency:</b> khaas strength — Honda=engine, Google=search, Amul=milk chain; 3 tests (value, hard to copy, multiple products)</li>
+  <li><b>CSR:</b> society ke liye zimmedari; Companies Act 2013 → 2% profit mandatory (India pehla desh!)</li>
+</ul>
+</div>
+<div class="box b-q"><b>Most probable exam questions — Unit 4:</b>
+<ol>
+  <li>Coordination kya hai? Meaning, characteristics aur importance explain karo. (10)</li>
+  <li>"Coordination is the essence of management" — vyaakhya karo. (10)</li>
+  <li>Coordination aur cooperation me difference. (5)</li>
+  <li>Principles/techniques of coordination. (10)</li>
+  <li>Coordination ke advantages aur disadvantages. (5)</li>
+  <li>TQM kya hai? Iske principles/elements. (10)</li>
+  <li>Management by Exception (MBE) — concept + example. (5)</li>
+  <li>Core competency kya hai? Examples ke saath explain karo. (10)</li>
+  <li>CSR kya hai? India me CSR law aur examples. (10)</li>
+</ol></div>
+
+<!-- ================== UNIT 5 ================== -->
+<h2 class="unit" id="u5">UNIT 5 — Direction &amp; Control</h2>
+
+<h3>5.1 Direction — Meaning, Characteristics, Elements, Importance, Principles</h3>
+<div class="box b-def"><b>Direction</b> = subordinates ko <b>instructions dena, guide karna, motivate karna aur lead karna</b> taaki wo kaam sahi tarike se karein. Ye wo function hai jo plan ko <b>action</b> me badalta hai — "planning soch hai, direction kadam hai." 🚶</div>
+<div class="box b-hing"><b>Hinglish:</b> Direction = "boss ka bolna + karwana". Jaise cricket coach — planning to management karta hai, par captain (direction) hi ground pe khiladiyon ko batata hai "isko yahan khada karo, aise bowl karo", aur hausla bhi deta hai. Bina direction ke best plan bhi kagaz pe reh jaata hai 😄</div>
+<h4>Characteristics (features)</h4>
+<ul>
+  <li>Ek <b>continuous process</b> — roz, har level pe chalti hai</li>
+  <li><b>Human-oriented</b> — machines ko nahi, logon ko direct karte hain (log hi kaam karte hain)</li>
+  <li><b>Top se neeche</b> (superior → subordinate, downward direction)</li>
+  <li><b>Executive/action function</b> — sochna nahi, karwana (plan ko execute karna)</li>
+  <li>Isme <b>leadership + motivation + communication</b> sab shaamil</li>
+  <li>Goal-oriented + creative (logon se best nikalwana)</li>
+</ul>
+<h4>Elements of Direction (4 — "SLCM" ka idea)</h4>
+<table>
+  <tr><th>Element</th><th>Matlab</th><th>Example</th></tr>
+  <tr><td><b>1. Supervision</b></td><td>Saamne dekh kar kaam karwana, guide karna (foreman/team leader)</td><td>Site engineer ka mistry ko dekhna 👷</td></tr>
+  <tr><td><b>2. Motivation</b></td><td>Kaam karne ki <b>chahat + energy</b> jagana (incentive, praise, bonus)</td><td>"Target pura to bonus milega!" 💰</td></tr>
+  <tr><td><b>3. Leadership</b></td><td>Logon ko sahi raasta dikhana, unhone follow karwaye bina danda bhi</td><td>Captain ka team ko guide karna 🏏</td></tr>
+  <tr><td><b>4. Communication</b></td><td>Instructions pahunchna — clear, sahi channel se (na backlog, na "bata hi nahi")</td><td>"Order Pad pe likho, aur WhatsApp pe confirm" 📱</td></tr>
+</table>
+<h4>Importance of Direction</h4>
+<ul>
+  <li>Plan ko <b>action me badalta hai</b> (theory → result) ✅ • Employee ka <b>kaam clear</b> hota hai (confusion nahi) • <b>Motivation + morale</b> badhta hai • <b>Coordination</b> establish karta hai • Leadership develop hoti hai • <b>Teamwork + unity</b> — sab ek direction me • Feedback ka rasta banta hai</li>
+</ul>
+<h4>Principles of Direction</h4>
+<ul>
+  <li><b>Unity of command:</b> ek banda, ek boss (Fayol wala)</li>
+  <li><b>Harmony of objectives:</b> personal goal + org goal ek saath chalein ("tumhari growth + company ki growth")</li>
+  <li><b>Maximum individual contribution:</b> har banda apni taaqat ke hisaab se contribute kare</li>
+  <li><b>Appropriate techniques:</b> situation ke hisaab se style (friendly ya strict — har banda alag 🎭)</li>
+  <li><b>Effective communication:</b> instructions saaf, poore, understandable</li>
+  <li><b>Effective leadership + follow-through:</b> leader ka accha hona + kaam ka follow-up (mangna, check karna)</li>
+</ul>
+<div class="box b-mn"><b>Trick (elements):</b> "<b>S-M-L-C</b>" = <b>S</b>upervision, <b>M</b>otivation, <b>L</b>eadership, <b>C</b>ommunication → bolo "<b>S</b>ab <b>M</b>ilke <b>L</b>og <b>C</b>halayenge" 🚀 (Directing ke 4 elements).</div>
+
+<h3>5.2 Control — Introduction &amp; Definition</h3>
+<div class="box b-def"><b>Control</b> = performance ko standards se <b>compare karna aur difference hone pe sudhaar ke kadam (corrective action) lena</b>. Isse pata chalta hai ki "plan ke hisaab se chal raha hai ya nahi." Control = measurement + comparison + correction (feedback loop).</div>
+<div class="box b-hing"><b>Hinglish (bahut simple):</b> Control = <b>"khada ho kar dekhna"</b>. Jaise mummy ne subah kaam diya, to shaam ko poochhti hai "kitna hua?" — aur agar aadha hua to aaj raat extra kaam karna padega 😄. Control ke bina plan sirf kagaz pe khoobsurat hota hai — hota kuch nahi.</div>
+<h4>Characteristics of Control</h4>
+<ul>
+  <li><b>Goal-oriented</b> — target ke saath compare karna hi iska kaam hai</li>
+  <li><b>Continuous process</b> — ek baar ka kaam nahi, regular cycle chalti rehti hai</li>
+  <li><b>Forward + backward looking:</b> past ka result dekhti, future ke liye sudharti hai</li>
+  <li><b>All levels</b> — top se lower tak, sab pe lagta hai</li>
+  <li>Control aur planning <b>judwa bhai</b> — planning = base, control = check (bina standard, check nahi; bina check, plan bekaar)</li>
+  <li><b>Dynamic</b> — badalte system ke saath badalta (naye tools, naye standards)</li>
+  <li>It is a <b>management function, not a police action</b> — sprit of cooperation (threat nahi, support) 👮‍♂️❌</li>
+</ul>
+<h4>Objectives &amp; Necessity (kyun zaroori hai)</h4>
+<ul>
+  <li>Plan ke hisaab se kaam ho raha hai — <b>verify</b> karna</li>
+  <li><b>Galtiyan pakadna + sudharna</b> (jaldi, kaam bigde se pehle)</li>
+  <li><b>Cost, quality, time</b> control karna (waste kam, quality high) 💰</li>
+  <li><b>Motivation + discipline</b> (jab pata hai check hoga, log serious rehte hain 😄)</li>
+  <li><b>Coordination + planning ka base</b>, future planning ke liye data</li>
+  <li>Standards ka development (kya "normal" hai, kya nahi)</li>
+</ul>
+<h4>Elements / Process of Control (4 steps — exam me diagram ke saath likho) <span class="tag">⭐</span></h4>
+<pre>STEP 1: STANDARDS SET KARO (planning se)
+  • Kya measure karna hai: sales, cost, quality, time, safety
+  • Quantitative: "10 lakh monthly sale", "0.5% se kam defect"
+  • Qualitative: "customer satisfaction high", "safety rules follow"
+          ↓
+STEP 2: ACTUAL PERFORMANCE MEASURE KARO
+  • Data collect (daily reports, sales register, machine counters, cctv)
+  • "Actual sale = 8 lakh"
+          ↓
+STEP 3: COMPARISON (Actual vs Standard)
+  • Difference (deviation) nikalo: 10 − 8 = 2 lakh kam
+  • Acceptable range (tolerance) se bahar = dhyan do (exception principle: MBE wala)
+          ↓
+STEP 4: CORRECTIVE ACTION (sudhaar)
+  • Option A: kaam ko standard pe laao (marketing badhao, staff training)
+  • Option B: standard ghalat tha to use revise karo
+  • Reason bhi dhundo (kyun kam hua?) aur dobara aisa na ho
+          ↓
+     (Feedback → planning me wapas → cycle chalta rehta hai 🔁)</pre>
+<h4>Limitations of Controlling</h4>
+<ul>
+  <li>Accurate <b>standards banana mushkil</b> (kuch cheezein measurable nahi — creativity, ethics)</li>
+  <li><b>Data/time lagta hai</b> — late report = late sudhaar</li>
+  <li>Employees ka <b>resistance</b> — "kya hum par shak hai?" (galti se boss bana dena)</li>
+  <li><b>Rapid external change</b> me control slow pad jaata (market hi badal gaya) 🌪️</li>
+  <li>Control <b>mahanga</b> ho sakta hai (poora system ka kharcha result se zyada na ho — cost-benefit sochna)</li>
+  <li>Sirf measurable pe focus = galat behaviour (numbers ke liye quality sacrifice 😬)</li>
+  <li>External factors par control nahi (mausam, government policy, Corona) — sirf react kar sakte ho</li>
+</ul>
+
+<h3>5.3 Budget &amp; Budgetary Control</h3>
+<div class="box b-def"><b>Budget</b> = ek <b>financial plan</b> — ek period ka estimated income aur expenditure (numbers me likha plan). <b>Budgetary Control</b> = budgets banakar <b>actual vs budget compare karke sudhaar</b> karne ki technique — control ka sabse common tool.</div>
+<div class="box b-hing"><b>Hinglish:</b> Budget = "mahine ka kharcha plan" 📝 (ghar ka: ₹5,000 khana, ₹2,000 recharge...). Budgetary control = "kharcha hua kitna, plan se kitna hata, kyun?" — aur agli baar sudhaar. Har ghar, har dukaan, har company yahi karti hai 😄</div>
+<h4>Types of Budgets (jaan pehchaan)</h4>
+<table>
+  <tr><th>Type</th><th>Kya cover karta</th></tr>
+  <tr><td><b>Sales Budget</b></td><td>Kitna bech-na hai (quantity × price) — sabse pehla/important (baaki isi pe depend) 📈</td></tr>
+  <tr><td><b>Production Budget</b></td><td>Kitna banana hai (sales + closing stock − opening stock)</td></tr>
+  <tr><td><b>Purchase/Material Budget</b></td><td>Kya-kya, kitna khareed-na hai raw material</td></tr>
+  <tr><td><b>Cash Budget</b></td><td>Paisa kab aayega, kab jaayega (cash flow ka plan) 💰</td></tr>
+  <tr><td><b>Capital Expenditure Budget</b></td><td>Machine, building, bade investment ka plan (long-term)</td></tr>
+  <tr><td><b>Master Budget</b></td><td>Saare budgets ka summary (poori company ka ek financial picture)</td></tr>
+  <tr><td><b>Zero-Base Budget</b></td><td>Pichhle saal se nahi — har baar zero se justify karo "ye kharcha kyun chahiye?" (saste/ zaroori kaam)</td></tr>
+</table>
+<h4>Process of Budgetary Control</h4>
+<ol>
+  <li>Objectives &amp; forecast tay karo (kitna bechna hai) • 2. Budget banane ki responsibility fix karo (budget officer/committee) • 3. Budget prepare karo (departments apna-apna) • 4. Approval (top management) • 5. Actual performance record • 6. Compare (actual vs budget → variance) • 7. Sudhaar + revised budget • 8. Follow-up/monitor</li>
+</ol>
+<h4>Advantages &amp; Limitations of Budgetary Control</h4>
+<table>
+  <tr><th>Advantages ✔️</th><th>Limitations ❌</th></tr>
+  <tr><td>Planning + control ek saath (aaj ka plan, kal ka check)</td><td>Sirf numbers — "budget ke liye kaam" galat outlook</td></tr>
+  <tr><td>Kharcha control + waste kam, profit badhta</td><td>Estimates/forecast pe depend — andaza galat = sab bekaar</td></tr>
+  <tr><td>Coordination (sabka budget ek master me milta)</td><td>Flexibility kam (market badla, budget purana)</td></tr>
+  <tr><td>Accountability clear (kaun kitna kharch karega)</td><td>Time + cost lagta hai (chhote business ke liye heavy)</td></tr>
+  <tr><td>Targets se motivation (numbers wala zidd 😄)</td><td>Employees ko "rok" jaisa lag sakta (initiative dabna)</td></tr>
+  <tr><td>Performance evaluation aasan (variance report)</td><td>Sirf measurable cheezein aati (quality/service baaki)</td></tr>
+</table>
+<div class="box b-real"><b>Real life:</b> Government ka poora "Annual Budget" (Feb me Finance Minister) — yahi budgetary control ka bada roop. Ghar ka mahine wala budget, college fest ka budget, startup ka "runway" calculation — sab. Aur exam aayenge: "budget ek plan hai jo numbers me likha jaye" — ye line yaad rakho ✅</div>
+<div class="box b-mn"><b>Trick (Control process 4 steps):</b> "<b>S-M-C-A</b>" = <b>S</b>tandards → <b>M</b>easure → <b>C</b>ompare → <b>A</b>ct (corrective). Bolo "<b>S</b>harma ji <b>M</b>ehnat <b>C</b>hodo, <b>A</b>b control karo" 😄. Aur Planning-Control relation: "Planning = Standard set; Control = Standard check."</div>
+
+<div class="rev">
+<h4>⚡ Unit 5 — Rapid Revision</h4>
+<ul>
+  <li>Direction = guide + motivate + lead + instruct (plan ko action me badalta hai)</li>
+  <li>Elements of direction: Supervision, Motivation, Leadership, Communication (S-M-L-C)</li>
+  <li>Principles of direction: unity of command, harmony of objectives, max contribution, appropriate techniques, effective communication, leadership + follow through</li>
+  <li>Control = Standards → Measure → Compare → Corrective action (S-M-C-A)</li>
+  <li>Characteristics: goal-oriented, continuous, forward+backward looking, all levels, planning ka judwa</li>
+  <li>Limitations: standards banana mushkil, resistance, cost, external factors, sirf measurable ka issue</li>
+  <li>Budget = financial plan in numbers; Budgetary control = actual vs budget compare + sudhaar</li>
+  <li>Budget types: Sales (pehla), Production, Purchase, Cash, Capital, Master, Zero-Base</li>
+  <li>Budgetary control ke fayde: planning+control, waste kam, coordination; limits: numbers ka khel, forecast-dependent, rigidity</li>
+</ul>
+</div>
+<div class="box b-q"><b>Most probable exam questions — Unit 5:</b>
+<ol>
+  <li>Direction kya hai? Iski characteristics, elements aur importance explain karo. (10)</li>
+  <li>Direction ke principles likho. (5–10)</li>
+  <li>Motivation aur Leadership ka direction me role. (5)</li>
+  <li>Control kya hai? Definition, characteristics aur objectives. (10)</li>
+  <li>Controlling ka process diagram ke saath explain karo. (10)</li>
+  <li>Controlling ki limitations/barriers. (5)</li>
+  <li>Planning aur controlling ka relationship. (5)</li>
+  <li>Budget kya hai? Types of budgets explain karo. (10)</li>
+  <li>Budgetary control kya hai? Advantage aur limitations. (10)</li>
+</ol></div>
+
+<div class="box b-key"><b>🏁 Poora Paper CMM-102T — Final strategy:</b> Ye subject <b>definitions + lists + diagrams</b> ka subject hai — 100% scoring! Priority topics: (1) Management functions + levels (2) Taylor ke 4 principles + Fayol ke 14 principles (3) Planning steps + MBO process (4) Organizing: delegation (3 elements), span of control (narrow vs wide) (5) Coordination = essence of management (6) TQM/MBE/Core Competency/CSR (7) Control process (S-M-C-A) + Budgetary control. Har answer me <b>1 real-life example</b> (Tata, Honda, kirana, Gurukul...) ghusa do — extra marks pakka. 💪</div>
+
+<div class="footer">
+  📚 File 01 — Principles &amp; Practices of Management (CMM-102T) • BBA Semester 1 • Hinglish Notes<br>
+  Baaki files: 02 (Business Economics), 03 (Accounting), 04 (Business Environment), 05 (Life Skills), 06 (Computer), 07 (Viva Prep) — index.html se sab kholo.
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BBA Sem 1 - Business Environment (CMM-104T)</title>
+<style>
+:root{--ink:#1c1c2b;--muted:#5b5b73;--brand:#134e4a;--brand2:#0f766e;--bg:#f0fbfa;--card:#fff;--line:#cdeeea}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:system-ui,-apple-system,'Segoe UI',Roboto,'Noto Sans',sans-serif;background:var(--bg);color:var(--ink);line-height:1.68;font-size:16.5px}
+.wrap{max-width:980px;margin:0 auto;padding:0 18px 90px}
+header.hero{background:linear-gradient(135deg,#115e59 0%,#0f766e 60%,#2dd4bf 100%);color:#fff;padding:38px 20px 34px;text-align:center}
+header.hero h1{margin:0 0 8px;font-size:1.7rem;line-height:1.3}
+header.hero p{margin:4px 0;opacity:.93;font-size:.97rem}
+.badge{display:inline-block;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);padding:3px 12px;border-radius:999px;font-size:.79rem;margin:4px 3px}
+nav.toc{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 20px;margin:-26px auto 26px;box-shadow:0 8px 24px rgba(28,28,43,.10);position:relative;z-index:2}
+nav.toc h2{margin:0 0 10px;font-size:1rem;color:var(--brand);text-transform:uppercase;letter-spacing:1px}
+nav.toc a{display:inline-block;margin:3px 12px 3px 0;color:var(--brand2);text-decoration:none;font-size:.92rem;border-bottom:1px dashed #ccc}
+h2.unit{font-size:1.45rem;color:#fff;background:linear-gradient(135deg,#115e59,#0f766e);padding:12px 18px;border-radius:12px;margin:48px 0 16px;box-shadow:0 6px 18px rgba(28,28,43,.22)}
+h3{font-size:1.2rem;color:var(--brand);margin:30px 0 9px;border-left:5px solid var(--brand2);padding-left:12px}
+h4{font-size:1.04rem;color:#333;margin:20px 0 7px}
+p{margin:9px 0}
+ul,ol{margin:8px 0 8px 4px;padding-left:22px}
+li{margin:4px 0}
+table{border-collapse:collapse;width:100%;margin:14px 0;background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 10px rgba(28,28,43,.07);font-size:.92rem}
+th{background:#ccfbf1;color:#134e4a;text-align:left;padding:9px 11px;border:1px solid var(--line);font-size:.89rem}
+td{padding:8px 11px;border:1px solid var(--line);vertical-align:top}
+tr:nth-child(even) td{background:#fbfbfe}
+code{background:#ccfbf1;padding:1.5px 6px;border-radius:5px;font-family:ui-monospace,Consolas,Menlo,monospace;font-size:.88em;color:var(--brand2)}
+pre{background:#16162e;color:#e8e8ff;padding:14px 16px;border-radius:12px;overflow-x:auto;font-family:ui-monospace,Consolas,Menlo,monospace;font-size:.85rem;line-height:1.6}
+.box{border-radius:12px;padding:13px 16px 13px 46px;margin:14px 0;position:relative;border:1px solid;font-size:.97rem}
+.box::before{position:absolute;left:13px;top:11px;font-size:1.15rem}
+.b-def{background:#eef2ff;border-color:#c7d2fe}.b-def::before{content:"📘"}
+.b-hing{background:#fff7ed;border-color:#fed7aa}.b-hing::before{content:"🗣️"}
+.b-real{background:#ecfdf5;border-color:#a7f3d0}.b-real::before{content:"🌍"}
+.b-tip{background:#fefce8;border-color:#fde68a}.b-tip::before{content:"🎯"}
+.b-warn{background:#fef2f2;border-color:#fecaca}.b-warn::before{content:"⚠️"}
+.b-mn{background:#f5f3ff;border-color:#ddd6fe}.b-mn::before{content:"🧠"}
+.b-fx{background:#f0f9ff;border-color:#bae6fd}.b-fx::before{content:"🧮"}
+.b-q{background:#fdf4ff;border-color:#f5d0fe}.b-q::before{content:"📝"}
+.b-key{background:#fffbeb;border-color:#fcd34d}.b-key::before{content:"🔑"}
+.tag{display:inline-block;background:var(--brand);color:#fff;font-size:.72rem;padding:2px 9px;border-radius:999px;margin-right:6px;letter-spacing:.4px}
+.rev{background:#16162e;color:#e8e8ff;border-radius:14px;padding:18px 20px;margin:18px 0}
+.rev h4{color:#c7d2fe;margin:0 0 8px}
+.rev li{margin:5px 0}
+.mini{font-size:.85rem;color:var(--muted)}
+.tag.alt{background:var(--brand2)}
+.footer{border-top:2px dashed var(--line);margin-top:50px;padding-top:18px;color:var(--muted);font-size:.88rem;text-align:center}
+</style>
+</head>
+<body>
+<header class="hero">
+  <h1>🌐 Business Environment (CMM-104T)</h1>
+  <p>Complete Hinglish Notes • Unit 1–5 • Schemes, examples + exam-ready points</p>
+  <div><span class="badge">4 Credits</span><span class="badge">48 Hours</span><span class="badge">ESE 70 + Internal 30</span><span class="badge">DSCC</span></div>
+</header>
+
+<div class="wrap">
+<nav class="toc">
+  <h2>Units</h2>
+  <a href="#u1">Unit 1 — Introduction to Business Environment</a>
+  <a href="#u2">Unit 2 — Economic Environment</a>
+  <a href="#u3">Unit 3 — Technological Environment</a>
+  <a href="#u4">Unit 4 — Global Environment</a>
+  <a href="#u5">Unit 5 — Political &amp; Legal Environment</a>
+</nav>
+
+<div class="box b-tip"><b>Is subject ka raaz:</b> Business Environment theory subject hai — par <b>examples + latest schemes + real company names</b> likhne se 70 me se 60+ aaram se aate hain. Ye topic pakka aata hai: <b>Business Environment ki nature, PESTLE/techniques of scanning, Economic reforms 1991, Liberalisation-Privatisation-Globalisation, WTO, FDI route, MRTP vs Competition Act, FEMA</b>. Har answer me 1-2 real example (Amul, TATA, Zomato, Maruti, Paytm) zaroor dalo ✅</div>
+
+<!-- ================== UNIT 1 ================== -->
+<h2 class="unit" id="u1">UNIT 1 — Introduction to Business Environment</h2>
+
+<h3>1.1 Business kya hai? Aur uske around kya-kya hai?</h3>
+<p>Kalpana karo tumne Kichha me ek chhota "Tea Point" khola. Chahe aap kitna achha chai banao — agar aas-paas road ki nayi highway ban gayi aur grahak nikal gaye, ya bahanabai ho gayi, ya customers ab "cold coffee" maang rahe hain aur tumhare paas sirf chai hai — to tumhara business bina kisi galti ke dub jayega. Ye "aas-paas ki cheezein" hi <b>Business Environment</b> hai.</p>
+
+<div class="box b-def"><b>Business Environment</b> = wo <b>sabhi internal aur external factors</b> (economic, social, political, legal, technological, natural, global) ka <b>sum total</b> jo kisi business ke <b>functioning, decisions aur growth</b> ko <b>affect</b> karte hain aur jin par business ka <b>control bahut kam ya zero</b> hota hai.</div>
+
+<p>Famous definition (Arthur M. Weimer): "Business environment encompasses the <b>climate or set of conditions</b> — economic, social, political, or institutional — in which business operations are conducted."</p>
+
+<div class="box b-hing"><b>Hinglish me:</b> Business = machhli 🐟 aur Environment = paani 🌊. Machhli paani ki quality nahi badal sakti, par uske hisaab se tairakar zinda reh sakti hai. Business bhi environment ko nahi badal sakta — usko <b>samajhkar apne aap ko dhaalna</b> padta hai. Isliye kehte hain: "Business jitna environment-savvy hoga, utna successful hoga."</div>
+
+<h3>1.2 Nature / Characteristics of Business Environment</h3>
+<table>
+<tr><th>Feature</th><th>Matlab + example</th></tr>
+<tr><td>1. Sum total of all factors</td><td>Sirf ek cheez nahi — economic + social + legal + tech + political sab mila hua</td></tr>
+<tr><td>2. Dynamic in nature</td><td>Roz badalta hai — 5 saal pehle UPI nahi thi, aaj bina UPI shop adhoori hai</td></tr>
+<tr><td>3. Uncertain</td><td>Aage kya hoga pura bharosa nahi — COVID ne travel industry ek dum rok di</td></tr>
+<tr><td>4. Complex</td><td>Hazaaron factors ek saath kaam karte hain; ek se doosre par asar</td></tr>
+<tr><td>5. Relative / not same for all</td><td>Ek hi environment ka asar alag-alag firms par alag — Tata ko bandwidth mili, chhoti courier firm ko chot</td></tr>
+<tr><td>6. Beyond control of business</td><td>Business tax rate, monsoon, news policies ko nahi badal sakta</td></tr>
+<tr><td>7. Far-reaching impact</td><td>Ek policy (GST) se poori supply chain ka design badal jaata hai</td></tr>
+<tr><td>8. Includes both internal + external</td><td>Internal: employees, culture, structure. External: customers, government, technology, competitors</td></tr>
+</table>
+
+<div class="box b-mn"><b>Trick — "S-D-U-C-R-B-F-I":</b> <b>S</b>um total, <b>D</b>ynamic, <b>U</b>ncertain, <b>C</b>omplex, <b>R</b>elative, <b>B</b>eyond control, <b>F</b>ar-reaching, <b>I</b>nternal+external. Isko 2-2 karke yaad karo: "SUCR-BFI".</div>
+
+<h3>1.3 Importance of Business Environment</h3>
+<ol>
+  <li><b>Opportunity identify karna:</b> Government ne EV subsidy di → Tata, Ola, Ather ko bada mauka mila.</li>
+  <li><b>Threat pehchan kar bachna:</b> Ola/Uber ne aa kar local taxi business ko chunauti di — jo pehle samjha, wo bacha.</li>
+  <li><b>Resource ka sahi use:</b> Kis state me plant lagaye (land, labour, subsidy) — environment study se pata chalta.</li>
+  <li><b>Planning aur policy making:</b> 5 saal ka plan environment ke andaze par banta hai.</li>
+  <li><b>Change se pehle tayyari:</b> GST aane se pehle software update kar liya — aise firms ko dhakka nahi laga.</li>
+  <li><b>Competitive edge:</b> Maruti ne small-car + service network par focus kiya kyunki Indian environment padha tha.</li>
+  <li><b>Image &amp; goodwill:</b> CSR, green manufacturing se brand value badhti hai.</li>
+  <li><b>Global market me survive:</b> Japan ke keizen standards bharat me aane se auto parts industry upar uthi.</li>
+</ol>
+
+<div class="box b-real"><b>Real life example — Amul (GCMMF):</b> 1946 me Kaira district ke doodh wale farmers ko private dairies ka exploitation dikha (social + economic environment). Family ne milk cooperative banaye — environment samajh kar model banaya. Aaj Amul ₹80,000+ crore turnover ka brand hai, aur "White Revolution" ka hero. Same doodh, same gaay — sirf environment ka sahi padho aur system badla. Yehi Business environment ka practical example hai 🐄</div>
+
+<h3>1.4 Dimensions / Components of Business Environment</h3>
+<p>Question aata hai: "Business environment ke components likhiye." Isko diagram ki tarah likho:</p>
+
+<pre>BUSINESS ENVIRONMENT
+
+|-- INTERNAL ENVIRONMENT (andar, control me)
+|     1. Value system   2. Mission/Objectives   3. Management structure
+|     4. Internal power relationships   5. Human resources   6. Company culture
+|
+|-- EXTERNAL ENVIRONMENT (bahar, control me nahi)
+      A. MICRO / Task environment (direct effect, thoda influence possible)
+         1. Customers  2. Competitors  3. Suppliers  4. Public/Media
+         5. Intermediaries (distributor, dealer)  6. Financiers (bank, investors)
+      B. MACRO environment (sab firms par asar, control zero)
+         1. ECONOMIC   -> GDP, inflation, interest rate, income, taxation
+         2. SOCIAL     -> culture, family, education, urbanisation, health, values
+         3. POLITICAL  -> govt stability, ideology, policy stand, trade unions
+         4. LEGAL      -> laws, MRTP, FEMA, Consumer Protection, Companies Act
+         5. TECHNOLOGICAL -> R&D, innovation, automation, obsolescence
+         6. NATURAL/PHYSICAL -> monsoon, climate, natural resources, pollution
+         7. DEMOGRAPHIC -> age, sex, population, rural-urban, literacy
+         8. GLOBAL/INTERNATIONAL -> WTO, IMF, FDI, exchange rate, tariffs</pre>
+
+<div class="box b-mn"><b>Yaad karne ki trick — "PESTLE + DE" (sabse famous):</b> <b>P</b>olitical, <b>E</b>conomic, <b>S</b>ocial, <b>T</b>echnological, <b>L</b>egal, <b>E</b>nvironmental/Natural + <b>D</b>emographic + International. Interview me "PESTLE analysis" bolna instant expert feel deta hai 😎</div>
+
+<h3>1.5 Environmental Scanning — "Aas-paas nazar rakhna"</h3>
+<div class="box b-def"><b>Environmental Scanning</b> = wo process jisme firm apne business ke around ki information <b>ik-athi</b> karti hai, <b>analyse</b> karti hai aur <b>future ka asar</b> predict karti hai — taaki strategy sahi bane. Isme chaar stages hote hain (kuch kitaabein 3-4, kuch 5 likhti hain).</div>
+
+<h4>Stages of Environmental Scanning</h4>
+<table>
+<tr><th>Stage</th><th>Kya hota hai</th><th>Example</th></tr>
+<tr><td>1. Scanning (general)</td><td>Broad level par environment ki information collect karna — jis me koi specific focus nahi</td><td>News, journals, annual reports padhna: "FAME scheme aa rahi hai"</td></tr>
+<tr><td>2. Monitoring</td><td>Jo important trends dikhe, unko track karna — kis direction me ja rahi hai</td><td>EV sales data har mahine follow karna</td></tr>
+<tr><td>3. Forecasting</td><td>Trends ke aadhaar par future prediction — kya hoga, kitna hoga</td><td>"2030 tak 30% vehicles EV honge"</td></tr>
+<tr><td>4. Assessment / Appraisal</td><td>Us prediction ka <b>company par kya impact</b> hoga, kya karna chahiye — yahi decision stage</td><td>"Hum battery partner dhoondein ya charging station me invest karein?"</td></tr>
+</table>
+
+<div class="box b-real"><b>Real life example:</b> 2020 me jab UPI/QR payment aaya, to Auto-rickshaw walon aur chhoti dukaanon ne "scanning" kiya (log UPI maang rahe hain), "monitoring" kiya (competitor ne QR laga diya), "forecast" kiya (cash wale customers kam honge) aur "assessment" kiya ki abhi bhi QR lagana zaroori hai. Jisne jaldi lagaya — uski bikri ruki nahi. Wahi Environmental Scanning hai, bilkul practical 😄</div>
+
+<h4>Techniques / Methods of Environmental Scanning</h4>
+<table>
+<tr><th>Technique</th><th>Kya karta hai</th></tr>
+<tr><td>SWOT Analysis</td><td>Internal Strengths &amp; Weaknesses + External Opportunities &amp; Threats — sabse famous</td></tr>
+<tr><td>PESTLE Analysis</td><td>Political, Economic, Social, Technological, Legal, Environmental factors ka study</td></tr>
+<tr><td>ETOP (Environmental Threat &amp; Opportunity Profile)</td><td>Har environmental factor ka table: factor, kya hai, threat ya opportunity, +/− marks, impact level</td></tr>
+<tr><td>QUEST (Quick Environmental Scanning Technique)</td><td>Managers ki team meeting me 4 steps: brainstorming → broad issues → future scenarios → strategy</td></tr>
+<tr><td>Scenario Building</td><td>2-3 possible futures bana kar plan — best/base/worst case</td></tr>
+<tr><td>Industry/Competitor Analysis</td><td>Porter's 5 Forces, competitor ka price/product network study</td></tr>
+<tr><td>Survey &amp; Market Research</td><td>Customers, dealers, experts se seedha data</td></tr>
+<tr><td>Expert Opinion / Delphi method</td><td>Experts se baar-baar round me opinion lekar consensus banana</td></tr>
+</table>
+
+<div class="box b-tip"><b>SWOT yaad rakhne ki trick:</b> <b>S</b>trength + <b>W</b>eakness = <b>internal</b> (humare paas control). <b>O</b>pportunity + <b>T</b>hreat = <b>external</b> (sarkar/market decide karti). Interview me ek line: "SWOT se STRATEGY banti hai — S+O se grow, W+T se bacho."</div>
+
+<h4>Benefits vs Limitations of Environmental Scanning</h4>
+<table>
+<tr><th>Benefits</th><th>Limitations</th></tr>
+<tr><td>Early warning system — threat ka pata pehle</td><td>Information ka accurate hona mushkil; data ki bharmar</td></tr>
+<tr><td>Better planning &amp; decision</td><td>Future uncertain — prediction galat ho sakti hai</td></tr>
+<tr><td>Opportunity ka faayda utha sakte hain</td><td>Kharach aur time lagta hai (chhoti firm afford nahi karti)</td></tr>
+<tr><td>Risk kam, innovation guide</td><td>Bade organisations me "information overload" sab kuch dhak deta hai</td></tr>
+<tr><td>Strategic edge over competitors</td><td>Reports padh kar rakh dena, action na lena (sabse badi limitation 😅)</td></tr>
+</table>
+
+<div class="box b-q"><b>Probable exam questions — Unit 1</b>
+<ol>
+  <li>Business Environment kya hai? Iski nature aur importance likhiye. (10)</li>
+  <li>Business environment ke components/dimensions ka diagram ke saath varnan kijiye. (10)</li>
+  <li>Environmental scanning kya hai? Iske steps aur techniques likhiye. (10)</li>
+  <li>SWOT analysis aur ETOP technique samjhaiye. (5)</li>
+  <li>Micro aur Macro environment me antar likhiye. (5)</li>
+</ol></div>
+
+<div class="rev">
+<h4>⚡ Rapid Revision — Unit 1</h4>
+<ul>
+  <li>Business Environment = all internal + external factors (Weimer definition).</li>
+  <li>Nature: sum total, dynamic, uncertain, complex, relative, beyond control, far-reaching impact.</li>
+  <li>Internal: value system, mission, structure, culture, HR. External = Micro (customers, competitors, suppliers, intermediaries, financiers, public) + Macro (PESTLE + Demographic + Global).</li>
+  <li>Importance: opportunity, threat, resource, planning, change readiness, competitive edge.</li>
+  <li>Scanning ke 4 stages: Scanning → Monitoring → Forecasting → Assessment.</li>
+  <li>Techniques: SWOT, PESTLE, ETOP, QUEST, Scenario building, Delphi, Market research, Industry analysis.</li>
+</ul>
+</div>
+
+<!-- ================== UNIT 2 ================== -->
+<h2 class="unit" id="u2">UNIT 2 — Economic Environment</h2>
+
+<h3>2.1 Economic Environment — kya hota hai?</h3>
+<div class="box b-def"><b>Economic Environment</b> = wo economic factors jo business ki demand, cost, profit, expansion aur budgeting ko affect karte hain — jaise <b>GDP &amp; growth rate, inflation, interest rate, exchange rate, income levels, tax system, unemployment, government expenditure, fiscal &amp; monetary policy, economic system</b>.</div>
+
+<h4>Main components (economic environment ke factors)</h4>
+<table>
+<tr><th>Factor</th><th>Business par asar</th></tr>
+<tr><td>GDP / growth rate</td><td>GDP badhega to demand badhegi; recession me sale girti hai</td></tr>
+<tr><td>Inflation</td><td>Kachcha maal mehnga — margin kam; customers kam kharch karte hain</td></tr>
+<tr><td>Interest rate / Credit</td><td>Loan mehnga ho to home/car/business loan kam; sasta ho to demand badh</td></tr>
+<tr><td>Money supply &amp; monetary policy (RBI)</td><td>Repo rate se liquidity, EMI, investment decide</td></tr>
+<tr><td>Fiscal policy (Government)</td><td>Tax badha ya kam, subsidy, government spending — kaunsa industry boom karega</td></tr>
+<tr><td>Income distribution &amp; purchasing power</td><td>Middle class badhega to Jio, Paytm, FMCG ka market badhega</td></tr>
+<tr><td>Exchange rate</td><td>Rupee kamzor = export sasta (IT, textiles ko faayda), import mehnga (oil mehnga)</td></tr>
+<tr><td>Taxation</td><td>Tax slab + GST rate se product price aur demand</td></tr>
+<tr><td>Economic system</td><td>Capitalist / Socialist / Mixed — business ki freedom decide</td></tr>
+<tr><td>Infrastructure &amp; power</td><td>Road, port, power ki quality se logistics cost</td></tr>
+</table>
+
+<div class="box b-real"><b>Real life example:</b> 2020 me lockdown se GDP gira → logon ne naye fridge/AC kharidna rok diya → showroom sales gir gayi → companies ne production kam kiya → karmchariyon ki salary par asar. Ye poori chain <b>Economic Environment</b> ka live demo hai. Aur sarkar ne UPI + Direct Benefit Transfer kiya, to demand phir se uthi.</div>
+
+<h3>2.2 Economic Systems</h3>
+<table>
+<tr><th>System</th><th>Kaun control karta hai</th><th>Business freedom</th><th>Example</th></tr>
+<tr><td>Capitalism (Market economy)</td><td>Private players; price demand-supply se</td><td>Zyada</td><td>USA, old UK</td></tr>
+<tr><td>Socialism (Command economy)</td><td>Government/State — production aur price sarkar decide</td><td>Bahut kam</td><td>Old USSR, North Korea</td></tr>
+<tr><td>Mixed Economy</td><td>Dono: private + public sector saath</td><td>Medium</td><td><b>India</b> ✅</td></tr>
+</table>
+<div class="box b-hing"><b>Hinglish me:</b> Capitalist system = "jisko bhi karna hai karo, market ka haath (invisible hand) sab theek karega". Socialist = "sab kuch sarkar karegi". India ka model = "dono karva lo, par regulator ki nazar rahegi" — isliye railway, defence jaise strategic sector me sarkar, aur mobile, dukaan, restaurant me private.</div>
+
+<h3>2.3 Indian Economy — Growth Strategy &amp; Planning</h3>
+<h4>(A) India ki Planning ka safar</h4>
+<table>
+<tr><th>Plan / Event</th><th>Period</th><th>Main baat</th></tr>
+<tr><td>First Five Year Plan</td><td>1951–56</td><td>Agriculture + irrigation par focus (Harrod–Domar model)</td></tr>
+<tr><td>Second Plan</td><td>1956–61</td><td>Mahalanobis model — heavy industry (Bhilai, Rourkela steel plants)</td></tr>
+<tr><td>Fifth Plan</td><td>1974–79</td><td>Garibi Hatao, self reliance</td></tr>
+<tr><td>Eighth Plan</td><td>1992–97</td><td>Economic reforms 1991 ka base; LPG (liberalisation)</td></tr>
+<tr><td>Twelfth Plan</td><td>2012–17</td><td>Aakhri five year plan — "Faster, More Inclusive and Sustainable Growth"</td></tr>
+<tr><td>NITI Aayog</td><td>2015 se</td><td>Planning Commission ki jagah; 3-year action agenda + vision documents</td></tr>
+</table>
+
+<h4>(B) Growth Strategy — Indian model</h4>
+<ul>
+  <li><b>Service-led growth:</b> IT/ITES se India ki growth; Bengaluru "Silicon Valley of India".</li>
+  <li><b>Manufacturing push:</b> Make in India (2014), PLI schemes (Production Linked Incentive), Atmanirbhar Bharat (2020).</li>
+  <li><b>Infrastructure push:</b> Highways, ports, new railway, Gati Shakti master plan, dedicated freight corridors.</li>
+  <li><b>Digital economy:</b> Aadhaar, UPI, Jan Dhan, ONDC, Digital India — world ka sabse bada digital payment system.</li>
+  <li><b>Financial inclusion:</b> Jan Dhan Yojana, Mudra Loan, Stand-up India (chhote business ke liye loan).</li>
+  <li><b>Tax reform:</b> GST (2017) — "One Nation, One Tax".</li>
+  <li><b>Ease of doing business:</b> Single window, insolvency law (IBC 2016), fewer licences.</li>
+  <li><b>Uncertainty:</b> Notebandi (2016), COVID (2020) — short term pain, par formalisation badha.</li>
+</ul>
+
+<div class="box b-real"><b>Real life example — GST:</b> Pehle ek truck UP se Uttarakhand aane me border par ghanton khada rehta tha (checkpost + entry tax), aur "one state one tax" ki wajah se cost badh jaati thi. 1 July 2017 ke baad GST aaya — checkposts khatm, e-way bill se tracking, aur supply chain planning aasan. Carrier companies ka turnaround time ghata, aur customer ko price bhi better mila. Ye ek policy ka business environment par direct asar hai ✅</div>
+
+<h3>2.4 Economic Reforms 1991 (LPG) — sabse important topic</h3>
+<div class="box b-def"><b>1991 ka Balance of Payments (BoP) Crisis:</b> 1991 me India ke paas foreign exchange reserve sirf ~2 weeks ke import ke liye bache the. BoP crisis, fiscal deficit aur Gulf War ka asar — isliye IMF ke saath loan hua aur <b>New Economic Policy (LPG)</b> shuru hui. Isko economists "India's economic liberalisation" kehte hain.</div>
+
+<h4>LPG = Liberalisation + Privatisation + Globalisation</h4>
+<table>
+<tr><th>Element</th><th>Matlab</th><th>Gaye steps</th></tr>
+<tr><td><b>Liberalisation</b></td><td>Government ke controls/compliance kam karna — industrial licensing, price control, import licence hataana</td><td>Industrial licensing kam (<b>licence raj</b> ka ant), MRTP limit badhai, rupee devaluation (July 1991), interest rate relaxation, FERA me badlav, product market me price control phir hata</td></tr>
+<tr><td><b>Privatisation</b></td><td>Public sector ki role kam karna; private sector ko kholna; PSUs ka disinvestment</td><td>Public sector ke liye reserved industries 17 se 8 (aur later 3) kiye; Disinvestment — Maruti, VSNL, IPCL, BALCO ke shares beche; National Renewal Fund (workers ke liye), Navratna/ Maharatna scheme</td></tr>
+<tr><td><b>Globalisation</b></td><td>Economy ko world market se jodna — trade, investment, technology, capital ka free flow</td><td>Import duty kam (tariff reduction), FEMA, rupee convertibility (current account), India ne WTO join kiya (1995), foreign bank entry, MNCs ko welcome, export promotion (SEZ, later)</td></tr>
+</table>
+
+<h4>Impact / Outcome of LPG Reforms</h4>
+<table>
+<tr><th>Positive</th><th>Negative</th></tr>
+<tr><td>GDP growth tez (1990s me 6-7%), services sector ka boom (IT, BPO)</td><td>Chhoti industries (SSI) par competition ka dabaav</td></tr>
+<tr><td>Foreign investment (FDI) aaya — Hyundai, Coca-Cola, Suzuki</td><td>Kuch sectors me unemployment badha (PSU me retrenchment/NRV)</td></tr>
+<tr><td>Consumer ko choice, price, quality badhi (Maruti ke baad 10 car brands)</td><td>Competition se local brand madhyam — kamzor firms band</td></tr>
+<tr><td>Technology transfer + R&amp;D aaya (Hero-Honda, Maruti-Suzuki)</td><td>Kuch natural resources ka over-exploitation; inequality bhi badhi</td></tr>
+<tr><td>Foreign exchange reserve bahut badha</td><td>Agriculture par investment focus kam; kisan dependency badhi</td></tr>
+</table>
+
+<h3>2.5 Economic Markets / Sector-wise structure</h3>
+<table>
+<tr><th>Market/Sector</th><th>Current scenario ka picture</th></tr>
+<tr><td>Agriculture (Primary)</td><td>~18% GDP, ~45% employment — monsoon, MSP, mandi, cold chain ki issue</td></tr>
+<tr><td>Industry (Secondary)</td><td>~28% GDP — automobile, pharma, steel, cement, textiles; Make in India push</td></tr>
+<tr><td>Services (Tertiary)</td><td>~54% GDP — IT, banking, telecom, healthcare, education; growth engine</td></tr>
+<tr><td>Financial market</td><td>SEBI regulated — BSE/NSE, mutual funds, insurance (IRDAI), IPO ka healthy market</td></tr>
+<tr><td>Money market</td><td>RBI ka repo rate, T-bills, commercial paper — short term funds</td></tr>
+<tr><td>Capital market</td><td>Shares/debentures — primary (IPO) + secondary (stock exchange trading)</td></tr>
+<tr><td>Foreign exchange market</td><td>Rupee-dollar rate, FEMA/RBI regulation; export-import par direct asar</td></tr>
+</table>
+
+<div class="box b-tip"><b>Answer me 2-3 number likhna zaroori hai (2024-25 ke aas-paas):</b> GDP growth ~6.5–7% (India fastest growing major economy), services ~55% of GDP, agriculture ~18%, forex reserves $600-700 bn, repo rate ~6.5%, GST slab 5/12/18/28%, inflation (CPI) target 4% ± 2%. Number exact yaad na ho to "approx/around" likho — par number likhne se answer strong lagta hai 📊</div>
+
+<div class="box b-q"><b>Probable exam questions — Unit 2</b>
+<ol>
+  <li>Economic environment ke components likhiye aur business par unka asar samjhaiye. (10)</li>
+  <li>1991 ke economic reforms (LPG) ko samjhaiye. Iska Indian business par kya impact hua? (12)</li>
+  <li>India ki economic planning / growth strategy ki main baatein likhiye. (10)</li>
+  <li>Capitalist, Socialist aur Mixed economy me antar. India kaisi economy hai? (10)</li>
+  <li>Liberalism, Privatisation aur Globalisation ko define kijiye. (5-5)</li>
+</ol></div>
+
+<div class="rev">
+<h4>⚡ Rapid Revision — Unit 2</h4>
+<ul>
+  <li>Economic environment factors: GDP, inflation, interest, exchange rate, income, tax, policy, infrastructure, economic system.</li>
+  <li>Economic systems: Capitalist (USA), Socialist (old USSR), <b>India = Mixed</b>.</li>
+  <li>12 Five Year Plans; 12th last (2012-17); ab NITI Aayog (2015).</li>
+  <li>1991 BoP crisis → New Economic Policy → <b>LPG</b>: Liberalisation + Privatisation + Globalisation.</li>
+  <li>Liberalisation = licence raj khatm, Privatisation = PSU disinvestment + de-reservation, Globalisation = FDI, tariff cut, WTO, MNC.</li>
+  <li>Positives: GDP growth, FDI, consumer choice. Negatives: SSI par dabaav, unemployment, inequality.</li>
+  <li>Sector shares ≈ Agriculture 18%, Industry 28%, Services 54% of GDP.</li>
+</ul>
+</div>
+
+<!-- ================== UNIT 3 ================== -->
+<h2 class="unit" id="u3">UNIT 3 — Technological Environment</h2>
+
+<h3>3.1 Technological Environment — kya hai?</h3>
+<div class="box b-def"><b>Technological Environment</b> = wo sabhi technological factors — nayi inventions, research &amp; development, automation, digital platforms, innovation, IT infrastructure, patents aur technology policy — jo business ke <b>production, cost, product, distribution aur competition</b> ko badalte hain.</div>
+
+<div class="box b-hing"><b>Hinglish me:</b> Technology ek "speed breaker + shortcut" dono hai. Jisne apnaya — shortcut mil gaya (Jio ne 4G data sasta karke poori industry badal di). Jisne ignore kiya — speed breaker (Nokia ne touchscreen/smartphone ko halka samjha, aaj market me nahi hai 😬).</div>
+
+<h4>Nature / Characteristics of Technological Environment</h4>
+<table>
+<tr><th>Feature</th><th>Matlab</th></tr>
+<tr><td>Fast changing</td><td>Har 2-3 saal me naya version — 2G → 3G → 4G → 5G ka safar</td></tr>
+<tr><td>Continuous R&amp;D</td><td>Companies ka R&amp;D budget growth ka engine — Tata, Reliance, Infosys, Wipro</td></tr>
+<tr><td>Cost reduction + quality</td><td>Automation se per-unit cost kam, quality consistent</td></tr>
+<tr><td>Obsolescence risk</td><td>Purana technology quickly bekaar — 3 saal me laptop purana</td></tr>
+<tr><td>Need of skill upgradation</td><td>Staff ko digital training chahiye (Tally, Excel, CRM, AI tools)</td></tr>
+<tr><td>Government support &amp; regulation</td><td>Startup India, Digital India, semiconductor PLI, IPR (patent law) se support aur control</td></tr>
+<tr><td>Global competition</td><td>Ek click me foreign competitor market me aa jaata hai (Amazon vs kirana)</td></tr>
+</table>
+
+<h4>Impact (Interface) of Technology on Business</h4>
+<ol>
+  <li><b>Product design:</b> Electric bikes, smart TVs, digital thermometers — sab tech ka kamaal.</li>
+  <li><b>Manufacturing:</b> CNC, robotics, 3D printing, IoT sensors se factory "smart" bani.</li>
+  <li><b>Marketing &amp; Distribution:</b> E-commerce (Amazon, Flipkart, Meesho), social media advertising, UPI-based payments.</li>
+  <li><b>Cost &amp; Productivity:</b> One machine 24 ghante chal sakti hai; per unit cost kam.</li>
+  <li><b>HR &amp; Work culture:</b> Work from home, video interviews, HRMS software; naye skill chahiye.</li>
+  <li><b>Financial management:</b> Tally/ERP se accounting, GST filing, online banking.</li>
+  <li><b>New business models:</b> Ola/Uber (asset light), Swiggy/Zomato (delivery), Netflix (streaming), Paytm (fintech).</li>
+</ol>
+
+<div class="box b-real"><b>Real life example — Jio:</b> 2016 me Jio ne sasta data + free calls diya. Iske 3 asar dekho: (1) Data consumption blast — video streaming, YouTube, reels culture. (2) Dookan walon ne QR code based digital payment apnaya. (3) Chhote phone sellers ko 4G feature phone (JioPhone) par focus karna pada. Ek technological change ne poori value chain hilaa di. Yehi "technological environment ka interface with business" hai 📱</div>
+
+<h3>3.2 Technology Transfer</h3>
+<div class="box b-def"><b>Technology Transfer</b> = technology (know-how, designs, process, trade secrets, patents) ko <b>ek desh/firm se doosre</b> desh/firm tak pahunchana — technical know-how, training, documentation ya joint venture ke roop me.</div>
+
+<h4>Channels / Modes of Technology Transfer</h4>
+<table>
+<tr><th>Mode</th><th>Kaise hota hai</th><th>Example</th></tr>
+<tr><td>Joint Venture</td><td>Do firms milkar nayi company banate hain — technology + capital share</td><td>Maruti–Suzuki, Hero–Honda (pehle), Bajaj–Kawasaki</td></tr>
+<tr><td>Licensing / Franchise</td><td>Fees/royalty de kar technology ka right lena</td><td>Domino's, Coca-Cola bottling</td></tr>
+<tr><td>Turnkey project</td><td>Poora plant banake dena — foreign company end-to-end setup karti hai</td><td>Power plant, refinery setups</td></tr>
+<tr><td>Foreign Direct Investment (FDI)</td><td>MNC apni branch/subsidiary banati hai — technology saath aati hai</td><td>Samsung plant Noida, Foxconn iPhone</td></tr>
+<tr><td>Technical collaboration / Consultancy</td><td>Experts aate hain, training dete hain, research contract</td><td>ISRO ke vendors, auto design houses</td></tr>
+<tr><td>Reverse Engineering</td><td>Product dekh kar khud banana (permitted boundaries me)</td><td>Generic pharma banane ka pattern</td></tr>
+<tr><td>Khari Kena / Acquisition</td><td>Company hi kharidna jisme tech hai</td><td>Tata ne Jaguar Land Rover kharida; Google ne Android (pehle ki acq.)</td></tr>
+</table>
+
+<h4>Benefits vs Problems of Technology Transfer</h4>
+<table>
+<tr><th>Benefits (host country)</th><th>Problems / Issues</th></tr>
+<tr><td>Modern technology bina khud research kharch ke</td><td>Purani/obsolete technology de dena ("technology dumping")</td></tr>
+<tr><td>Employment + skill development</td><td>Royalty/fees me paisa bahar jata hai, control bhi bahar</td></tr>
+<tr><td>Quality aur productivity me sudhar</td><td>Core tech transfer nahi hoti — sirf assembly work milta hai</td></tr>
+<tr><td>Export competitiveness</td><td>Host ke local R&amp;D par negative asar (dependency)</td></tr>
+<tr><td>Capital + management techniques aati hain</td><td>Environment/legal compliance ke issues (dirty technology shifting)</td></tr>
+</table>
+
+<h3>3.3 Technology Assessment &amp; Government Policy</h3>
+<div class="box b-def"><b>Technology Assessment</b> = kis technology ko adopt karna chahiye, uska cost-benefit, risk, environmental effect aur long-term impact <b>pehle se evaluate</b> karna. Isse galat technology me paisa barbaad hone se bacha jaata hai.</div>
+<ul>
+  <li><b>Tekno-economic analysis:</b> Cost, investment, ROI, payback period, capacity.</li>
+  <li><b>Social &amp; environmental impact:</b> Pollution, safety, employment par asar.</li>
+  <li><b>Legal/IPR check:</b> Patent, licence, export restrictions.</li>
+  <li><b>Infra &amp; skill readiness:</b> Power, internet, trained manpower available hai ya nahi.</li>
+  <li><b>Scalability &amp; Future proofing:</b> 5 saal baad bhi chalega ya nahi.</li>
+</ul>
+
+<table>
+<tr><th>Government Initiative</th><th>Kya karta hai</th></tr>
+<tr><td>Digital India (2015)</td><td>Broadband, e-governance, digital literacy</td></tr>
+<tr><td>Startup India (2016)</td><td>Tax benefit, funding, easy registration — 1 lakh+ startups</td></tr>
+<tr><td>Make in India (2014)</td><td>Manufacturing hub banane ke liye investment + skill</td></tr>
+<tr><td>PLI Schemes</td><td>Production Linked Incentive — mobile, pharma, solar, semiconductor</td></tr>
+<tr><td>National Science &amp; Technology Policy</td><td>R&amp;D funding, innovation ecosystem, IPR protection</td></tr>
+<tr><td>Aadhaar + UPI + ONDC</td><td>Digital public infrastructure — DBT, payments, e-commerce democratisation</td></tr>
+</table>
+
+<div class="box b-tip"><b>Answer me ye 3 line answer ko strong bana deti hai:</b> (1) "Technology business environment ka wo part hai jo sabse tez badalta hai." (2) "Adopt karne me delay = obsolescence = market share loss (Nokia/Kodak example)." (3) "India ka approach: technology transfer + self-reliance (Atmanirbhar Bharat) dono — jaise semiconductor mission."</div>
+
+<div class="box b-q"><b>Probable exam questions — Unit 3</b>
+<ol>
+  <li>Technological environment ki nature aur business par uske prabhav (impact) likhiye. (10)</li>
+  <li>Technology transfer ke channels/modes likhiye aur uske benefits aur problems samjhaiye. (12)</li>
+  <li>Technology assessment kya hai? Iske criteria likhiye. (5)</li>
+  <li>India ki technology policy / Digital India jaise initiative ka business par asar. (10)</li>
+</ol></div>
+
+<div class="rev">
+<h4>⚡ Rapid Revision — Unit 3</h4>
+<ul>
+  <li>Tech environment = nayi tech, automation, R&amp;D, digital platforms, IPR.</li>
+  <li>Nature: fast changing, R&amp;D continuous, cost reduction, obsolescence, skill up gradation, global competition.</li>
+  <li>Impact areas: product, production, marketing &amp; distribution, cost, HR, finance, new business models.</li>
+  <li>Technology transfer modes: Joint venture, licensing, turnkey, FDI, consultancy, reverse engineering, acquisition.</li>
+  <li>Issues: obsolete tech dumping, royalty outflow, core tech na milna, dependency.</li>
+  <li>Assessment ke 5 angle: tekno-economic, social/environment, legal/IPR, infra-skill, scalability.</li>
+  <li>India ke flagship: Digital India, Startup India, PLI, semiconductor mission, UPI/ONDC.</li>
+</ul>
+</div>
+
+<!-- ================== UNIT 4 ================== -->
+<h2 class="unit" id="u4">UNIT 4 — Global Environment</h2>
+
+<h3>4.1 Global / International Business Environment</h3>
+<div class="box b-def"><b>Global Environment</b> = wo international factors — WTO rules, trade agreements, import-export policy, foreign exchange rate, FDI rules, global demand, foreign culture — jo kisi desh ke business ko poore world ke saath jodte hain aur competition ko ghar tak laate hain.</div>
+
+<h4>Why firms go Global? (Kyun bahar jaate hain)</h4>
+<table>
+<tr><th>Reason</th><th>Matlab + example</th></tr>
+<tr><td>1. Market expansion</td><td>Ghar ka market saturate ho gaya — Maruti Africa/Latin America me export karti hai</td></tr>
+<tr><td>2. Cost advantage</td><td>Sasta labour/resource — bharat me IT/BPO ka model, Vietnam me garments</td></tr>
+<tr><td>3. Raw material &amp; resources</td><td>Tel, gas, minerals ke liye — ONGC, Reliance ka overseas sourcing</td></tr>
+<tr><td>4. Economies of scale</td><td>Bade volume se per-unit cost kam — Apple ka global supply chain</td></tr>
+<tr><td>5. Government incentives</td><td>Export subsidy, SEZ (Special Economic Zone), tax holidays</td></tr>
+<tr><td>6. Technology &amp; know-how</td><td>Nayi tech seekhne ke liye partnership/FDI</td></tr>
+<tr><td>7. Competition se bachna</td><td>Local market me fierce competition → naye bazaar me jao</td></tr>
+<tr><td>8. Risk diversification</td><td>Ek desh me recession ho to doosre desh se revenue</td></tr>
+<tr><td>9. Brand building</td><td>"Global brand" ka image — Tata, Mahindra, Zomato (Blinkit), Ola (UK/Aus test)</td></tr>
+<tr><td>10. Duty/Quota bachana</td><td>Tariff avoid karne ke liye usi desh me plant — Suzuki ka India/Europe setup</td></tr>
+</table>
+
+<h4>Routes / Modes of entering global business (Entry Strategies)</h4>
+<pre>Risk & control:  LOW  ---------------------------------->  HIGH
+Investment:      LOW  ---------------------------------->  HIGH
+
+1. Exporting (indirect -> direct -> agent -> own office)
+2. Licensing / Franchising
+3. Contract manufacturing (make for other brand)
+4. Management contract / Turnkey project
+5. Joint Venture
+6. Strategic Alliance (coke-pepsi type marketing tie-ups, airline code share)
+7. Mergers & Acquisitions (M&A)
+8. Wholly Owned Subsidiary / 100% FDI plant (Greenfield)
+9. Global Sourcing / Outsourcing (Bharat me TCS-Infosys result)
+Note: "outsourcing me ownership nahi, FDI me ownership + control hota hai".</pre>
+
+<table>
+<tr><th>Route</th><th>Control</th><th>Risk/Paisa</th><th>Example</th></tr>
+<tr><td>Export</td><td>Sabse kam</td><td>Kam</td><td>Basmati rice export, spices</td></tr>
+<tr><td>Licensing/Franchise</td><td>Medium</td><td>Kam-medium</td><td>Domino's, McDonald's franchise</td></tr>
+<tr><td>Joint Venture</td><td>Shared</td><td>Medium</td><td>Maruti Suzuki, Tata-Starbucks (Tata Starbucks)</td></tr>
+<tr><td>M&amp;A</td><td>Poora (mostly)</td><td>Zyada</td><td>Tata – Corus/JLR, Bharti–Zain</td></tr>
+<tr><td>Wholly owned (FDI)</td><td>Poora</td><td>Sabse zyada</td><td>Samsung India's Noida plant upgrades, Apple partners</td></tr>
+</table>
+
+<h3>4.2 Global Players &amp; India ka Global Trade Position</h3>
+<ul>
+  <li><b>World's big players:</b> USA (largest economy), China (largest exporter/manufacturer), Germany (engineering), Japan (auto, robotics), UAE/Singapore (trade hubs), EU as a bloc.</li>
+  <li><b>India ke strengths:</b> IT services (TCS, Infosys, Wipro), pharma (generic medicines — "pharmacy of the world"), auto components, gems &amp; jewellery, textiles, agri export (rice, spices), digital payments (UPI ka global expansion).</li>
+  <li><b>India ke challenges:</b> Logistics cost high (~13-14% of GDP), import dependency on crude oil, tariff/non-tariff barriers, low R&amp;D spending, skill gaps.</li>
+  <li><b>FTA/Agreements:</b> India–UAE CEPA, India–Australia ECTA, India-EFTA (TEPA 2024), RCEP se India bahar raha (shuru me concerns).</li>
+</ul>
+
+<h3>4.3 FDI in India</h3>
+<div class="box b-def"><b>FDI (Foreign Direct Investment)</b> = ek desh ke business me doosre desh ka long-term investment — plant, subsidiary, share capital ke roop me, jisme <b>control/management me hissedaari</b> hoti hai. FPI (Foreign Portfolio Investment) se alag hai kyunki FPI me sirf shares kharid rakhte hain, control nahi.</div>
+
+<table>
+<tr><th>Point</th><th>Detail</th></tr>
+<tr><td>Routes</td><td>(1) <b>Automatic route</b> — bina government approval (most sectors, e.g. 100% in many manufacturing). (2) <b>Government approval route</b> — sensitive sectors (defence, media, telecom security, atomic energy) me approval chahiye</td></tr>
+<tr><td>Entry forms</td><td>Wholly-owned subsidiary, Joint venture, Branch/Liaison/Project office, M&amp;A</td></tr>
+<tr><td>Regulator</td><td>RBI + DPIIT (policy), FEMA ke rules</td></tr>
+<tr><td>Top sectors</td><td>Services, computer software/hardware, trading, telecommunications, construction, automobile, pharma</td></tr>
+<tr><td>Top source countries</td><td>Mauritius, Singapore, USA, Netherlands, Japan, UAE (round-tripping ke liye Mauritius ka pehle naam tha)</td></tr>
+<tr><td>Benefits</td><td>Capital, technology, jobs, exports, competition, better management practices</td></tr>
+<tr><td>Issues</td><td>Sectoral caps, land &amp; labour issues, tax uncertainty, "hot money" concern, foreign control ka darr</td></tr>
+</table>
+
+<div class="box b-real"><b>Real life example:</b> Samsung ka Noida plant world ka sabse bada mobile factory kehlata hai; Maruti Suzuki ka FDI ne India ka auto ecosystem khada kiya (Manesar, Gurgaon ke vendor clusters). Aaj India me iPhone assembly bhi FDI se hi ho raha hai — ek factory se hazaaron support jobs, aur vendor industries bhi ban rahi hain.</div>
+
+<h3>4.4 WTO — World Trade Organization</h3>
+<div class="box b-def"><b>WTO</b> = 1995 me GATT ki jagah bana global body jo desh ke beech trade ke rules banata aur disputes solve karta hai. Headquarter: <b>Geneva, Switzerland</b>. Principle: trade ko <b>free, fair aur predictable</b> banana (non-discrimination — Most Favoured Nation &amp; National Treatment principle ke through).</div>
+
+<table>
+<tr><th>Benefits for India</th><th>Problems / Concerns</th></tr>
+<tr><td>Market access — Indian export ko sabse-favoured treatment</td><td>Developed countries ka subsidy/dumping (agriculture me)</td></tr>
+<tr><td>Dispute settlement system — case jeet sakte hain</td><td>TRIPS ke kaaran generic medicine aur patent price pressure</td></tr>
+<tr><td>Foreign investment badhne me help</td><td>Agriculture par pressure — subsidy aur MSP ke rules ka darr</td></tr>
+<tr><td>Textile quota khatm — bharat ko bada mauka mila</td><td>Non-tariff barriers (quality standards) ka bahana se protection</td></tr>
+<tr><td>Technology aur best practices ka flow</td><td>Services me movement of labour (GATS mode 4) par developed countries rok</td></tr>
+</table>
+<div class="box b-mn"><b>Yaad rakhne ki trick:</b> WTO = "<b>W</b>orld <b>T</b>rade = <b>O</b>pen market + friendly disputes". GATT (temporary, goods only) → WTO (permanent, goods + services + IPR + investment). Geneva me baithta hai; 160+ members; "one country, one vote".</div>
+
+<h3>4.5 Scanning the Global Environment</h3>
+<p>Global me jaane se pehle company ko ye check karna chahiye (ye 8 point ka answer likh sakte hain):</p>
+<ol>
+  <li><b>Political stability:</b> Kis desh me sarkar stable hai, coup/uncertainty ka risk kitna (Southeast Asia vs war-torn zone).</li>
+  <li><b>Legal system &amp; IPR protection:</b> Contract enforcement, patent law, corruption index.</li>
+  <li><b>Economic condition:</b> Income level, purchasing power, inflation, currency stability.</li>
+  <li><b>Culture &amp; consumer behaviour:</b> Food preference, language, festivals, colour/religion sensitivity (McDonald's ne India me beef-free menu rakha).</li>
+  <li><b>Competition:</b> Local brands, MNC rivals, entry barriers.</li>
+  <li><b>Trade rules &amp; tariffs:</b> Import duty, quota, FTA ka benefit, WTO commitment.</li>
+  <li><b>Technology &amp; infrastructure:</b> Internet/payment system, logistics quality (phone app chalega ya nahi?).</li>
+  <li><b>Currency &amp; capital movement:</b> Exchange rate risk, forex convertibility ke rule, hedging cost.</li>
+</ol>
+<div class="box b-real"><b>Real life example:</b> Netflix japan me utna nahi chala kyunki content lokal nahi thi. par jab Netflix ne local content (anime, local films) banaya to subscriber badhne lage. Yeh dikhata hai ki sirf "achha product" kaafi nahi — environment padhna zaroori hai.</div>
+
+<div class="box b-q"><b>Probable exam questions — Unit 4</b>
+<ol>
+  <li>Globalisation kya hai? Firms global kyun jaati hain — karan likhiye. (10)</li>
+  <li>Global market me enter karne ke routes/modes likhiye aur unka comparison kijiye. (12)</li>
+  <li>FDI kya hai? India me FDI ke routes aur benefits/issues likhiye. (10)</li>
+  <li>WTO ki sthapna, objectives, benefits aur India ke liye problems likhiye. (10)</li>
+  <li>Global environment ko scan (analyse) karte waqt kaunse factors dekhe jaate hain? (5)</li>
+</ol></div>
+
+<div class="rev">
+<h4>⚡ Rapid Revision — Unit 4</h4>
+<ul>
+  <li>Firms global kyun: market, cost, resources, scale, incentive, tech, competition, diversification, brand, duty bachana.</li>
+  <li>Entry routes (risk badhne ke order me): Export → Licensing → Franchise → Contract manufacturing → JV → Strategic alliance → M&amp;A → Wholly owned (FDI).</li>
+  <li>FDI routes: Automatic vs Government approval; regulator RBI + DPIIT; entry forms: WOS, JV, branch, M&amp;A.</li>
+  <li>FDI benefits: capital, tech, jobs, exports; issues: caps, land-labour, tax, hot money.</li>
+  <li>WTO (1995, Geneva) = GATT ka replacement; principles MFN + National Treatment; benefits: market access + dispute settlement; problems: subsidy, TRIPS, agriculture.</li>
+  <li>Global scanning ke 8 factors: political, legal/IPR, economic, culture, competition, trade rules, tech/infra, currency risk.</li>
+</ul>
+</div>
+
+<!-- ================== UNIT 5 ================== -->
+<h2 class="unit" id="u5">UNIT 5 — Political &amp; Legal Environment</h2>
+
+<h3>5.1 Political Environment</h3>
+<div class="box b-def"><b>Political Environment</b> = wo political factors — government ka swaroop (democracy/autocracy), political ideology, political stability, ruling party ki policy, elections, trade unions, public opinion — jo business ke rules, taxes, subsidies aur growth par asar dalte hain.</div>
+
+<h4>Components of Political Environment</h4>
+<table>
+<tr><th>Component</th><th>Business par asar</th></tr>
+<tr><td>Political system / ideology</td><td>Capitalist vs socialist thinking — licence raj vs ease of doing business</td></tr>
+<tr><td>Political stability</td><td>Stable sarkar = investment aata hai; instability = risk badhta hai</td></tr>
+<tr><td>Government policy &amp; attitude towards business</td><td>Pro business (tax cut, PLI) ya kathin (licence, price control) — policy signal</td></tr>
+<tr><td>Elections / political cycle</td><td>Chunav se pehle subsidy/freebies, kisan loan waiver — demand pattern badalta hai</td></tr>
+<tr><td>Trade unions &amp; labour militancy</td><td>Strike se production rukta hai (Maruti Manesar strike 2011-12)</td></tr>
+<tr><td>Foreign policy &amp; diplomacy</td><td>Trade agreements, sanctions, border tension se trade disturb (India-China par tariffs)</td></tr>
+<tr><td>Public opinion/Public safety</td><td>Public &amp; law and order ka mahaul — kaunsa product local demand layega</td></tr>
+<tr><td>Political risks</td><td>Nationalisation, expropriation, licence cancellation, sudden policy change</td></tr>
+</table>
+
+<div class="box b-real"><b>Real life example:</b> 2016 me Government ne high-value notes band kar diye (demonetisation). Ek raat me cash economy thap — chhote businessmen, daily wages, wedding season suppliers, kirana walon ko turant cash management badalni padi aur digital payments tez ho gaye (Paytm/UPI ka blast). Ye ek political decision ka direct business impact tha — aur isi wajah se firms ko "political risk" ka planning karna padta hai.</div>
+
+<h3>5.2 Legal Environment</h3>
+<div class="box b-def"><b>Legal Environment</b> = wo sabhi laws, acts, rules aur judicial decisions jinke andar business ko chalna padta hai — companies ka registration, contract, competition, consumer, labour, tax, foreign exchange, environment, IPR. Ye batate hain <b>"kya permissible hai aur kya nahi".</b></div>
+
+<h4>Important laws ka overview (exam me naam likhna zaroori hai)</h4>
+<table>
+<tr><th>Law</th><th>Kaam / Business par asar</th></tr>
+<tr><td><b>MRTP Act, 1969</b></td><td>Monopolies &amp; Restrictive Trade Practices — monopoly/restrictive/unfair trade practice par control (2009 me Competition Act ne replace kiya)</td></tr>
+<tr><td><b>Competition Act, 2002</b></td><td>CCI (Competition Commission of India) — anti-competitive agreements, abuse of dominance, M&amp;A approval; CCI ka CCI lenient hai > MRTP</td></tr>
+<tr><td><b>FEMA, 1999</b></td><td>Foreign Exchange Management Act — FERA ki jagah; forex transaction, FDI, export-import payment, holdings ke rules</td></tr>
+<tr><td>Companies Act, 2013</td><td>Company ka lakhana, directors, audit, CSR, financial statements ki requirement</td></tr>
+<tr><td>Consumer Protection Act, 2019</td><td>Consumer ke adhikar, CCPA, e-commerce ke rules, misleading ad ka control</td></tr>
+<tr><td>GST Act / Income Tax Act, 1961</td><td>Indirect aur direct tax liability; rate aur compliance define karta hai</td></tr>
+<tr><td>Factories Act, 1948 / Labour Codes</td><td>Maximum working hours, safety, wages — labour environment</td></tr>
+<tr><td>Environment Protection Act, 1986 / Companies Act 2013</td><td>Pollution norms, environmental clearances; CSR ka 2% rule (Companies Act Section 135)</td></tr>
+<tr><td>Intellectual Property (Patents Act, Copyrights, Trademarks, designs)</td><td>Innovation ka protection — violation par legal action (pharma, film, software)</td></tr>
+<tr><td>Fiscal / Monetary laws</td><td>Budget, tax rates, RBI ka rate decision — business cost aur demand</td></tr>
+</table>
+
+<h3>5.3 MRTP Act, 1969 (detail me — bahut important)</h3>
+<div class="box b-def"><b>MRTP Act</b> = Monopolies and Restrictive Trade Practices Act, 1969 — India ka pehla competition law. Iska maksad tha: <b>monopoly concentration</b> rokna, <b>restrictive trade practices</b> (jo competition ko rok dein) ko control karna, aur <b>unfair trade practices</b> (misleading ad, fake quality) par rok lagana. Iske tehat <b>MRTP Commission</b> kaam karti thi (1970 me sthapit).</div>
+
+<h4>MRTP Act ke main provisions</h4>
+<ol>
+  <li><b>Registration of undertakings:</b> Bade houses ko MRTP Commission me register karna padta tha (asset limit ke upar wale).</li>
+  <li><b>Control on monopolistic trade practices:</b> Price badhana, supply rokna, profit artificially badhana — inko roka jaata tha.</li>
+  <li><b>Restrictive trade practices (RTP):</b> Jaise tie-in sale (ek saath doosra product lena zaroori), price fixing, exclusive dealing, area restriction, refusal to deal.</li>
+  <li><b>Unfair trade practices (UTP):</b> False representation, fake claim, misleading advertisement ("100% guarantee cure" 😬), bait advertising.</li>
+  <li><b>Divestiture:</b> Zaroorat padne par company ko apne division/hisa bechne ka order.</li>
+  <li><b>Penalty:</b> Fine aur illegal practice band karne ka order.</li>
+</ol>
+
+<h4>MrTP Act ki Limitations (kyun replace kiya gaya)</h4>
+<ul>
+  <li>"Dominance" ka definition asset size par tha — par global market me size zaroori thi competitiveness ke liye (scale matter karta hai!).</li>
+  <li>Aaj ka competition policy "structure" nahi, "conduct/behaviour" (abuse) ko dekhna chahta tha.</li>
+  <li>Procedures slow, penalties kam, technology aur services economy ke liye outdated.</li>
+  <li>Globalisation (1991) ke baad WTO commitments, foreign competition ke liye naya framework chahiye tha.</li>
+  <li>Isliye <b>Competition Act 2002</b> lagu hua (2009 se fully active) aur MRTP Commission ka kaam CCI ko chala gaya.</li>
+</ul>
+
+<div class="box b-mn"><b>Trick to compare:</b> <b>MRTP (1969) = "Size dekho, rok do"</b> (structural, big-is-bad mindset). <b>Competition Act (2002) = "Behaviour dekho, rok do"</b> (agreement/abuse dekhta hai, chahe company chhoti ya badi ho). Yaad rakhne ke liye: <b>M</b>RTP ka <b>M</b> = Monopoly (bade ko rokna), Competition Act ka <b>C</b> = Conduct (bure behaviour ko rokna).</div>
+
+<h3>5.4 FEMA, 1999 (detail me)</h3>
+<div class="box b-def"><b>FEMA (Foreign Exchange Management Act, 1999)</b> = wo act jo India me foreign exchange (forex) ke saare transactions, foreign investment, export-import ke payments, forex accounts aur resident/non-resident ke dealings ko control karta hai. Iska main aim: <b>external trade &amp; payments ko facilitate karna</b>, aur forex market ko orderly rakhna. RBI aur Central Government iske rules banate hain. Ye <b>FERA (1973)</b> ki jagah aaya — FERA ka approach "control" tha, FEMA ka approach "management + facilitation" hai.</div>
+
+<h4>FERA vs FEMA — comparison (favourite exam question)</h4>
+<table>
+<tr><th>Basis</th><th>FERA (1973)</th><th>FEMA (1999)</th></tr>
+<tr><td>Objective</td><td>Forex conserve/control karna (shortage ke daur me)</td><td>Forex ko manage + facilitate karna; trade ko aasan banana</td></tr>
+<tr><td>Nature</td><td>Draconian/strict rules</td><td>Liberal, "management" oriented</td></tr>
+<tr><td>Default ki nature</td><td><b>Criminal offence</b> (jail ho sakti thi)</td><td><b>Civil offence</b> — compounding aur minimum penalty</td></tr>
+<tr><td>Authority</td><td>Enforcement Directorate (ED) ka bada control</td><td>RBI/Rules se manage; ED ab bhi investigation karti hai par halka</td></tr>
+<tr><td>Case burden</td><td>Accused ko prove karna padta tha ki wo innocent hai</td><td>Enforcement ko prove karna padta hai ki offence hui hai</td></tr>
+<tr><td>Resident/Holding rules</td><td>Very restrictive — forex holding/lakhana mushkil</td><td>Liberal — resident forex accounts, ROI, investment ke route aasan</td></tr>
+<tr><td>Scope</td><td>Sirf forex transactions ke rules</td><td>Forex + foreign security + immovable property + accounts + FDI</td></tr>
+</table>
+
+<h4>FEMA ke main provisions (short me)</h4>
+<ul>
+  <li><b>Dealings in forex:</b> Authorised persons (banks) ke through hi forex ka buy/sell kar sakte hain.</li>
+  <li><b>Current account transactions:</b> Mostly free — par RBI ki "current account rules" ke under restrictions kuch cases me (school fees, travel limit etc.).</li>
+  <li><b>Capital account transactions:</b> FDI/FPI, immovable property, foreign securities — rules ke saath allowed.</li>
+  <li><b>FDI/ODI:</b> Automatic route me allowed; special sectors me approval (DPIIT).</li>
+  <li><b>Export/Import:</b> Payment, realisation, EDF (Export Declaration Form), FEMA ke compliance.</li>
+  <li><b>Penalty:</b> Civil penalty (upto 3x amount involved, and $200,000 type limits), compounding, appeal to Appellate Tribunal (ATFE).</li>
+  <li><b>Resident:</b> Indian resident foreign currency accounts (RFC) aur FCNR/NRE (for NRIs) ke rules.</li>
+</ul>
+
+<div class="box b-real"><b>Real life example:</b> Tum Dubai se cousin ke liye iPhone laate ho ya bhai US me hai aur wahan se tumhe dollars bhejta hai — ye FEMA ke rules ke andar hi hote hain (bank ke through, purpose batana, limit ke saath). Koi forex transaction outside bank/channel karta hai — wo FEMA violation hai. Company FDI lekar branch chain kholti hai — uske FDI route, reporting aur payment FEMA ke tehat hote hain. Isliye har MNC/startup ka CA FEMA compliance check karta hai.</div>
+
+<div class="box b-tip"><b>Answer me likhne ka order (Unit 5 ka score card):</b> (1) Political environment ka definition + components. (2) Legal environment ke 5-6 laws ka naam + ek line role. (3) MRTP Act: objectives + provisions + limitations. (4) FERA vs FEMA table (marks pakka). (5) Ek real example (demonetisation / Amazon v. CCI for competition / FDI route). Ye 5 point likh doge to 70 me 60+ confirmed ✅</div>
+
+<div class="box b-q"><b>Probable exam questions — Unit 5</b>
+<ol>
+  <li>Political environment ke components likhiye aur business par unka prabhav samjhaiye. (10)</li>
+  <li>Legal environment kya hai? Business ko prabhavit karne wale pramukh kanun (laws) likhiye. (10)</li>
+  <li>MRTP Act, 1969 ke provisions aur limitations likhiye. Use Competition Act 2002 se kaise badla gaya? (12)</li>
+  <li>FERA aur FEMA me antar likhiye. FEMA ke main provisions bataiye. (12)</li>
+  <li>Political risk kya hai? Business usko kaise manage karta hai? (5)</li>
+</ol></div>
+
+<div class="rev">
+<h4>⚡ Rapid Revision — Unit 5</h4>
+<ul>
+  <li>Political environment: ideology, stability, government attitude, elections, trade unions, foreign policy, political risk.</li>
+  <li>Legal environment: Companies Act 2013, Consumer Protection 2019, GST, labour codes, environment law, IPR.</li>
+  <li>MRTP Act 1969 = first competition law; objectives: curb monopoly + RTP + UTP; MRTP Commission (1970); replaced by Competition Act 2002 (CCI).</li>
+  <li>FERA 1973 = control (criminal offence) → FEMA 1999 = management (civil offence); current account mostly free, capital account rules ke saath.</li>
+  <li>Competition Act 2002 ke 3 pillar: anti-competitive agreements, abuse of dominance, combination/M&amp;A regulation (CCI).</li>
+  <li>Answer me example dena zaroori: demonetisation (political), Maruti strike (union), Amazon-CCI (competition), FDI route (FEMA).</li>
+</ul>
+</div>
+
+<div class="footer">
+  📚 File 04 — Business Environment (CMM-104T) • BBA Semester 1 • Hinglish Notes<br>
+  Baaki files: 01 (Management), 02 (Business Economics), 03 (Accounting), 05 (Life Skills), 06 (Computer), 07 (Viva Prep)
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BBA Sem 1 - Basics of Accounting (CMM-101T)</title>
+<style>
+:root{--ink:#1c1c2b;--muted:#5b5b73;--brand:#78350f;--brand2:#b45309;--bg:#fffbf2;--card:#fff;--line:#f6e6c8}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:system-ui,-apple-system,'Segoe UI',Roboto,'Noto Sans',sans-serif;background:var(--bg);color:var(--ink);line-height:1.68;font-size:16.5px}
+.wrap{max-width:980px;margin:0 auto;padding:0 18px 90px}
+header.hero{background:linear-gradient(135deg,#92400e 0%,#b45309 60%,#fbbf24 100%);color:#fff;padding:38px 20px 34px;text-align:center}
+header.hero h1{margin:0 0 8px;font-size:1.7rem;line-height:1.3}
+header.hero p{margin:4px 0;opacity:.93;font-size:.97rem}
+.badge{display:inline-block;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);padding:3px 12px;border-radius:999px;font-size:.79rem;margin:4px 3px}
+nav.toc{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 20px;margin:-26px auto 26px;box-shadow:0 8px 24px rgba(28,28,43,.10);position:relative;z-index:2}
+nav.toc h2{margin:0 0 10px;font-size:1rem;color:var(--brand);text-transform:uppercase;letter-spacing:1px}
+nav.toc a{display:inline-block;margin:3px 12px 3px 0;color:var(--brand2);text-decoration:none;font-size:.92rem;border-bottom:1px dashed #ccc}
+h2.unit{font-size:1.45rem;color:#fff;background:linear-gradient(135deg,#92400e,#b45309);padding:12px 18px;border-radius:12px;margin:48px 0 16px;box-shadow:0 6px 18px rgba(28,28,43,.22)}
+h3{font-size:1.2rem;color:var(--brand);margin:30px 0 9px;border-left:5px solid var(--brand2);padding-left:12px}
+h4{font-size:1.04rem;color:#333;margin:20px 0 7px}
+p{margin:9px 0}
+ul,ol{margin:8px 0 8px 4px;padding-left:22px}
+li{margin:4px 0}
+table{border-collapse:collapse;width:100%;margin:14px 0;background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 10px rgba(28,28,43,.07);font-size:.92rem}
+th{background:#fef3c7;color:#78350f;text-align:left;padding:9px 11px;border:1px solid var(--line);font-size:.89rem}
+td{padding:8px 11px;border:1px solid var(--line);vertical-align:top}
+tr:nth-child(even) td{background:#fbfbfe}
+code{background:#fef3c7;padding:1.5px 6px;border-radius:5px;font-family:ui-monospace,Consolas,Menlo,monospace;font-size:.88em;color:var(--brand2)}
+pre{background:#16162e;color:#e8e8ff;padding:14px 16px;border-radius:12px;overflow-x:auto;font-family:ui-monospace,Consolas,Menlo,monospace;font-size:.85rem;line-height:1.6}
+.box{border-radius:12px;padding:13px 16px 13px 46px;margin:14px 0;position:relative;border:1px solid;font-size:.97rem}
+.box::before{position:absolute;left:13px;top:11px;font-size:1.15rem}
+.b-def{background:#eef2ff;border-color:#c7d2fe}.b-def::before{content:"📘"}
+.b-hing{background:#fff7ed;border-color:#fed7aa}.b-hing::before{content:"🗣️"}
+.b-real{background:#ecfdf5;border-color:#a7f3d0}.b-real::before{content:"🌍"}
+.b-tip{background:#fefce8;border-color:#fde68a}.b-tip::before{content:"🎯"}
+.b-warn{background:#fef2f2;border-color:#fecaca}.b-warn::before{content:"⚠️"}
+.b-mn{background:#f5f3ff;border-color:#ddd6fe}.b-mn::before{content:"🧠"}
+.b-fx{background:#f0f9ff;border-color:#bae6fd}.b-fx::before{content:"🧮"}
+.b-q{background:#fdf4ff;border-color:#f5d0fe}.b-q::before{content:"📝"}
+.b-key{background:#fffbeb;border-color:#fcd34d}.b-key::before{content:"🔑"}
+.tag{display:inline-block;background:var(--brand);color:#fff;font-size:.72rem;padding:2px 9px;border-radius:999px;margin-right:6px;letter-spacing:.4px}
+.rev{background:#16162e;color:#e8e8ff;border-radius:14px;padding:18px 20px;margin:18px 0}
+.rev h4{color:#c7d2fe;margin:0 0 8px}
+.rev li{margin:5px 0}
+.mini{font-size:.85rem;color:var(--muted)}
+.tag.alt{background:var(--brand2)}
+.footer{border-top:2px dashed var(--line);margin-top:50px;padding-top:18px;color:var(--muted);font-size:.88rem;text-align:center}
+</style>
+</head>
+<body>
+<header class="hero">
+  <h1>💰 Basics of Accounting (CMM-101T)</h1>
+  <p>Complete Hinglish Notes • Unit 1–5 • Formats, formulas + numerical examples</p>
+  <div><span class="badge">4 Credits</span><span class="badge">60 Hours</span><span class="badge">ESE 70 + Internal 30</span><span class="badge">DSCC</span></div>
+</header>
+
+<div class="wrap">
+<nav class="toc">
+  <h2>Units</h2>
+  <a href="#u1">Unit 1 — Introduction to Accounting</a>
+  <a href="#u2">Unit 2 — Journal, Ledger &amp; Trial Balance</a>
+  <a href="#u3">Unit 3 — Final Accounts</a>
+  <a href="#u4">Unit 4 — Depreciation &amp; Stock Valuation</a>
+  <a href="#u5">Unit 5 — Computerised Accounting &amp; Tally</a>
+</nav>
+
+<div class="box b-tip"><b>Is subject ka raaz:</b> Accounting me <b>format + rule + practice</b> teen cheezein sabse zyada marks deti hain. Golden Rules of Debit-Credit, Journal entry, Trial Balance, Trading &amp; P&amp;L a/c, Balance Sheet, Depreciation (SLM + WDV) — ye pakka aate hain. Har numerical me <b>working notes</b> likhna kabhi mat bhoolna, examiner wahi dekhta hai ✅</div>
+
+<!-- ================== UNIT 1 ================== -->
+<h2 class="unit" id="u1">UNIT 1 — Introduction to Accounting</h2>
+
+<h3>1.1 Accounting kya hai? (Meaning &amp; Definition)</h3>
+<p>Socho tumhare papa ki ek chhoti dukaan hai. Roz subah counter kholte hain, shaam ko band karte hain. Din bhar me kitna maal aaya, kitna bikri hui, kitna udhaar gaya, kitna kharcha hua — agar ye sab kuch <b>likhi hui jagah</b> na ho, to agle mahine unhe ye bhi pata nahi chalega ki faayda hua ya nuksaan. Wahi likhne-rakhne ka systematic kaam <b>Accounting</b> hai.</p>
+
+<div class="box b-def"><b>Accounting</b> = <b>kis logic</b> ki financial transactions ko <b>systematic tarike se record</b> karna, <b>classify</b> karna, <b>summarise</b> karna, <b>analyse</b> karna aur jinke <b>results (profit/loss, financial position)</b> users ko <b>report</b> karna — taaki wo sahi decision le saken.</div>
+
+<p>American Institute of Certified Public Accountants (AICPA) ke shabdon me:</p>
+<div class="box b-def">"Accounting is the art of <b>recording, classifying and summarising</b> in a significant manner and in terms of money, transactions and events which are, in part at least, of a <b>financial character</b>, and <b>interpreting the results</b> thereof." — Yani accounting = recording + classifying + summarising + interpreting.</div>
+
+<h4>Accounting ka process (step by step)</h4>
+<pre>Step 1  IDENTIFY  ->  Financial transaction identify karo (voucher aaya)
+Step 2  RECORD    ->  JOURNAL me likho (double entry)
+Step 3  CLASSIFY  ->  LEDGER me posting karo (account-wise)
+Step 4  SUMMARISE ->  TRIAL BALANCE banao
+Step 5  FINALISE  ->  Trading a/c + P&L a/c + Balance Sheet
+Step 6  ANALYSE   ->  Ratio / trend analysis
+Step 7  COMMUNICATE -> Report / Annual report se users tak</pre>
+
+<h4>Characteristics / Features (properties of accounting)</h4>
+<table>
+<tr><th>Feature</th><th>Matlab (Hinglish me)</th></tr>
+<tr><td>Financial transactions only</td><td>Sirf wahi cheezein likhi jaati hain jinka <b>paisa me value</b> ho. Boss ki achhi aadat ya staff ka achha nature nahi likha jayega 😄</td></tr>
+<tr><td>Systematic record</td><td>Pehle journal, phir ledger, phir trial balance — sequence fixed</td></tr>
+<tr><td>Art + Science</td><td>Art: skill aur experience chahiye. Science: principles aur rules ka body hai</td></tr>
+<tr><td>Money measurement</td><td>Har transaction rupee/dollar me hi likhi jaati hai</td></tr>
+<tr><td>Historical in nature</td><td>Ye <b>pehle hui</b> (past) transactions ka record hai — future ka plan nahi (wo budgeting hai)</td></tr>
+<tr><td>Legal requirements</td><td>Companies Act, Income Tax Act, GST — sab ke liye proper books zaroori (Shri Gopal scam jaise cases me record hi proof banta hai 😬)</td></tr>
+<tr><td>Interpreting results</td><td>Sirf likhna nahi — result ka matlab samjhana bhi kaam hai</td></tr>
+</table>
+
+<h3>1.2 Importance / Need / Objectives &amp; Scope</h3>
+<h4>(A) Objectives of Accounting</h4>
+<ul>
+  <li><b>Record karne ka objective:</b> Har transaction ka systematic record rakhna.</li>
+  <li><b>Profit/Loss nikalna:</b> Period ka net result (Profit &amp; Loss account se).</li>
+  <li><b>Financial position batana:</b> Balance Sheet se assets-liabilities ka picture.</li>
+  <li><b>Property/assets ki jaankari</b> aur un mein kya-kya badla — record rakhna.</li>
+  <li><b>Decision support:</b> Management, owners, bank, sarkar — sabko sahi info dena.</li>
+</ul>
+
+<h4>(B) Importance — kisko kaam aata hai? (Users of accounting information)</h4>
+<table>
+<tr><th>User</th><th>Kya dekhta hai / kyun</th></tr>
+<tr><td>Owner / Shareholders</td><td>Paisa kamaya ya nahi? Dividend milega? Share ki value badhegi?</td></tr>
+<tr><td>Management</td><td>Kaunsa product loss me hai? Cost control kahan karna hai?</td></tr>
+<tr><td>Banks / Lenders</td><td>Loan diya to wapas milega? Balance sheet + cash flow se check karte hain</td></tr>
+<tr><td>Suppliers / Creditors</td><td>Is company ko udhaar par maal de sakte hain ya nahi?</td></tr>
+<tr><td>Sarkar / Tax Department</td><td>Income tax, GST — kitna tax banta hai?</td></tr>
+<tr><td>Employees / Labour Union</td><td>Bonus, increment, job security ka aadhaar</td></tr>
+<tr><td>Investors / Analysts</td><td>Invest karna chahiye ya nahi — profit trend dekhte hain</td></tr>
+<tr><td>Public / Society</td><td>Company ka contribution, CSR, employment</td></tr>
+</table>
+
+<div class="box b-real"><b>Real life example:</b> Jab tum home loan ke liye bank jate ho, bank tumhari salary slip ke saath-saath <b>kitni EMI already chal rahi hai</b> ye dekhta hai — matlab bank individual ki bhi accounting dekh raha hai. Aur jab Amul ya Tata ki annual report aati hai, unki <b>audited accounts</b> hi investors ko batati hain ki company kitni strong hai. Isliye kehte hain: "No accounting = No trust = No business."</div>
+
+<h4>(C) Scope / Branches of Accounting</h4>
+<table>
+<tr><th>Branch</th><th>Kaam kya karta hai</th></tr>
+<tr><td>Financial Accounting</td><td>Overall profit/loss aur financial position — shareholders, banks, tax ke liye</td></tr>
+<tr><td>Cost Accounting</td><td>Product/kaam ki cost nikalna, cost control, cost reduction — industry ka favourite (Maruti ke kaar me per-unit cost)</td></tr>
+<tr><td>Management Accounting</td><td>Manager ke decision ke liye data — budgeting, variance, ratio analysis</td></tr>
+<tr><td>Tax Accounting</td><td>Income tax, GST, TDS compliance</td></tr>
+<tr><td>Social / Human Resource Accounting</td><td>Samaj aur employees ko value dena (CSR report, employee value)</td></tr>
+</table>
+
+<div class="box b-warn"><b>Limitations of accounting (yahan marks kat jaate hain agar na likho):</b> (1) Sirf <b>financial</b> cheezein, quality/employee morale nahi likhta. (2) <b>Historical</b> record hai — future kal ka kuch nahi batata. (3) <b>Price level changes</b> (inflation) ko ignore karta hai. (4) <b>Window dressing</b> possible hai — achha dikhane ke liye figures ko sundar kiya ja sakta hai. (5) Personal judgement/bias — depreciation method, provision ka estimate. (6) Sirf money value — goodwill internally build hui nahi dikhati.</div>
+
+<h3>1.3 Basic Terms (Vocabulary — ratta maarne layak)</h3>
+<table>
+<tr><th>Term</th><th>Definition (Hinglish me)</th></tr>
+<tr><td>Capital</td><td>Owner ka business me lagaya hua paisa. Capital = Assets − Liabilities. Ye owner ki <b>liability</b> hai business ke liye</td></tr>
+<tr><td>Drawings</td><td>Owner ne personal use ke liye business se paisa/maal nikala — capital kam karta hai</td></tr>
+<tr><td>Transaction</td><td>Koi bhi aisa event jiska financial effect ho (₹5,000 ka maal kharida = transaction)</td></tr>
+<tr><td>Goods / Merchandise</td><td>Business jis cheez ka dhandha karta hai (Kirana wale ke liye aata, mobile shop ke liye phone)</td></tr>
+<tr><td>Assets</td><td>Business ki cheezein/property jo future me benefit degi (Building, Cash, Debtors, Furniture)</td></tr>
+<tr><td>Liabilities</td><td>Business ka bojh — jise dena hai (Loan, Creditors, Bills payable)</td></tr>
+<tr><td>Revenue</td><td>Trade/sale ka paisa — main income</td></tr>
+<tr><td>Expense / Expenditure</td><td>Chalane ka kharcha (rent, salary). Expenditure = jiska benefit aage milega (capital expenditure)</td></tr>
+<tr><td>Debtor (Sundry Debtors)</td><td>Jiske paas business ka udhaar hai — hum unse paisa lenge</td></tr>
+<tr><td>Creditor (Sundry Creditors)</td><td>Jise hum paisa denge — supplier</td></tr>
+<tr><td>Stock / Inventory</td><td>Bechne ke liye pada hua maal</td></tr>
+<tr><td>Voucher</td><td>Transaction ka documentary proof — cash voucher, purchase voucher</td></tr>
+<tr><td>Bad debts</td><td>Jo udhaar wapas na aaye — usko loss likhna</td></tr>
+<tr><td>Insolvent</td><td>Jo dukan ya vyakti total paisa nahi de sakta — uske liye court process (IBBI) chalta hai</td></tr>
+</table>
+
+<h3>1.4 Accounting Principles / Concepts / Conventions (GAAP)</h3>
+<p>Ye "khel ke rules" hain. Inhi ke aadhar par financial statement samajhne layak rehte hain. Isko <b>GAAP</b> (Generally Accepted Accounting Principles) kehte hain.</p>
+
+<h4>(A) Key Concepts (basic assumptions — assume karke chalta hai)</h4>
+<table>
+<tr><th>Concept</th><th>Rule</th><th>Example</th></tr>
+<tr><td>Business Entity Concept</td><td>Business aur owner <b>alag</b> hain. Owner ka paisa = capital (liability of business)</td><td>Papa ne dukaan ko ₹5,00,000 daala — dukaan ke books me ye "Capital" hai, papa ki jaib nahi</td></tr>
+<tr><td>Money Measurement Concept</td><td>Sirf paisa me naapa jaane wali cheezein likho</td><td>Manager ki achhi leadership nahi likhi, lekin uski salary likhi jayegi</td></tr>
+<tr><td>Going Concern Concept</td><td>Business aage bhi chalega aisa maan kar chalta hai — isliye asset ki cost ko saalon me baant dete hain (depreciation)</td><td>Zameen ki cost ek saal me nahi likh rahe, isliye building 30 saal me depreciate hoti hai</td></tr>
+<tr><td>Cost Concept</td><td>Asset ko uske <b>purchase price</b> par likho, market price par nahi</td><td>Vikas ne ₹8,00,000 me flat kharida; aaj market ₹12,00,000 hai — books me 8L hi rahega</td></tr>
+<tr><td>Dual Aspect Concept</td><td>Har transaction ka <b>do taraf</b> effect — Debit = Credit. Yahi Accounting Equation ka base hai</td><td>Cash laaye ₹1,00,000 — Cash badha (Dr.) aur Capital badha (Cr.)</td></tr>
+<tr><td>Realisation Concept</td><td>Income tabhi maano jab bikri <b>ho chuki</b> ho, promise nahi</td><td>Customer ne bola "kal kharidunga" — ye sale nahi</td></tr>
+<tr><td>Accrual Concept</td><td>Income/expense us period me likho jab wo <b>hua</b>, chahe paisa aaya/gaaya ho ya nahi</td><td>March ki salary May me mili — to March me hi expense.</td></tr>
+<tr><td>Matching Concept</td><td>Ek period ke saare expenses aur usi ke revenues ko mila kar profit nikalo</td><td>Sale ke saath cost of goods sold bhi hataao</td></tr>
+<tr><td>Accounting Period Concept</td><td>Zindagi ko chhote periods (1 saal, ya 1 April–31 March) me baanto taaki result nikal sake</td><td>Annual accounts 1 April se 31 March tak</td></tr>
+<tr><td>Full Disclosure Concept</td><td>Sab important baatein batao — kuch chhupao nahi</td><td>Contingent liability, related party transaction footnotes me likhna</td></tr>
+</table>
+
+<h4>(B) Conventions (practice-based guidelines)</h4>
+<table>
+<tr><th>Convention</th><th>Rule</th></tr>
+<tr><td>Consistency</td><td>Ek baar jo method chuna (jaise SLM depreciation) use saal-dar-saal follow karo — warna comparison bekaar</td></tr>
+<tr><td>Materiality</td><td>Sirf important cheezein alag se dikhao. ₹100 ke stapler ko 10 saal me depreciate karna bewakoofi hai — seedha expense</td></tr>
+<tr><td>Conservatism (Prudence)</td><td>Loss ka intezaar nahi, profit ka wait karo. Provision banao, doubtful debts hataao — "expected profit record na karo, expected loss record karo"</td></tr>
+<tr><td>Objectivity / Verifiability</td><td>Har entry ka proof ho — bill, voucher, invoice (guess-work nahi)</td></tr>
+<tr><td>Timeliness</td><td>Report time par de do — late information bekaar</td></tr>
+</table>
+
+<div class="box b-mn"><b>Yaad karne ki trick:</b> Concepts ke pehle akshar jodo → <b>"B M G C D R A M A F"</b> → <b>B</b>usiness entity, <b>M</b>oney measurement, <b>G</b>oing concern, <b>C</b>ost, <b>D</b>ual aspect, <b>R</b>ealisation, <b>A</b>ccrual, <b>M</b>atching, <b>A</b>ccounting period, <b>F</b>ull disclosure. Conventions: <b>C-M-C-O</b> = Consistency, Materiality, Conservatism, Objectivity.</div>
+
+<h3>1.5 Accounting Equation (sabse zyada use hoti hai)</h3>
+<div class="box b-fx"><b>Assets = Liabilities + Capital</b><br>Ya isko aise likho: <b>Capital = Assets − Liabilities</b><br>Dual aspect kehta hai: har transaction ke baad bhi ye equation <b>balance</b> rehti hai. Agar koi entry likhne me doubt ho to isi equation se check karo.</div>
+
+<h4>Examples — equation kaise kaam karta hai</h4>
+<table>
+<tr><th>Transaction</th><th>Effect</th><th>Assets</th><th>=</th><th>Liabilities + Capital</th></tr>
+<tr><td>1. Owner ne business me ₹5,00,000 daala</td><td>Cash badha, capital badha</td><td>5,00,000</td><td>=</td><td>0 + 5,00,000</td></tr>
+<tr><td>2. Bank se loan liya ₹2,00,000</td><td>Cash badha, liability badhi</td><td>7,00,000</td><td>=</td><td>2,00,000 + 5,00,000</td></tr>
+<tr><td>3. Furniture kharida ₹1,00,000 cash</td><td>Ek asset se dusra asset (cash ghata, furniture badha)</td><td>6,00,000 + 1,00,000 = 7,00,000</td><td>=</td><td>2,00,000 + 5,00,000</td></tr>
+<tr><td>4. Maal kharida udhaar (credit) par ₹80,000</td><td>Stock badha, creditors badhe</td><td>7,80,000</td><td>=</td><td>2,80,000 + 5,00,000</td></tr>
+<tr><td>5. Owner ne personal use ke liye ₹20,000 nikale</td><td>Cash ghata, capital ghata (drawing)</td><td>7,60,000</td><td>=</td><td>2,80,000 + 4,80,000</td></tr>
+<tr><td>6. Creditors ko ₹30,000 diye</td><td>Cash ghata, liability ghati</td><td>7,30,000</td><td>=</td><td>2,50,000 + 4,80,000</td></tr>
+</table>
+<div class="box b-key"><b>Doctor wala formula bhi yahi hai:</b> Assets (jo humare paas hai) = Liabilities (jo doosron ka hai) + Capital (jo owner ka hai). Kabhi bhi ye equation toot jaye — samjho entry galat hai.</div>
+
+<h3>1.6 Types of Accounts (Accounts ke bhed)</h3>
+<h4>(A) Traditional / Golden classification</h4>
+<table>
+<tr><th>Type</th><th>Kya hai</th><th>Examples</th></tr>
+<tr><td><b>Personal Account</b></td><td>Vyakti, firm, bank, company — jinki khata hum rakhte hain</td><td>Ram's A/c, SBI A/c, Capital A/c, Supplier A/c</td></tr>
+<tr><td><b>Real Account</b></td><td>Sampatti (property) se juda account</td><td>Cash, Furniture, Building, Machinery, Stock</td></tr>
+<tr><td><b>Nominal Account</b></td><td>Income, expense, loss, gain — "naam ke" accounts</td><td>Salary, Rent, Interest, Discount, Sales</td></tr>
+</table>
+<p>Personal account ke do bhed bhi likhne hote hain: <b>Natural</b> (Ram, Shyam), <b>Artificial</b> (firms, companies, banks, government) aur <b>Representative</b> (Outstanding Salary A/c, Prepaid Rent A/c — ye vyakti nahi, unki taraf se khade hain).</p>
+
+<h4>(B) Modern / Practical classification (5 types — ALCRE)</h4>
+<table>
+<tr><th>Type</th><th>Examples</th><th>Balance kaisa?</th></tr>
+<tr><td>Assets</td><td>Cash, Machinery, Debtors, Stock (Current + Fixed + Intangible)</td><td>Debit balance</td></tr>
+<tr><td>Liabilities</td><td>Creditors, Loan, Bills Payable</td><td>Credit balance</td></tr>
+<tr><td>Capital / Owner's Equity</td><td>Capital, Drawings (contra)</td><td>Credit balance</td></tr>
+<tr><td>Revenue / Income</td><td>Sales, Commission Received, Interest received</td><td>Credit balance</td></tr>
+<tr><td>Expenses / Losses</td><td>Salary, Rent, Depreciation, Bad debts</td><td>Debit balance</td></tr>
+</table>
+
+<h3>1.7 Golden Rules of Debit &amp; Credit (D-C ka baap)</h3>
+<div class="box b-def"><b>Debit (Dr.)</b> = Left side of account. <b>Credit (Cr.)</b> = Right side. Ye "good" aur "bad" nahi hai — sirf side ke naam hain. Har entry me Debit = Credit hota hai.</div>
+
+<h4>Traditional rules (account type ke hisaab se)</h4>
+<table>
+<tr><th>Account type</th><th>Rule</th><th>Example</th></tr>
+<tr><td>Personal</td><td><b>Debit the receiver, Credit the giver</b> (jo letaa hai debit, jo deta hai credit)</td><td>Ram ko ₹20,000 diye → Ram Dr., Cash Cr.</td></tr>
+<tr><td>Real</td><td><b>Debit what comes in, Credit what goes out</b></td><td>Furniture kharida → Furniture Dr., Cash Cr.</td></tr>
+<tr><td>Nominal</td><td><b>Debit all expenses &amp; losses, Credit all incomes &amp; gains</b></td><td>Salary di → Salary Dr., Cash Cr.</td></tr>
+</table>
+<div class="box b-mn"><b>Trick:</b> Personal = <b>"R-G"</b> (Receiver debit, Giver credit) • Real = <b>"IN-OUT"</b> (jo andar aaye debit, jo bahar jaye credit) • Nominal = <b>"Kharcha Debit, Kamai Credit"</b>. Bas teen line me poora double entry system set hai ✅</div>
+
+<h4>Modern rules (ALCRE) — jo aaj software/Tally me chalta hai</h4>
+<table>
+<tr><th>Type</th><th>Rule</th></tr>
+<tr><td>Assets</td><td>Increase → <b>Debit</b> | Decrease → Credit</td></tr>
+<tr><td>Liabilities</td><td>Increase → <b>Credit</b> | Decrease → Debit</td></tr>
+<tr><td>Capital</td><td>Increase → <b>Credit</b> | Decrease → Debit</td></tr>
+<tr><td>Revenue</td><td>Increase → <b>Credit</b> | Decrease → Debit</td></tr>
+<tr><td>Expenses</td><td>Increase → <b>Debit</b> | Decrease → Credit</td></tr>
+</table>
+
+<h3>1.8 Book-keeping vs Accounting vs Accountancy</h3>
+<table>
+<tr><th>Point</th><th>Book-keeping</th><th>Accounting</th></tr>
+<tr><td>Meaning</td><td>Transaction likhna, classify karna (journal, ledger)</td><td>Upar wala kaam + summarise, analyse, interpret, report</td></tr>
+<tr><td>Scope</td><td>Chhota, clerical</td><td>Bada, analytical</td></tr>
+<tr><td>Level</td><td>Clerk/Tally operator</td><td>Accountant/Manager/CA</td></tr>
+<tr><td>Decision making</td><td>Koi nahi</td><td>Haan, decisions me help karta hai</td></tr>
+<tr><td>Relation</td><td>Accountancy ka <b>part/first step</b> hai</td><td>Book-keeping se shuru hokar reporting tak jaata hai</td></tr>
+</table>
+<div class="box b-hing"><b>Hinglish me:</b> Book-keeping = "likhne wala kaam". Accounting = "likhne ke baad samajhne ka kaam". Accountancy = poora <b>subject/body of knowledge</b>. Jaise cricket me batting alag skill hai, fielding alag — par game cricket hi kehlata hai.</div>
+
+<h3>1.9 Basis &amp; Forms of Accounting</h3>
+<table>
+<tr><th>Basis / Form</th><th>Matlab</th><th>Note</th></tr>
+<tr><td>Cash basis</td><td>Income/expense tabhi likho jab paisa <b>aajaye/jaaye</b></td><td>Simple, par actual profit distort hota hai</td></tr>
+<tr><td>Accrual basis</td><td>Jab ghatna hui tabhi likho (chahe paisa baad me aaye)</td><td>Companies Act/AS me <b>compulsory</b>; true profit deta hai</td></tr>
+<tr><td>Hybrid / Mixed</td><td>Dono ka mix</td><td>Chhoti dukaanon me dekha jaata hai</td></tr>
+<tr><td>Single entry system</td><td>Sirf cash + personal accounts; incomplete record</td><td>Chhoti firms; statement of affairs se profit nikalte hain</td></tr>
+<tr><td>Double entry system</td><td>Har transaction ke 2 effects — debit + credit; scientific</td><td>Aaj ka standard (Luca Pacioli, 1494)</td></tr>
+</table>
+
+<div class="box b-q"><b>Probable exam questions — Unit 1</b>
+<ol>
+  <li>Accounting kya hai? Iski definition, nature aur importance samjhaiye. (10)</li>
+  <li>Accounting ke basic concepts aur conventions ko define karke examples se samjhaiye. (10)</li>
+  <li>Accounting equation samjhaiye aur do transactions lekar prove kijiye. (5)</li>
+  <li>Accounts ke prakar bataiye aur Debit-Credit ke niyam likhiye. (10)</li>
+  <li>Book-keeping aur Accounting me antar likhiye. (5)</li>
+  <li>Accounting ki limitations likhiye. (5)</li>
+</ol></div>
+
+<div class="rev">
+<h4>⚡ Rapid Revision — Unit 1</h4>
+<ul>
+  <li>Accounting = recording + classifying + summarising + interpreting (AICPA definition).</li>
+  <li>Characteristics: financial, systematic, art &amp; science, money measurement, historical, legal need.</li>
+  <li>Concepts: Business Entity, Money Measurement, Going Concern, Cost, Dual Aspect, Realisation, Accrual, Matching, Periodicity, Full Disclosure.</li>
+  <li>Conventions: Consistency, Materiality, Conservatism, Objectivity.</li>
+  <li>Equation: Assets = Liabilities + Capital.</li>
+  <li>Traditional accounts: Personal, Real, Nominal. Modern: ALCRE (Asset, Liability, Capital, Revenue, Expense).</li>
+  <li>Rules: personal "debit receiver, credit giver" • real "debit in, credit out" • nominal "expense debit, income credit".</li>
+  <li>Double entry system ka janmdata: <b>Luca Pacioli (1494)</b>.</li>
+</ul>
+</div>
+
+<!-- ================== UNIT 2 ================== -->
+<h2 class="unit" id="u2">UNIT 2 — Journal, Ledger &amp; Trial Balance</h2>
+
+<h3>2.1 Journal — "Roznamcha"</h3>
+<div class="box b-def"><b>Journal</b> = business ki <b>sabse pehli</b> book jis me transactions <b>date-wise, chronological order</b> me double-entry form me likhi jaati hain. Isliye isko <b>Book of Original Entry / Subsidiary Book ka baap / Roznamcha</b> bhi kehte hain.</div>
+
+<h4>Format of Journal</h4>
+<pre>Date  | Particulars (Dr/Cr)              | L.F | Debit(₹) | Credit(₹)
+------|----------------------------------|-----|----------|----------
+Apr 1 | Cash A/c              Dr.        |     | 5,00,000 |
+      |    To Capital A/c                |     |          | 5,00,000
+      | (Being cash brought in as capital)|   |          |
+</pre>
+<ul>
+  <li><b>Date</b> — transaction ki tareekh.</li>
+  <li><b>Particulars</b> — Debit account pehle likho (prefix "<b>Dr.</b>"), neeche "To" lagakar credit account; dono ki narration bracket me.</li>
+  <li><b>L.F.</b> = Ledger Folio (ledger me kis page par posting ki, uska number).</li>
+  <li><b>Dr./Cr. amount</b> — barabar hona chahiye.</li>
+  <li><b>Narration</b> — short explanation "Being ..." — ye examiner ko confident dikhata hai.</li>
+</ul>
+
+<div class="box b-tip"><b>Steps of journalising:</b> 1) Kaunse <b>do</b> accounts affect hue, pehchano. 2) Unka type (Asset/Liability/Capital/Revenue/Expense) likho. 3) Rule apply karo (debit kaunsa, credit kaunsa). 4) Entry likho + narration do. 5) Check karo: Debit total = Credit total.</div>
+
+<h4>Types of Journal entries (aadhi neend me bhi yaad)</h4>
+<table>
+<tr><th>Entry type</th><th>Entry kaise banti hai</th><th>Example</th></tr>
+<tr><td>Simple entry</td><td>1 debit + 1 credit</td><td>Cash sale: Cash Dr. To Sales</td></tr>
+<tr><td>Compound entry</td><td>Ek hi date par 2 se zyada accounts</td><td>Salary ₹20,000 + Rent ₹5,000 cash me: Salary Dr. 20,000, Rent Dr. 5,000, To Cash 25,000</td></tr>
+<tr><td>Opening entry</td><td>Naye saal ka pehla entry — pichhle saal ke assets/liabilities aage laana</td><td>Cash Dr., Stock Dr., Furniture Dr. To Creditors, To Capital</td></tr>
+<tr><td>Closing entry</td><td>Period end par nominal accounts band karna (P&amp;L/Trading me transfer)</td><td>Sales Dr. To Trading A/c</td></tr>
+<tr><td>Adjustment entry</td><td>Year-end adjustment ke liye (outstanding, prepaid, depreciation…)</td><td>Depreciation Dr. To Machinery</td></tr>
+<tr><td>Rectification entry</td><td>Galat entry sudharne ke liye</td><td>Suspense/related account se correct karna</td></tr>
+<tr><td>Transfer entry</td><td>Ek account se dusre me transfer</td><td>Profit &amp; Loss A/c Dr. To Capital A/c (profit transfer)</td></tr>
+</table>
+
+<h4>Worked Journal Example (poora solve) — "Sunrise Traders"</h4>
+<table>
+<tr><th>Date</th><th>Transaction</th></tr>
+<tr><td>Apr 1</td><td>Ashok ne ₹5,00,000 cash se business shuru kiya</td></tr>
+<tr><td>Apr 3</td><td>Furniture kharida ₹60,000 cash</td></tr>
+<tr><td>Apr 5</td><td>Maal kharida (credit) Sohan se ₹1,20,000</td></tr>
+<tr><td>Apr 8</td><td>Cash sale ₹40,000</td></tr>
+<tr><td>Apr 12</td><td>Sohan ko ₹1,00,000 cash diya</td></tr>
+<tr><td>Apr 15</td><td>Mohit ko credit sale ₹75,000</td></tr>
+<tr><td>Apr 18</td><td>Rent diya ₹15,000; Salary di ₹25,000 (cash)</td></tr>
+<tr><td>Apr 25</td><td>Mohit se cash mila ₹45,000</td></tr>
+</table>
+
+<pre>Journal Entries (Sunrise Traders)
+
+Apr 1  Cash A/c                      Dr.  5,00,000
+          To Capital A/c                             5,00,000
+       (Being business started with cash)
+
+Apr 3  Furniture A/c                 Dr.     60,000
+          To Cash A/c                                  60,000
+       (Being furniture purchased for cash)
+
+Apr 5  Purchase A/c                  Dr.  1,20,000
+          To Sohan (Creditor) A/c                   1,20,000
+       (Being goods purchased on credit)
+
+Apr 8  Cash A/c                      Dr.     40,000
+          To Sales A/c                                 40,000
+       (Being goods sold for cash)
+
+Apr 12 Sohan A/c                     Dr.  1,00,000
+          To Cash A/c                               1,00,000
+       (Being cash paid to creditor)
+
+Apr 15 Mohit (Debtor) A/c            Dr.     75,000
+          To Sales A/c                                 75,000
+       (Being goods sold on credit)
+
+Apr 18 Rent A/c                      Dr.     15,000
+       Salary A/c                    Dr.     25,000
+          To Cash A/c                                  40,000
+       (Being rent and salary paid)
+
+Apr 25 Cash A/c                      Dr.     45,000
+          To Mohit A/c                                 45,000
+       (Being cash received from debtor)
+
+Total Debit = 5,00,000+60,000+1,20,000+40,000+1,00,000+75,000+40,000+45,000 = 9,80,000
+Total Credit = same = 9,80,000  ✅ Balanced</pre>
+
+<div class="box b-real"><b>Real life example:</b> Tumhare hostel ka mess wala har din "aaj ka hisaab" register me likhta hai — aata kitna aaya, sabzi ka kharcha, doodh ka bill. Wo hai <b>journal</b>. Shaam ko wo har supplier ke hisaab se jodta hai ki "Sharma ji ko kitna dena hai" — wo <b>ledger</b> ban gaya. Aur mahine ke end par dono taraf jod kar check karta hai — wahi <b>trial balance</b> hai.</div>
+
+<h3>2.2 Ledger — "Khata" (principal book)</h3>
+<div class="box b-def"><b>Ledger</b> = journal ki entries ko <b>account-wise</b> classify karke rakhi jaane wali book. Isko <b>Principal Book / Book of Final Entry</b> kehte hain — kyunki yahan se hi trial balance aur final accounts bante hain.</div>
+
+<h4>Format of Ledger Account (T-format)</h4>
+<pre>Dr.                         CASH A/C                          Cr.
+Date | Particulars |  J.F | Amount | Date | Particulars | J.F |  Amount
+Apr 1| To Capital  |      |5,00,000| Apr 3| By Furniture|     |   60,000
+Apr 8| To Sales    |      |  40,000| Apr12| By Sohan    |     |1,00,000
+Apr25| To Mohit    |      |  45,000| Apr18| By Rent     |     |   15,000
+     |             |      |        | Apr18| By Salary   |     |   25,000
+     |             |      |        | Apr30| By Balance c/d|   |3,85,000
+     |             |      |5,85,000|      |             |     |5,85,000
+May 1| To Balance b/d|     |3,85,000|      |             |     |</pre>
+
+<h4>Posting ke steps</h4>
+<ol>
+  <li>Journal ka <b>debit</b> account dhoondo, uska ledger me <b>debit</b> side likho; "To (credit account ka naam)" likho.</li>
+  <li>Journal ka <b>credit</b> account dhoondo, uska ledger me <b>credit</b> side likho; "By (debit account ka naam)" likho.</li>
+  <li>Har posting me J.F. (Journal Folio) likho.</li>
+  <li>Mahine/period ke end me dono side jodo → farak = <b>balance</b>. "Balance c/d" likh kar dono side barabar karo.</li>
+  <li>Naye period me "Balance b/d" likh kar shuru karo.</li>
+</ol>
+
+<h4>Journal vs Ledger</h4>
+<table>
+<tr><th>Basis</th><th>Journal</th><th>Ledger</th></tr>
+<tr><td>Nature</td><td>Book of original entry</td><td>Book of final entry / principal book</td></tr>
+<tr><td>Order</td><td>Date-wise (chronological)</td><td>Account-wise</td></tr>
+<tr><td>Narration</td><td>Zaroori</td><td>Nahi likhi jaati</td></tr>
+<tr><td>Balancing</td><td>Nahi hota</td><td>Har account balance hota hai</td></tr>
+<tr><td>Purpose</td><td>Transaction record karna</td><td>Trial balance/final accounts banana</td></tr>
+</table>
+
+<h3>2.3 Trial Balance</h3>
+<div class="box b-def"><b>Trial Balance</b> = ek statement jis me ek particular date par sab ledger accounts ke <b>debit aur credit balances</b> ki list bana kar dono totals ko <b>barabar</b> dikhaya jaata hai — taaki ye prove ho sake ki double entry me arithmetical accuracy hai.</div>
+
+<h4>Objectives / Uses</h4>
+<ul>
+  <li>Arithmetical accuracy check karna (Debit total = Credit total).</li>
+  <li>Final accounts banane ka base dena (Trading, P&amp;L, Balance Sheet).</li>
+  <li>Errors detect karna (partially).</li>
+  <li>Ek jagah sab account balances ka summary dena.</li>
+</ul>
+
+<h4>Rule: kaunsa account Dr. side, kaunsa Cr. side</h4>
+<table>
+<tr><th>Debit balance wale (Dr. column)</th><th>Credit balance wale (Cr. column)</th></tr>
+<tr><td>Cash, Bank, Furniture, Machinery, Building, Stock, Debtors, Drawings, Purchase, Returns inward (Sales Return), Carriage inward, Wages, Salaries, Rent, Insurance, Bad debts, Discount allowed, Expenses/Losses</td><td>Capital, Loan, Creditors, Bills payable, Sales, Returns outward (Purchase Return), Commission received, Interest received, Discount received, Provision for doubtful debts, Reserve fund, Outstanding expenses</td></tr>
+</table>
+<div class="box b-mn"><b>Shortcut:</b> Jo cheez <b>humare paas</b> hai ya <b>humne kharch</b> kiya → Dr. Jo cheez <b>doosron ki</b> hai ya <b>humne kamaya</b> → Cr. Wahi ALCRE rule hai, bas balance side ki shakal me.</div>
+
+<h4>Format of Trial Balance</h4>
+<pre>TRIAL BALANCE as on 30 April
+S.No | Account Name        | L.F | Debit (₹) | Credit (₹)
+1    | Cash A/c            |     | 3,85,000  |
+2    | Furniture A/c       |     |   60,000  |
+3    | Purchase A/c        |     | 1,20,000  |
+4    | Sales A/c           |     |           | 1,15,000
+5    | Sohan (Creditor) A/c|     |   20,000  |
+6    | Mohit (Debtor) A/c  |     |   30,000  |
+7    | Rent A/c            |     |   15,000  |
+8    | Salary A/c          |     |   25,000  |
+9    | Capital A/c         |     |           | 5,00,000
+     | TOTAL               |     |6,55,000   | 6,55,000
+</pre>
+<div class="box b-key"><b>Note:</b> Debit total = Credit total hone ka matlab ye NAHI ki koi galti nahi hai (kuch errors trial balance me pakde nahi jaate). Isliye kehte hain: "Trial balance agreement is a test of arithmetic accuracy, not a proof of absolute accuracy."</div>
+
+<h4>Methods of preparing Trial Balance</h4>
+<ol>
+  <li><b>Totals method</b> — har account ke total (debit total/Credit total) list karo.</li>
+  <li><b>Balances method</b> — sirf net balance likho (sabse common).</li>
+  <li><b>Totals-cum-balances method</b> — dono.</li>
+</ol>
+
+<h4>Errors — konse pakde jaate hain, konse nahi</h4>
+<table>
+<tr><th>Error type</th><th>Matlab</th><th>Trial balance me pakda jayega?</th></tr>
+<tr><td>Error of Omission (complete)</td><td>Transaction hi nahi likhi</td><td>Nahi ❌</td></tr>
+<tr><td>Error of Commission</td><td>Galat account/amount me likh diya par double entry hui</td><td>Nahi (agar dono taraf same galat) ❌</td></tr>
+<tr><td>Error of Principle</td><td>Nature galat — jaise machinery ko expense me likh diya</td><td>Nahi ❌</td></tr>
+<tr><td>Compensating Errors</td><td>Ek galti doosri galti se cancel ho gayi</td><td>Nahi ❌</td></tr>
+<tr><td>Partial omission</td><td>Ek side likhi, doosri nahi</td><td>Haan ✅</td></tr>
+<tr><td>Wrong posting of amount (ek taraf)</td><td>Ek side ₹500, doosri ₹5,000</td><td>Haan ✅</td></tr>
+<tr><td>Posting same side of both accounts</td><td>Dono Dr. ya dono Cr.</td><td>Haan ✅</td></tr>
+<tr><td>Wrong casting totalling</td><td>Jodne me galti</td><td>Haan ✅</td></tr>
+</table>
+
+<h4>Rectification of Errors</h4>
+<ul>
+  <li><b>Before Trial Balance:</b> Entry ko seedha sudhar do (kuch cases me journal se).</li>
+  <li><b>After Trial Balance, difference hua:</b> Pehle <b>Suspense Account</b> kholo, difference daalo, phir ek-ek galti ka rectification entry karke Suspense ko band karo.</li>
+  <li><b>After final accounts:</b> Agar profit affected hua ho to <b>Profit &amp; Loss Adjustment A/c</b> (previous year adjustment) use karo.</li>
+</ul>
+
+<h4>Common rectification examples</h4>
+<table>
+<tr><th>Galti</th><th>Rectification entry</th></tr>
+<tr><td>Sale ₹5,000 ko Purchase me likh diya (dono taraf galti)</td><td>Sales A/c Dr. 5,000, To Purchase A/c 5,000</td></tr>
+<tr><td>Ram se ₹1,000 mila, par Shyam ke account me credit ho gaya</td><td>Shyam A/c Dr. 1,000, To Ram A/c 1,000</td></tr>
+<tr><td>Machinery ₹50,000 ko Repair expense me likh diya (error of principle)</td><td>Machinery A/c Dr. 50,000, To Repair A/c 50,000</td></tr>
+<tr><td>Ek taraf ₹560 ki jagah ₹650 likh diya (difference ₹90)</td><td>Suspense A/c se adjust; phir difference wale account ko Dr./Cr. karke Suspense band karo</td></tr>
+</table>
+
+<div class="box b-real"><b>Real life example:</b> NEFT/UPI me paisa galat number par chala gaya — bank turant "reversal entry" karti hai. Ek entry se dusra account adjust hota hai aur ek temporary suspense me difference rehta hai jab tak matter settle na ho. Bilkul yahi Suspense Account ka concept hai. Aur jab railway ya bank ka daily "tally" hota hai (cash counter ka total milaana) — wahi trial balance ka roop hai 👌</div>
+
+<div class="box b-q"><b>Probable exam questions — Unit 2</b>
+<ol>
+  <li>Journal kya hai? Iska, format banaiye aur diye gaye transactions ki journal entries pass kijiye. (10+5)</li>
+  <li>Ledger aur Journal me antar likhiye. (5)</li>
+  <li>Trial Balance kya hai? Iske objectives aur method likhiye. (10)</li>
+  <li>Trial balance ke kaunse errors pakde nahi jaate? Suspense account ka use samjhaiye. (10)</li>
+  <li>Ek dukaan ke 8-10 transactions diye gaye — journal entries pass karke ledger + trial balance banaaiye. (Numerical)</li>
+</ol></div>
+
+<div class="rev">
+<h4>⚡ Rapid Revision — Unit 2</h4>
+<ul>
+  <li>Journal = Book of Original Entry, date-wise double entry + narration.</li>
+  <li>Ledger = Book of Final Entry (Principal book), account-wise, "To"/"By" format.</li>
+  <li>Posting = journal se ledger me transfer; balance c/d se account band hota hai.</li>
+  <li>Trial Balance = ledger balances ki list; Dr. total = Cr. total (as on date).</li>
+  <li>Dr. side: assets, expenses, drawings, purchase, debtors. Cr. side: liabilities, capital, income, sales, creditors.</li>
+  <li>4 errors trial balance me pakde nahi jaate: Omission, Commission, Principle, Compensating.</li>
+  <li>Rectification: Trial balance se pehle seedha; baad me Suspense A/c; final accounts ke baad P&amp;L Adjustment A/c.</li>
+</ul>
+</div>
+
+<!-- ================== UNIT 3 ================== -->
+<h2 class="unit" id="u3">UNIT 3 — Final Accounts (Trading A/c, P&amp;L A/c, Balance Sheet &amp; Receipts-Payments)</h2>
+
+<h3>3.1 Final Accounts kya hote hain?</h3>
+<div class="box b-def"><b>Final Accounts</b> = saal ke end par banaye jaane wale statements jo batate hain: (1) <b>Trading A/c</b> — gross profit/loss, (2) <b>Profit &amp; Loss A/c</b> — net profit/loss, (3) <b>Balance Sheet</b> — ek date par assets &amp; liabilities ki position. Inhi ko <b>financial statements</b> kehte hain.</div>
+
+<div class="box b-hing"><b>Hinglish me:</b> Trading A/c = "bikri ka hisaab" (kitna becha, kitne me bechne ke liye laya). P&amp;L A/c = "ghar ke kharchon ka hisaab". Balance Sheet = "aaj ka status" — kitna maal, kitna karza, aur owner ka kitna. Ek baat yaad rakho: <b>Trading aur P&amp;L account "period" ke hote hain</b> (1 April se 31 March tak), aur <b>Balance Sheet "point" ka hota hai</b> (jaise "and as on 31 March").</div>
+
+<h3>3.2 Trading Account</h3>
+<div class="box b-def"><b>Trading Account</b> = wo account jo direct expenses aur net sales/value of goods ka comparison karke <b>Gross Profit ya Gross Loss</b> nikalta hai. Isme manufacturing/trading se seedha juda kharcha aata hai.</div>
+
+<h4>Format of Trading Account (Vertical/T-form)</h4>
+<pre>Trading Account for the year ended 31 March
+
+Dr. Particulars            Amount | Particulars                     Amount
+To Opening Stock          xx,xxx  | By Sales                  xx,xxx
+To Purchases     xx,xxx           |    Less: Returns inward  (xx,xxx)
+   Less: Returns outward (xx,xxx) |    = Net Sales             xx,xxx
+     = Net Purchases      xx,xxx  | By Closing Stock           xx,xxx
+To Wages / Carriage in / Freight  |
+   / Octroi / Dock / Factory rent |
+   / Fuel, Power, Coal / Gas /    |
+   Customs duty (import)  xx,xxx  |
+To Gross Profit (transferred to   |
+   P&L A/c)               xx,xxx  |
+----------------------------------|-----------------------------------
+        TOTAL             ======  |        TOTAL              ======
+</pre>
+<div class="box b-mn"><b>Direct expenses ki trick:</b> Sirf wo kharcha jo maal ko bechne layak banana/laane me laga: <b>W-W-C-F-O-F-P-C</b> = Wages, Wrapping, Carriage inward, Freight inward, Octroi, Factory rent/insurance/power, Customs duty, Coal/gas/fuel. Jo kharcha maal banne ke BAAD ya bechne ke liye laga (carriage outward, advertisement) — wo P&amp;L me jayega, Trading me nahi.</div>
+
+<div class="box b-fx"><b>Formula:</b> Gross Profit = Net Sales − COGS (Cost of Goods Sold).<br>COGS = Opening Stock + Net Purchases + Direct Expenses − Closing Stock.<br>Gross Loss = jab COGS zyada aur sales kam ho.</div>
+
+<h3>3.3 Profit &amp; Loss Account</h3>
+<div class="box b-def"><b>Profit &amp; Loss A/c</b> = wo account jo indirect expenses, losses, other incomes jodkar <b>Net Profit / Net Loss</b> nikalta hai. Ye Gross Profit se shuru hota hai aur Net Profit ko Capital me transfer karta hai (Balance Sheet me).</div>
+
+<h4>Typical items — Debit side (expenses/losses)</h4>
+<ul>
+  <li>Office &amp; administrative: Salary, Rent (office), Printing &amp; Stationery, Postage, Telephone, Insurance, Audit fees, Legal charges.</li>
+  <li>Selling &amp; distribution: Advertisement, Carriage outward, Salesman commission, Bad debts, Provision for doubtful debts, Discount allowed, Packing (for delivery).</li>
+  <li>Financial: Interest on loan, Bank charges, Discount on issue of shares, Interest on capital.</li>
+  <li>Maintenance &amp; others: Repairs, Depreciation, Loss by fire/theft (jo insurance se cover nahi hua), Charity/Donation.</li>
+</ul>
+<h4>Credit side (incomes/gains)</h4>
+<ul>
+  <li>Gross Profit (Trading A/c se)</li>
+  <li>Discount received, Commission received, Interest received on investments/deposits</li>
+  <li>Rent received, Dividend received, Profit on sale of old asset, Excess provision written back, Bad debts recovered</li>
+</ul>
+
+<pre>Profit &amp; Loss Account for the year ended 31 March
+
+Dr. Particulars              Amount | Particulars                    Amount
+To Salary                   xx,xxx  | By Gross Profit b/d         xx,xxx
+To Rent, Rates &amp; Taxes      xx,xxx  | By Discount received        xx,xxx
+To Printing &amp; Stationery    xx,xxx  | By Commission received      xx,xxx
+To Advertising              xx,xxx  | By Interest received        xx,xxx
+To Carriage outward         xx,xxx  | By Rent received            xx,xxx
+To Bad debts + Provision    xx,xxx  | By Profit on sale of asset  xx,xxx
+To Depreciation             xx,xxx  | By Bad debts recovered      xx,xxx
+To Interest on loan         xx,xxx  |
+To Net Profit (to Capital)  xx,xxx  |
+------------------------------------|------------------------------------
+       TOTAL                ======  |       TOTAL                 ======
+</pre>
+
+<h3>3.4 Balance Sheet</h3>
+<div class="box b-def"><b>Balance Sheet</b> = ek <b>statement</b> (account nahi!) jo ek particular date par business ke <b>assets, liabilities aur capital</b> ko dikhata hai. Iska base hai: <b>Assets = Liabilities + Capital</b>. Isme koi "profit" nahi nikalta — ye sirf position batata hai.</div>
+
+<h4>Two formats</h4>
+<table>
+<tr><th>Format</th><th>Order</th><th>Kis type ki firm</th></tr>
+<tr><td>Liquidity order (T-form)</td><td>Liabilities: Short-term pehle (Creditors, Bill payable, Bank OD) → Capital last. Assets: Cash/Bank pehle → Fixed assets last</td><td>Chhoti firms (Sole trader, Partnership)</td></tr>
+<tr><td>Permanence order (T-form)</td><td>Liabilities: Capital pehle → short term last. Assets: Fixed pehle → current last</td><td>Sole trader me common</td></tr>
+<tr><td>Vertical (Statement) format</td><td>Companies Act 2013 Schedule III ka format — Equity &amp; Liabilities upar, Assets neeche</td><td>Companies (Ltd.) ke liye compulsory</td></tr>
+</table>
+
+<pre>Balance Sheet as on 31 March
+Liabilities                 Amount | Assets                      Amount
+Capital          xx,xxx            | Fixed Assets:
+  Add: Net Profit  xx,xxx          |   Building / Plant / Machinery
+  Less: Drawings  (xx,xxx)         |   Furniture, Vehicles (after dep)
+Long-term Liabilities:             | Investments
+  Bank Loan, Debentures            | Current Assets:
+Current Liabilities:               |   Closing Stock, Debtors (less prov.)
+  Creditors, Bills payable,        |   Bills receivable, Prepaid expenses
+  Outstanding expenses, Bank O/D,  |   Accrued income
+  Provision for tax, Income         | Cash in hand, Cash at bank
+  received in advance              | Loans &amp; Advances, Loose tools
+-----------------------------------|-----------------------------------
+       TOTAL               ======  |        TOTAL                ======
+</pre>
+
+<h3>3.5 Adjustments (ye pura numerical ka scoring part hai)</h3>
+<p>Balance Sheet banate waqt kuch entries wo hoti hain jinka effect <b>do jagah</b> hota hai — P&amp;L me bhi aur Balance Sheet me bhi. Isliye adjustment ke baad dono side dobara banana padta hai.</p>
+<table>
+<tr><th>Adjustment</th><th>Trading/P&amp;L me effect</th><th>Balance Sheet me effect</th></tr>
+<tr><td>Closing Stock</td><td>Trading A/c credit side + P&amp;L me GP me shamil</td><td>Assets side me (current asset)</td></tr>
+<tr><td>Outstanding Expense (e.g. salary unpaid)</td><td>P&amp;L ka debit side me add</td><td>Liabilities side me "Outstanding expense"</td></tr>
+<tr><td>Prepaid Expense</td><td>P&amp;L ka debit kam</td><td>Assets side "Prepaid expense"</td></tr>
+<tr><td>Accrued Income (income due but not received)</td><td>P&amp;L credit side add</td><td>Assets side "Accrued income"</td></tr>
+<tr><td>Income received in advance</td><td>P&amp;L credit kam</td><td>Liabilities side "Unearned income"</td></tr>
+<tr><td>Depreciation</td><td>P&amp;L debit side</td><td>Asset ki value kam karke dikhao</td></tr>
+<tr><td>Bad debts + New provision for doubtful debts</td><td>P&amp;L debit side (bad debts + new provision − old provision)</td><td>Debtors se provision minus karke dikhao</td></tr>
+<tr><td>Interest on capital</td><td>P&amp;L debit</td><td>Capital me add</td></tr>
+<tr><td>Interest on drawings</td><td>P&amp;L credit (income)</td><td>Drawings me minus / capital me add</td></tr>
+<tr><td>Goods taken by owner for personal use</td><td>Purchase kam, so GP badhega</td><td>Drawings badhega</td></tr>
+<tr><td>Free samples / charity / advertisement me maal</td><td>Purchase kam + related expense badhega</td><td>Effect nahi</td></tr>
+<tr><td>Manager's commission on profit</td><td>P&amp;L debit</td><td>Liabilities me "Outstanding commission"</td></tr>
+</table>
+
+<div class="box b-key"><b>Golden line for adjustments:</b> "Har adjustment ka <b>double effect</b> dikhao — ek P&amp;L me, ek Balance Sheet me. Agar sirf ek jagah likha, examiner aadhe marks kaat lega."</div>
+
+<h4>Worked Numerical — Trading + P&amp;L + Balance Sheet</h4>
+<pre>Given (Sunrise Traders, year ended 31 March):
+Opening stock     1,20,000    Sales                9,00,000
+Purchases         5,60,000    Sales returns          20,000
+Carriage inward     15,000    Purchase returns       30,000
+Wages               45,000    Closing stock         1,50,000
+Salary              80,000    Rent received          12,000
+Rent (office)       36,000    Discount received       8,000
+Advertisement       25,000    Capital               4,00,000
+Bad debts            6,000    Loan (12% p.a.)       2,00,000
+Insurance           14,000    Creditors             1,10,000
+Depreciation on furniture 8,000  Furniture         1,60,000
+                                Debtors (before provision) 1,05,000
+                                Cash + Bank           1,78,000
+
+Step 1: Trading Account
+Dr. To Opening Stock 1,20,000 | By Sales 9,00,000
+    To Purchases 5,60,000      |    Less Returns 20,000 => 8,80,000
+      Less Returns 30,000 => 5,30,000 | By Closing Stock 1,50,000
+    To Carriage inward 15,000  |
+    To Wages 45,000            |
+    To Gross Profit c/d 2,20,000 |
+    TOTAL 10,30,000 | TOTAL 10,30,000
+GP = 8,80,000 + 1,50,000 - (1,20,000 + 5,30,000 + 15,000 + 45,000) = 2,20,000
+
+Step 2: P&L Account
+Dr. To Salary 80,000    | By Gross Profit 2,20,000
+    To Rent 36,000      | By Rent received 12,000
+    To Advertisement 25,000 | By Discount received 8,000
+    To Bad debts 6,000  |
+    To Insurance 14,000 |
+    To Depreciation 8,000 |
+    To Interest on loan 24,000 |
+    To Net Profit c/d 47,000 |
+    TOTAL 2,40,000 | TOTAL 2,40,000
+Net Profit = 2,40,000 - 1,93,000 = 47,000
+
+Step 3: Balance Sheet as on 31 March
+Liabilities                     | Assets
+Capital 4,00,000                | Furniture 1,60,000 - 8,000 = 1,52,000
+ Add: Net Profit 47,000         | Debtors 1,05,000
+ = 4,47,000                     | Stock 1,50,000
+Loan 2,00,000                   | Cash & Bank 1,78,000
+Creditors 1,10,000              |
+Interest on loan outstanding 24,000 |
+TOTAL 7,81,000 | TOTAL 7,81,000  ✅
+</pre>
+
+<div class="box b-tip"><b>Numerical me marks bachane ki strategy:</b> (1) Pehle working notes likho — bad debts provision, depreciation, interest on loan. (2) Trading me sirf direct items, P&amp;L me sirf indirect. (3) Balance Sheet me "as on" date likho, "for the year ended" nahi. (4) Dono taraf total mila kar likho — mismatch mat chhodo. (5) Capital me Net Profit add aur Drawings minus karna kabhi mat bhoolna.</div>
+
+<h3>3.6 Manufacturing Account (extra but poocha jata hai)</h3>
+<p>Jo firm khud maal banati hai (e.g. biscuit factory), wo trading se pehle <b>Manufacturing A/c</b> banati hai. Isme: Opening WIP + Raw material consumed + Direct wages + Factory overheads − Closing WIP = <b>Cost of Production</b>, jo Trading A/c me transfer kiya jaata hai.</p>
+
+<h3>3.7 Receipts &amp; Payments Account (Not-for-Profit organisations)</h3>
+<div class="box b-def"><b>Receipts &amp; Payments Account</b> = ek <b>cash book ka summary</b> — poore saal ke saare cash receipts (Dr. side) aur cash payments (Cr. side) ek jagah. Ye clubs, temples, societies, NGOs ke liye banta hai. Iska <b>opening aur closing balance cash/bank hota hai</b>, aur <b>ye accrual basis par nahi, cash basis par hota hai</b> — isliye isme outstanding/prepaid kuch nahi hota.</div>
+
+<pre>Receipts &amp; Payments Account for the year ended 31 March
+Dr. Receipts                          Cr. Payments
+To Balance b/d (cash+bank)  xx,xxx    By Rent &amp; Taxes            xx,xxx
+To Subscriptions received   xx,xxx    By Salaries                xx,xxx
+To Entrance fees            xx,xxx    By Electricity &amp; Water     xx,xxx
+To Donations                xx,xxx    By Sports expenses         xx,xxx
+To Interest received        xx,xxx    By Charity/Donations given xx,xxx
+To Sale of old furniture    xx,xxx    By Insurance               xx,xxx
+To Bank interest            xx,xxx    By Purchase of furniture   xx,xxx
+To Locker rent              xx,xxx    By Investments purchased   xx,xxx
+                                      By Balance c/d (cash+bank) xx,xxx
+TOTAL =====                             TOTAL =====
+</pre>
+
+<h4>Receipts &amp; Payments vs Income &amp; Expenditure vs Balance Sheet</h4>
+<table>
+<tr><th>Basis</th><th>Receipts &amp; Payments</th><th>Income &amp; Expenditure</th></tr>
+<tr><td>Nature</td><td>Cash book ki summary</td><td>Aam P&amp;L account jaisa</td></tr>
+<tr><td>Basis</td><td>Cash basis (actual receipt/payment)</td><td>Accrual basis</td></tr>
+<tr><td>Capital vs revenue mix</td><td>Dono mix ho jaate hain (furniture purchase bhi dikhta hai)</td><td>Sirf revenue items; capital items Balance Sheet me jaate hain</td></tr>
+<tr><td>Result</td><td>Closing cash/bank balance</td><td>Surplus/Deficit</td></tr>
+<tr><td>Opening/closing</td><td>Balance b/d aur Balance c/d dikhta hai</td><td>Opening/closing balance nahi, sirf income &amp; expense</td></tr>
+</table>
+<div class="box b-real"><b>Real life example:</b> Tumhare mohalle ka Ganesh Utsav committee. Unka "hisab kitab" zyada tar aisa hi hota hai: kitna collection aaya, kitna decoration/pandal/halwaai gaya, last me kitna bacha. Bache hue paise ka Balance Sheet hota hai Committee dukaan me. Bank account wala bada trust (jaise mandir trust) bhi Receipts &amp; Payments + Income &amp; Expenditure + Balance Sheet — teeno banata hai.</div>
+
+<div class="box b-warn"><b>Common mistakes jo sab karte hain:</b> (1) Balance Sheet ko "account" bol dena — ye <b>statement</b> hai. (2) Closing stock ko sirf Balance Sheet me likhna, Trading me bhool jaana. (3) Depreciation ko asset ki cost me se ghata kar <b>dono</b> jagah dikhana bhool jaana. (4) Outstanding expense ko P&amp;L me add karke liability me na dikhana. (5) Carriage outward ko Trading me likh dena (wo P&amp;L me jata hai). (6) Net Loss ho to capital se minus karna bhool jaana.</div>
+
+<div class="box b-q"><b>Probable exam questions — Unit 3</b>
+<ol>
+  <li>Trading Account aur Profit &amp; Loss Account ka format banaiye aur antar samjhaiye. (10)</li>
+  <li>Adjustments ke saath final accounts banaiye — 8-10 adjustments diye jaayenge. (12-15, sabse common numerical)</li>
+  <li>Balance Sheet ke format aur uska importance? (5)</li>
+  <li>Receipts &amp; Payments Account aur Income &amp; Expenditure Account me antar likhiye. (10)</li>
+  <li>Gross Profit aur Net Profit me antar, aur COGS ka formula. (5)</li>
+</ol></div>
+
+<div class="rev">
+<h4>⚡ Rapid Revision — Unit 3</h4>
+<ul>
+  <li>Final Accounts = Trading A/c + P&amp;L A/c + Balance Sheet.</li>
+  <li>GP = Net Sales − COGS; COGS = Opening Stock + Net Purchase + Direct Expenses − Closing Stock.</li>
+  <li>Direct expenses (Trading me): wages, carriage inward, freight, octroi, factory power, import duty. Indirect (P&amp;L me): salary, rent, advertisement, carriage outward, depreciation, interest.</li>
+  <li>Balance Sheet = statement, "as on date", A = L + C ka roop.</li>
+  <li>Important adjustments: closing stock, outstanding/prepaid, accrued/unearned income, depreciation, bad debts + provision, interest on capital/drawings, goods for personal use.</li>
+  <li>NPO ke liye Receipts &amp; Payments (cash basis) + Income &amp; Expenditure (accrual, surplus/deficit) + Balance Sheet.</li>
+</ul>
+</div>
+
+<!-- ================== UNIT 4 ================== -->
+<h2 class="unit" id="u4">UNIT 4 — Depreciation Accounting &amp; Stock Valuation</h2>
+
+<h3>4.1 Depreciation kya hai?</h3>
+<p>Tumhare ghar me fridge 10 saal chalega. Uska purana hona — body rust lagna, compressor ka weak hona, resale value girna — ye sab <b>depreciation</b> hai. Company ke books me bhi har fixed asset ki value saal-dar-saal ghanti hai — kyunki wo "use" hota hai.</p>
+
+<div class="box b-def"><b>Depreciation</b> = fixed asset ki <b>cost (ya book value) me se</b>, uske useful life ke aadhaar par, <b>har saal</b> jo <b>decline</b> hota hai usko systematically expense me likhna. Ye asset ke <b>use</b>, <b>wear and tear</b>, ya <b>obsolescence</b> (purana ho jaana) ki wajah se hota hai. AS-6 (Depreciation) isko govern karta hai.</div>
+
+<h4>Causes of Depreciation (5 causes — exam me pakka)</h4>
+<table>
+<tr><th>Cause</th><th>Matlab</th><th>Example</th></tr>
+<tr><td>1. Wear and tear</td><td>Rozana use se ghisna</td><td>Delivery van ke tyre</td></tr>
+<tr><td>2. Efflux of time</td><td>Sirf samay guzarne se (chahe use na ho)</td><td>Leasehold land, licence, patents</td></tr>
+<tr><td>3. Obsolescence</td><td>Nai technology ke aane se purana ho jaana</td><td>2G phone wale ne 4G aane par machine badli</td></tr>
+<tr><td>4. Accidents</td><td>Durghatna se kharab hona</td><td>Truck accident me total loss (partly insurance)</td></tr>
+<tr><td>5. Depletion exhaustion</td><td>Natural resource ka khatam hona</td><td>Coal mine, oil well (ko depletion kehte hain)</td></tr>
+</table>
+
+<h4>Need / Objectives of charging depreciation</h4>
+<ul>
+  <li><b>True profit nikalna</b> — asset ke use ka cost usi saal ke revenue se match karna (matching concept).</li>
+  <li><b>True financial position</b> — asset ko grip value par dikhana.</li>
+  <li><b>Replacement fund</b> — paisa jama hoke nai machine kharidne me kaam aaye.</li>
+  <li><b>Tax benefit</b> — expense hone se taxable profit kam, tax bachta hai.</li>
+  <li><b>Cost of production sahi nikalna</b> — cost accounting ke liye zaroori.</li>
+  <li><b>Dividend decision</b> — capital ko dividend me baant dena galat hoga.</li>
+</ul>
+
+<h4>Factors (jo calculation me chahiye)</h4>
+<ol>
+  <li>Cost of asset (kharid ki keemat + installation + freight + erection)</li>
+  <li>Estimated useful life (saal/ghante/units)</li>
+  <li>Estimated scrap/salvage/residual value</li>
+  <li>Method of depreciation chunna</li>
+</ol>
+<div class="box b-fx"><b>Formula (dono method ka base):</b> Depreciable amount = Cost − Scrap value. Yahi amount saari life me expense me likhi jaati hai (chahe kis method se bhi).</div>
+
+<h3>4.2 Methods of Depreciation</h3>
+<table>
+<tr><th>Method</th><th>Kaise kaam karta hai</th><th>Kahan best hai</th></tr>
+<tr><td><b>1. Straight Line Method (SLM / Original cost / Fixed instalment)</b></td><td>Har saal <b>barabar</b> amount: (Cost − Scrap) ÷ Life. Depreciation asset ki original cost par lagti hai</td><td>Jahan use har saal barabar ho — building, furniture, patents, lease</td></tr>
+<tr><td><b>2. Written Down Value (WDV / Diminishing balance)</b></td><td>Har saal <b>book value</b> par fixed % lagta hai; amount har saal girti hai</td><td>Jahan shuru me repair kam, baad me zyada — machinery, vehicles, computers</td></tr>
+<tr><td>3. Annuity method</td><td>Asset ka "interest" bhi cost me jodte hain — barabar annual charge</td><td>Leasehold property, long-term assets</td></tr>
+<tr><td>4. Sinking fund method</td><td>Depreciation ke saath ek fund me paisa invest karte hain jo replacement ke time kaam aaye</td><td>Bade plants, jinke replacement me bada paisa lage</td></tr>
+<tr><td>5. Insurance policy method</td><td>Policy premium ke roop me jama karna; maturity par replacement</td><td>Chhoti firms jahan discipline nahi hoti 😅</td></tr>
+<tr><td>6. Depletion / Units of production</td><td>Production/hours ke hisaab se: (Cost − Scrap) × (Units is saal ÷ Total units)</td><td>Mines, quarries, oil wells</td></tr>
+<tr><td>7. Machine hour rate</td><td>Per hour charge × actual hours</td><td>Jahan machine ka use uneven ho</td></tr>
+</table>
+
+<h4>SLM vs WDV — comparison table (ca favourite)</h4>
+<table>
+<tr><th>Basis</th><th>SLM</th><th>WDV</th></tr>
+<tr><td>Base</td><td>Original cost (constant)</td><td>Book value (changing, girti hui)</td></tr>
+<tr><td>Annual amount</td><td>Barabar (uniform)</td><td>Pehle saal zyada, aage kam</td></tr>
+<tr><td>Zero/scrap tak</td><td>Asset ki value zero ya scrap par pahunch jaati hai</td><td>Value <b>kabhi zero nahi</b> hoti (theoretically)</td></tr>
+<tr><td>Maintenance ke saath total</td><td>Total charge badhta hai (depreciation same + repair badhta)</td><td>Total charge lagbhag stable rehta hai 👍</td></tr>
+<tr><td>Common in</td><td>Building, furniture, patents</td><td>Machinery, vehicles, computers</td></tr>
+<tr><td>Companies Act</td><td>Both allowed (Schedule II useful life based)</td><td>Both allowed</td></tr>
+<tr><td>Income tax</td><td>—</td><td>Tax me WDV method hi chalta hai ⚠️ (ye exam me mark hota hai)</td></tr>
+</table>
+
+<h4>Worked example — dono method side by side</h4>
+<pre>Machine cost        = ₹5,00,000
+Scrap value         = ₹50,000
+Useful life         = 5 years
+WDV rate            = 20% p.a.
+
+SLM: Depreciation = (5,00,000 - 50,000) / 5 = ₹90,000 every year
+Year  Depreciation  Book value (closing)
+1     90,000        4,10,000
+2     90,000        3,20,000
+3     90,000        2,30,000
+4     90,000        1,40,000
+5     90,000          50,000  (= scrap ✅)
+
+WDV: Dep = 20% of book value
+Year  Depreciation      Book value (closing)
+1     20% of 5,00,000 = 1,00,000   4,00,000
+2     20% of 4,00,000 =   80,000   3,20,000
+3     20% of 3,20,000 =   64,000   2,56,000
+4     20% of 2,56,000 =   51,200   2,04,800
+5     20% of 2,04,800 =   40,960   1,63,840
+NOTE: WDV me kisi bhi saal value 0 nahi hoti - sirf girti rehti hai.
+
+Journal entry (har saal):
+Depreciation A/c            Dr.
+     To Machinery / Asset A/c
+(P&L me depreciation expense; Balance Sheet me asset ki value kam)
+
+Transfer at year end:
+Profit & Loss A/c           Dr.
+     To Depreciation A/c
+</pre>
+
+<div class="box b-mn"><b>Yaad rakhne ki trick:</b> <b>S</b>LM = <b>S</b>ame har saal (S = Same). <b>W</b>DV = <b>W</b>aise ghat-ti jaye (W = Wanting less). Aur tax department ko <b>WDV</b> pasand hai, accounts me <b>SLM</b> bhi chalta hai.</div>
+
+<h3>4.3 Depreciation vs Depletion vs Amortisation</h3>
+<table>
+<tr><th>Term</th><th>Kis cheez par</th><th>Example</th></tr>
+<tr><td>Depreciation</td><td>Tangible fixed assets (machine, building)</td><td>Delivery van ki wear-tear</td></tr>
+<tr><td>Depletion</td><td>Natural resources (wasting assets)</td><td>Coal mine se koyla nikalna</td></tr>
+<tr><td>Amortisation</td><td>Intangible assets (patent, copyright, goodwill, software)</td><td>5 saal ka patent 5 saal me khatm</td></tr>
+</table>
+
+<h3>4.4 Stock / Inventory Valuation</h3>
+<div class="box b-def"><b>Stock (Inventory)</b> = business ke paas bechne ke liye pada hua maal — raw material, work-in-progress (WIP) aur finished goods. <b>Stock valuation</b> = saal ke end par is maal ki value lagana — chahe cost par ya market value par, jo bhi kam ho.</div>
+
+<div class="box b-key"><b>AS-2 ka rule (bilkul pakka yaad karo):</b> Inventory ko <b>"Lower of Cost and Net Realisable Value (NRV)"</b> par value karo. NRV = estimated selling price − selling ke kharch (delivery, commission). Matlab: agar market me daam gir gaya hai to loss aaj hi maan lo (conservatism), par agar market daam badha hai to profit tabhi jab bikri ho jaye.</div>
+
+<h4>Methods of Stock Valuation</h4>
+<table>
+<tr><th>Method</th><th>Kaam kaise karta hai</th><th>Effect jab price badh rahi ho</th></tr>
+<tr><td><b>FIFO</b> (First In First Out)</td><td>Puraana maal pehle bikta hai — closing stock naye (mehnge) maal par</td><td>Closing stock value <b>zyada</b> → profit zyada dikhta (inflation me)</td></tr>
+<tr><td><b>LIFO</b> (Last In First Out)</td><td>Naya maal pehle nikala jaata hai — closing stock purane (saste) maal par</td><td>Closing stock kam → profit kam, tax benefit</td></tr>
+<tr><td>HIFO (Highest In First Out)</td><td>Sabse mehnga maal pehle</td><td>Used for tax planning (limited use)</td></tr>
+<tr><td>Weighted Average (AVCO)</td><td>Average cost = Total cost ÷ Total units (periodic) ya har purchase ke baad naya average (moving average)</td><td>Extremes nikal jate hain — middle path</td></tr>
+<tr><td>Specific Identification</td><td>Har unit ko uske actual cost se identity karo</td><td>Jewellery, cars, machines ke liye</td></tr>
+<tr><td>Standard cost</td><td>Pre-set standard cost par value</td><td>Manufacturing me control ke liye</td></tr>
+<tr><td>Base stock / Adjusted selling price</td><td>Ek minimum stock always base value par</td><td>Rarely used, theory question ke liye</td></tr>
+</table>
+<div class="box b-warn"><b>Note:</b> Indian companies ke financial statements me <b>LIFO allowed nahi</b> hai (AS-2 ke hisaab se FIFO ya Weighted Average chalti hai). LIFO sirf theory/exam aur US-GAAP me milta hai — ye line likhne se examiner impress hota hai👌</div>
+
+<h4>Worked example — FIFO vs Weighted Average</h4>
+<pre>Transactions:
+1 Apr  Opening stock   100 units @ ₹10  = 1,000
+10 Apr Purchase        200 units @ ₹12  = 2,400
+20 Apr Purchase        100 units @ ₹15  = 1,500
+Total available        400 units       total cost = 4,900
+Sale during month      250 units  (closing stock = 150 units)
+
+FIFO (purana pehle gaya):
+Sold = 100 units @10 (1,000) + 150 units @12 (1,800) = 2,800
+Closing stock = 50 units @12 (600) + 100 units @15 (1,500) = ₹2,100
+
+Weighted Average:
+Average cost = 4,900 / 400 = ₹12.25
+Closing stock = 150 x 12.25 = ₹1,837.50
+Cost of goods sold = 250 x 12.25 = ₹3,062.50
+
+Compare: FIFO closing stock (2,100) > Weighted average (1,837.50)
+=> FIFO me zyada profit, FIFO se tax bhi zyada. Isi logic se exam me
+   "price badhne par kaunsa method zyada profit dikhayega?" ka answer = FIFO.
+</pre>
+
+<div class="box b-real"><b>Real life example:</b> Kirana dukaan me 2 bori aata aayi — ek ₹1,200 (purani rate) aur ek ₹1,400 (nayi rate, gehu mehnga ho gaya). Jab grahak aata hai, dukandar kehta hai "naya aata ₹1,400 ka". Wo LIFO jaisa hi behaviour hai. Par agar wo pehle purani bori khatam kare, to FIFO. Aur agar wo dono bori ka average nikaal kar ₹1,300 me beche — to Weighted Average. Simple! 👌</div>
+
+<div class="box b-q"><b>Probable exam questions — Unit 4</b>
+<ol>
+  <li>Depreciation kya hai? Iske causes aur objectives likhiye. (10)</li>
+  <li>SLM aur WDV method me kya antar hai? ₹5,00,000 ki machine par 5 saal ke liye dono method se depreciation nikaaliye (scrap ₹50,000, WDV rate 20%). (12)</li>
+  <li>Depreciation aur Amortisation me antar. (5)</li>
+  <li>Stock valuation ke methods bataiye, FIFO aur Weighted Average se numerical kijiye. (10)</li>
+  <li>AS-2 kya kehta hai? "Lower of cost or NRV" ko example se samjhaiye. (5)</li>
+</ol></div>
+
+<div class="rev">
+<h4>⚡ Rapid Revision — Unit 4</h4>
+<ul>
+  <li>Depreciation = fixed asset ka cost/uso ka expense me systematic allocation; 5 causes: wear-tear, time, obsolescence, accident, depletion.</li>
+  <li>SLM: (Cost − Scrap)/Life, barabar har saal | WDV: book value ka fixed %, ghat-ti jaye.</li>
+  <li>Tax me WDV, finance me dono; Assets ko 0 tak WDV nahi jaata.</li>
+  <li>Depreciation vs Depletion (wasting assets) vs Amortisation (intangibles).</li>
+  <li>Stock valuation: AS-2 → lower of cost and NRV; methods FIFO, LIFO (not allowed in India), Weighted Average, Specific ID.</li>
+  <li>Price badhne par: FIFO = high closing stock + high profit; LIFO = low profit (tax planning); Weighted Average = middle.</li>
+</ul>
+</div>
+
+<!-- ================== UNIT 5 ================== -->
+<h2 class="unit" id="u5">UNIT 5 — Computerised Accounting &amp; Tally</h2>
+
+<h3>5.1 Role of Computers in Accounting</h3>
+<div class="box b-def"><b>Computerised Accounting</b> = jab accounting ke sab kaam — recording se reporting tak — <b>computer software</b> (Tally, Busy, Zoho Books, SAP, ERP) ki madad se kiye jaate hain, haath se register bharne ke bajaye.</div>
+
+<h4>Benefits / Role of computers (10 points — poora answer)</h4>
+<table>
+<tr><th>No.</th><th>Benefit</th><th>Hinglish me samajh</th></tr>
+<tr><td>1</td><td><b>Speed</b></td><td>Ek entry se ledger, trial balance, balance sheet — sab seconds me tayyar</td></tr>
+<tr><td>2</td><td><b>Accuracy</b></td><td>Total galat nahi hota; formula khud lagta hai</td></tr>
+<tr><td>3</td><td><b>Automatic posting</b></td><td>Journal entry ek baar — ledger khud ban jaata hai</td></tr>
+<tr><td>4</td><td><b>Storage &amp; retrieval</b></td><td>Paanch saal ka data computer/cloud me; ek click me mil jaata hai (register me dhoondhna padtaa)</td></tr>
+<tr><td>5</td><td><b>Report generation</b></td><td>P&amp;L, Balance Sheet, Trial Balance, GST return, Debtors ageing — instant</td></tr>
+<tr><td>6</td><td><b>GST compliance</b></td><td>GSTR-1/3B ke liye data auto; e-invoice/e-way bill integration</td></tr>
+<tr><td>7</td><td><b>Cost saving</b></td><td>Kam staff, kam stationery, kam errors — long run me sasta</td></tr>
+<tr><td>8</td><td><b>Scalability</b></td><td>Ek dukaan se 100 branch ka data same software me</td></tr>
+<tr><td>9</td><td><b>Analysis &amp; MIS</b></td><td>Ratio, trend, cost centre report — management decision easy</td></tr>
+<tr><td>10</td><td><b>Security &amp; audit trail</b></td><td>Password, user roles, koi entry delete kare to trail rehta hai</td></tr>
+</table>
+
+<h4>Limitations / Challenges</h4>
+<ul>
+  <li>Setup cost (software + hardware + training) zyada.</li>
+  <li>Staff ko training chahiye — thoda resistance hota hai.</li>
+  <li>Data <b>security &amp; hacking/virus</b> ka risk; regular backup zaroori.</li>
+  <li>System failure/power cut ka risk — UPS aur cloud backup chahiye.</li>
+  <li>GIGO: Garbage In Garbage Out — galat input se galat report.</li>
+  <li>Sab kuch automate ho gaya to basic accounting samajh kamzor ho sakti hai 😅</li>
+</ul>
+
+<div class="box b-real"><b>Real life example:</b> Tumhare area ke dairy shop wale ke paas pehle 3 registers hoti thi (udhaar, cash, stock). Aaj ek laptop me Tally hai — grahak ka naam par udhaar entry, bill print, mahine ka GST summary. Ek hi bandaa pehle se 5 guna kaam ek baar me kar leta hai. Yahi computerised accounting ka jaadu hai 📈</div>
+
+<h3>5.2 Tally — Practical Applications</h3>
+<div class="box b-def"><b>Tally</b> = India ka sabse popular accounting software (Tally Solutions, Bangalore). Poora naam: <b>TallyPrime</b> (pehle Tally.ERP 9, usse pehle Tally 9/7.2). Isme accounting, inventory, GST, payroll, banking, e-way bill — sab ek hi jagah. Ye <b>"Accounting with Inventory"</b> software hai. "Tally" naam isliye — kyunki tally karna = milaana/check karna.</div>
+
+<h4>Tally ke features (exam me likhne layak)</h4>
+<table>
+<tr><th>Feature</th><th>Vivaran</th></tr>
+<tr><td>Double entry system</td><td>Har voucher me automatically debit-credit balance karwata hai</td></tr>
+<tr><td>Voucher-based entry</td><td>Journal nahi — "voucher" (payment, receipt, sales, purchase, contra, journal) me entry hoti hai</td></tr>
+<tr><td>Real-time reporting</td><td>Balance Sheet, P&amp;L, Trial Balance, Cash Flow — turant (F4 se P&amp;L, F5 se... in TallyPrime: Gateway of Tally > Reports)</td></tr>
+<tr><td>GST ready</td><td>GST-1, GST-3B, e-invoice, HSN/SAC, tax ledger auto</td></tr>
+<tr><td>Inventory management</td><td>Stock groups, units of measure (UOM), reorder level, godown, batch, expiry, price list</td></tr>
+<tr><td>Payroll</td><td>Employee salary, attendance, PF/ESI calculation</td></tr>
+<tr><td>Multi-currency</td><td>Dollar/euro me bhi entry aur forex gain/loss</td></tr>
+<tr><td>Security control</td><td>Company-level password, user roles, audit trail</td></tr>
+<tr><td>Data exchange</td><td>XML/Excel export, bank reconciliation (BRS) import</td></tr>
+<tr><td>Cost centres/Godown</td><td>Har branch/department ka alag profit dekhna</td></tr>
+</table>
+
+<h4>Accounting ke basic concepts Tally me</h4>
+<ul>
+  <li><b>Company Information:</b> create company, company details (name, financial year, address, currency), alter, delete, security control, backup/restore.</li>
+  <li><b>Groups:</b> Ledger accounts ko group me baantna (28 pre-defined primary/secondary groups). Jaise Sundry Debtors, Sundry Creditors, Bank Accounts, Cash-in-hand, Sales Accounts, Purchase Accounts, Expenses, Capital, Loans.</li>
+  <li><b>Ledgers:</b> Actual accounts jinme entry ki jaati hai — Capital, Ram (debtor), SBI bank, Rent, Salary, GST Output.</li>
+  <li><b>Vouchers:</b> Transaction ke prakaar.</li>
+  <li><b>Display/Reports:</b> Day Book, Ledger, Trial Balance, Trading A/c, P&amp;L A/c, Balance Sheet, Cash/Fund Flow, Ratio Analysis, Outstanding statements.</li>
+</ul>
+
+<h4>Types of Vouchers in Tally</h4>
+<table>
+<tr><th>Voucher</th><th>Shortcut</th><th>Kis kaam ke liye</th><th>Accounts</th></tr>
+<tr><td>Contra (F4)</td><td>F4</td><td>Cash ↔ Bank ya Bank ↔ Bank, cash deposit/withdraw</td><td>Cash, Bank</td></tr>
+<tr><td>Payment (F5)</td><td>F5</td><td>Paisa diya — expense ya creditor ko payment</td><td>Cash/Bank Dr., expense/creditor Cr.</td></tr>
+<tr><td>Receipt (F6)</td><td>F6</td><td>Paisa mila — cash/bank me receipt</td><td>Cash/Bank Dr., income/debtor Cr.</td></tr>
+<tr><td>Sales (F8)</td><td>F8</td><td>Maal bechne par</td><td>Debtor/Cash Dr., Sales Cr.</td></tr>
+<tr><td>Purchase (F9)</td><td>F9</td><td>Maal kharidne par</td><td>Purchase Dr., Creditor/Cash Cr.</td></tr>
+<tr><td>Journal (F7)</td><td>F7</td><td>Adjustment entry (credit note, debit note, depreciation, provision)</td><td>Dono taraf koi bhi</td></tr>
+<tr><td>Delivery/Receipt Note</td><td>Alt+F8 / Alt+F9</td><td>Maal bheja/aaya par bill nahi (stock movement)</td><td>Inventory only</td></tr>
+<tr><td>Credit/Debit Note</td><td>Ctrl+F8 / Ctrl+F9</td><td>Wapas kiya maal / rate difference</td><td>Returns</td></tr>
+<tr><td>Memorandum voucher</td><td>Ctrl+F10</td><td>Non-accounting info (jaise order mila)</td><td>Entry nahi hoti</td></tr>
+</table>
+
+<div class="box b-mn"><b>Tally shortcut yaad karne ki trick:</b> <b>F4 Contra</b> (Cash-Bank), <b>F5 Payment</b> (Paid), <b>F6 Receipt</b> (Received), <b>F7 Journal</b> (Adjustment), <b>F8 Sales</b> (8 = "ate" = bech diya), <b>F9 Purchase</b> ("nine = kharida"), <b>F10</b> Other/Memo. Yaad rakhne ka simple funda: <b>4-5-6 paisa aana-jaana, 7 adjustment, 8-9 bikri-kharid.</b></div>
+
+<h4>Basic steps — Tally me company banana</h4>
+<pre>Step 1  Gateway of Tally > Company Info > Create Company
+        -> Name, Financial year (1 Apr - 31 Mar), book beginning, currency
+Step 2  Create Ledgers: Accounts Info > Ledgers > Create
+        -> Capital A/c (Group: Capital Account)
+        -> Cash A/c      (Group: Cash-in-hand)
+        -> SBI A/c       (Group: Bank Accounts)
+        -> Purchase A/c  (Group: Purchase Accounts)
+        -> Sales A/c     (Group: Sales Accounts)
+        -> Rent, Salary  (Group: Indirect Expenses)
+        -> Ram           (Group: Sundry Debtors)
+        -> Sohan         (Group: Sundry Creditors)
+Step 3  Voucher entry karo (F4 - F9 ke through) as per transaction
+Step 4  Reports dekho: Display More Reports > Trial Balance / P&L / Balance Sheet
+Step 5  Backup: Company Info > Backup / restore data; period-end closing
+</pre>
+
+<h4>Worked practical example (Tally me kya karna hoga)</h4>
+<pre>Transaction: Ram ko ₹25,000 ka maal cash me becha
+
+Tally me:
+  Voucher: SALES (F8)
+  Party A/c: Cash            (Debit)
+  Sales Ledger: Sales A/c    (Credit)
+  Amount: 25,000
+  GST (agar registered ho to): CGST 2.5% + SGST 2.5% ya IGST 5%
+  -> Bill print, e-invoice QR (turnover limit ke baad)
+Note: Tally khud debit-credit auto-balance karega.
+
+Transaction: Bank se cash nikala ₹10,000
+  Voucher: CONTRA (F4)
+  -> Cash A/c Dr. 10,000 ; To Bank A/c 10,000
+
+Transaction: Depreciation ₹8,000 pass karni hai
+  Voucher: JOURNAL (F7)
+  -> Depreciation A/c Dr. ; To Furniture A/c
+</pre>
+
+<h3>5.3 Computerised vs Manual Accounting</h3>
+<table>
+<tr><th>Basis</th><th>Manual</th><th>Computerised</th></tr>
+<tr><td>Speed</td><td>Slow</td><td>Bahut fast</td></tr>
+<tr><td>Accuracy</td><td>Human error zyada</td><td>Calculation error lagbhag zero</td></tr>
+<tr><td>Ledger posting</td><td>Haath se har entry</td><td>Automatic</td></tr>
+<tr><td>Storage</td><td>Register, physical space</td><td>Digital/cloud, unlimited</td></tr>
+<tr><td>Reports</td><td>Time lagega, calculation manual</td><td>Ek click me</td></tr>
+<tr><td>Skill needed</td><td>Accounting knowledge</td><td>Accounting + software skill</td></tr>
+<tr><td>Cost</td><td>Shuru me kam, staff zyada</td><td>Shuru me zyada, long run me kam</td></tr>
+<tr><td>Risk</td><td>Aag/paani/chori, entry loss</td><td>Virus/hacking, data loss (backup zaroori)</td></tr>
+</table>
+
+<div class="box b-tip"><b>Viva/practical ke liye 3 lines tayyar rakho:</b> (1) "Tally me maine company create karke uske Financial Year aur ledgers set kiye." (2) "Voucher entry (F4-F9) ke baad Trial Balance aur Balance Sheet auto-generate hoti hai." (3) "GST ke liye tax ledgers aur HSN/SAC set karke GSTR-1/3B ka summary Tally se nikal sakte hain."</div>
+
+<div class="box b-q"><b>Probable exam questions — Unit 5</b>
+<ol>
+  <li>Computerised accounting ke fayde aur limitations samjhaiye. (10)</li>
+  <li>Tally ke features likhiye. Tally me company kaise banate hain? (10)</li>
+  <li>Tally me vouchers ke prakaar aur unke shortcut likhiye. (10)</li>
+  <li>Manual aur computerised accounting me antar likhiye. (5)</li>
+  <li>Accounts me computer ka role / MIS me contribution. (5)</li>
+</ol></div>
+
+<div class="rev">
+<h4>⚡ Rapid Revision — Unit 5</h4>
+<ul>
+  <li>Computerised accounting = speed + accuracy + auto posting + instant reports + GST + security.</li>
+  <li>Limitations: cost, training, security, GIGO, dependency.</li>
+  <li>Tally = Indian accounting software (TallyPrime); double entry + inventory + GST + payroll + multi-currency.</li>
+  <li>Hierarchy: Primary/Secondary Groups → Ledgers → Vouchers → Reports.</li>
+  <li>Vouchers: F4 Contra, F5 Payment, F6 Receipt, F7 Journal, F8 Sales, F9 Purchase, Ctrl+F8/F9 Credit/Debit note, Ctrl+F10 Memo.</li>
+  <li>Reports: Day Book, Ledger, Trial Balance, Trading A/c, P&amp;L A/c, Balance Sheet, Outstanding, Ratio analysis.</li>
+  <li>Manual vs computerised: speed, accuracy, storage, cost, risk me fark.</li>
+</ul>
+</div>
+
+<div class="footer">
+  📚 File 03 — Basics of Accounting (CMM-101T) • BBA Semester 1 • Hinglish Notes<br>
+  Baaki files: 01 (Management), 02 (Business Economics), 04 (Business Environment), 05 (Life Skills), 06 (Computer), 07 (Viva Prep)
+</div>
+</div>
+</body>
+</html>
